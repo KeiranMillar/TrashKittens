@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
+using System.Collections;
 
 namespace UnityStandardAssets._2D
 {
@@ -8,8 +9,8 @@ namespace UnityStandardAssets._2D
     public class Platformer2DUserControl : MonoBehaviour
     {
         private PlatformerCharacter2D m_Character;
-        private bool m_Jump;
-
+        private bool m_Jump = false;
+		public float speed;
 
         private void Awake()
         {
@@ -19,27 +20,28 @@ namespace UnityStandardAssets._2D
 
         private void Update()
         {
-            if (!m_Jump)
-            {
-                // Read the jump input in Update so button presses aren't missed.
-                m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
-            }
+//            if (!m_Jump)
+//            {
+//                // Read the jump input in Update so button presses aren't missed.
+//                m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
+//            }
+
+
         }
-
-
+			
         private void FixedUpdate()
         {
             // Read the inputs.
             //bool crouch = Input.GetKey(KeyCode.LeftControl);
 			bool crouch = false;
-            float h = -0.3f;
 
-
+			if (Input.GetMouseButton (0))
+				Debug.Log ("click");
             // Pass all parameters to the character control script.
-            m_Character.Move(h, crouch, m_Jump);
+            m_Character.Move(speed, crouch, m_Jump);
 
 
-            m_Jump = false;
+//            m_Jump = false;
         }
     }
 }
