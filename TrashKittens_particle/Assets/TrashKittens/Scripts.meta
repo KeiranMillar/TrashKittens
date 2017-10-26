@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:TrashKittens_particle/Assets/TrashKittens/Scripts.meta
 guid: 2e59f388d2fcd8945a93ce16c3b79f81
 folderAsset: yes
 timeCreated: 1507900985
+=======
+guid: 7ed9763753852d942913425379af57c4
+folderAsset: yes
+timeCreated: 1507902275
+>>>>>>> e6ebd5eef82abacae88efe89ab015839e91e7289:TrashKittens_particle/Assets/TrashKittens/Scripts.meta
 licenseType: Free
 DefaultImporter:
   userData: 
