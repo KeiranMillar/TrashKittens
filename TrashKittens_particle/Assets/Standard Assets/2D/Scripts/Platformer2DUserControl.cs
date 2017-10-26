@@ -1,7 +1,7 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
-using System.Collections;
 
 namespace UnityStandardAssets._2D
 {
@@ -35,7 +35,7 @@ namespace UnityStandardAssets._2D
             //bool crouch = Input.GetKey(KeyCode.LeftControl);
 			bool crouch = false;
 
-			if (Input.GetMouseButton (0))
+			if (Input.anyKey)
 				Debug.Log ("click");
             // Pass all parameters to the character control script.
             m_Character.Move(speed, crouch, m_Jump);

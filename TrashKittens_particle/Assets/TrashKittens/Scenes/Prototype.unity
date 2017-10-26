@@ -3124,6 +3124,70 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &170355237
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 170355238}
+  - component: {fileID: 170355240}
+  - component: {fileID: 170355239}
+  m_Layer: 0
+  m_Name: PlatformSpecificParticleControllers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &170355238
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 170355237}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.954045, y: -26.110445, z: 30.864988}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 240119318}
+  - {fileID: 2024015116}
+  m_Father: {fileID: 279295736}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &170355239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 170355237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b27507c5d0efbbd47ac8c1de9a1a0a35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BuildTargetGroup: 1
+  m_Content:
+  - {fileID: 240119317}
+  m_MonoBehaviours: []
+  m_ChildrenOfThisObject: 0
+--- !u!114 &170355240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 170355237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b27507c5d0efbbd47ac8c1de9a1a0a35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BuildTargetGroup: 0
+  m_Content:
+  - {fileID: 2024015115}
+  m_MonoBehaviours: []
+  m_ChildrenOfThisObject: 0
 --- !u!1 &170691861
 GameObject:
   m_ObjectHideFlags: 0
@@ -4101,6 +4165,114 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &240119317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 240119318}
+  - component: {fileID: 240119319}
+  m_Layer: 0
+  m_Name: Particle Controller (Mobile)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &240119318
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 240119317}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.006718, y: 27.0892, z: -30.793343}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 170355238}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &240119319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 240119317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acea13a76cc56d74db53fc5bc2d9d315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  demoParticles:
+    items:
+    - transform: {fileID: 400010, guid: 645413a00f7bd0242bbd6d0e5eb6f439, type: 2}
+      mode: 1
+      align: 1
+      maxCount: 2
+      minDist: 0
+      camOffset: 15
+      instructionText: Tap to Create Explosions.
+    - transform: {fileID: 400000, guid: bf495eacf58e31146ab012aa89ac68da, type: 2}
+      mode: 1
+      align: 1
+      maxCount: 1
+      minDist: 0
+      camOffset: 5
+      instructionText: Tap to Create Fire.
+    - transform: {fileID: 400000, guid: b99a0a5998b2736429fd2a2fd1d01c5e, type: 2}
+      mode: 1
+      align: 1
+      maxCount: 10
+      minDist: 0
+      camOffset: 5
+      instructionText: Tap to Create Fire.
+    - transform: {fileID: 0}
+      mode: 0
+      align: 1
+      maxCount: 1
+      minDist: 0
+      camOffset: 15
+      instructionText: 
+    - transform: {fileID: 400000, guid: b6fecef6c92b67147b638a07ef91195b, type: 2}
+      mode: 1
+      align: 0
+      maxCount: 1
+      minDist: 0
+      camOffset: 15
+      instructionText: Tap to Create Steam.
+    - transform: {fileID: 0}
+      mode: 0
+      align: 1
+      maxCount: 1
+      minDist: 0
+      camOffset: 25
+      instructionText: Touch and Hold to Spray Water.
+    - transform: {fileID: 0}
+      mode: 0
+      align: 1
+      maxCount: 1
+      minDist: 0
+      camOffset: 40
+      instructionText: 
+    - transform: {fileID: 400006, guid: ccbcfc705a39717429590a9f247ec30a, type: 2}
+      mode: 1
+      align: 1
+      maxCount: 3
+      minDist: 0
+      camOffset: 5
+      instructionText: Tap to Place Flares.
+  spawnOffset: 0.5
+  multiply: 1
+  clearOnChange: 1
+  titleText: {fileID: 0}
+  sceneCamera: {fileID: 0}
+  instructionText: {fileID: 0}
+  previousButton: {fileID: 0}
+  nextButton: {fileID: 0}
+  graphicRaycaster: {fileID: 0}
+  eventSystem: {fileID: 0}
 --- !u!1 &243982051
 GameObject:
   m_ObjectHideFlags: 0
@@ -4700,6 +4872,7 @@ Transform:
   m_Children:
   - {fileID: 767145537}
   - {fileID: 1197414316}
+  - {fileID: 170355238}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17036,7 +17209,6 @@ GameObject:
   - component: {fileID: 920846917}
   - component: {fileID: 920846916}
   - component: {fileID: 920846915}
-  - component: {fileID: 920846922}
   m_Layer: 0
   m_Name: 2DCharacter
   m_TagString: Player
@@ -17200,19 +17372,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!114 &920846922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 920846914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8336d9bb1ba56ae49b0d343112f2a5f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  surfaceOffset: 1.5
-  setTargetOn: {fileID: 1524028728}
 --- !u!1 &925428176
 GameObject:
   m_ObjectHideFlags: 0
@@ -28145,10 +28304,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1522392753}
---- !u!1 &1524028728 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100000, guid: 18fcd494ab71841d695135246693eb3a, type: 2}
-  m_PrefabInternal: {fileID: 995250562}
 --- !u!1 &1527101988
 GameObject:
   m_ObjectHideFlags: 0
@@ -37597,6 +37752,114 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &2024015115
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2024015116}
+  - component: {fileID: 2024015117}
+  m_Layer: 0
+  m_Name: Particle Controller (Standalone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2024015116
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2024015115}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.006718, y: 27.0892, z: -30.793343}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 170355238}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2024015117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2024015115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acea13a76cc56d74db53fc5bc2d9d315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  demoParticles:
+    items:
+    - transform: {fileID: 400010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
+      mode: 1
+      align: 1
+      maxCount: 4
+      minDist: 0
+      camOffset: 15
+      instructionText: Click to Create Explosions.
+    - transform: {fileID: 400000, guid: bf495eacf58e31146ab012aa89ac68da, type: 2}
+      mode: 1
+      align: 1
+      maxCount: 1
+      minDist: 0
+      camOffset: 5
+      instructionText: Click to Create Fire.
+    - transform: {fileID: 400000, guid: b99a0a5998b2736429fd2a2fd1d01c5e, type: 2}
+      mode: 1
+      align: 1
+      maxCount: 50
+      minDist: 0
+      camOffset: 5
+      instructionText: Click to Create Fire.
+    - transform: {fileID: 0}
+      mode: 0
+      align: 1
+      maxCount: 1
+      minDist: 0
+      camOffset: 35
+      instructionText: 
+    - transform: {fileID: 400000, guid: 32aafb358d61bd14b9b27ed0871fe43b, type: 2}
+      mode: 1
+      align: 0
+      maxCount: 4
+      minDist: 0
+      camOffset: 15
+      instructionText: Click to Create Steam.
+    - transform: {fileID: 0}
+      mode: 0
+      align: 1
+      maxCount: 1
+      minDist: 0
+      camOffset: 25
+      instructionText: Click and Hold to Spray Water.
+    - transform: {fileID: 0}
+      mode: 0
+      align: 1
+      maxCount: 1
+      minDist: 0
+      camOffset: 40
+      instructionText: 
+    - transform: {fileID: 400006, guid: 0438351a6e6422d43a09930e9be00ee9, type: 2}
+      mode: 1
+      align: 1
+      maxCount: 15
+      minDist: 0
+      camOffset: 5
+      instructionText: Click to Place Flares.
+  spawnOffset: 0.5
+  multiply: 1
+  clearOnChange: 1
+  titleText: {fileID: 0}
+  sceneCamera: {fileID: 0}
+  instructionText: {fileID: 0}
+  previousButton: {fileID: 0}
+  nextButton: {fileID: 0}
+  graphicRaycaster: {fileID: 1070170425}
+  eventSystem: {fileID: 1197414319}
 --- !u!1 &2032369661
 GameObject:
   m_ObjectHideFlags: 0
