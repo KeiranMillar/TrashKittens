@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Click_On_Drill : MonoBehaviour {
+public class ClickOnDrill : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () 
