@@ -5,9 +5,8 @@ using UnityEngine;
 public class ClickOnDrill : MonoBehaviour {
 
 	public int price = 5;
-	GameObject drill = GameObject.Find("Quad");
-	//var resourcesScript = drill.GetComponent<ResourceCollection>();
-	float resources = drill.GetComponent<ResourceCollection>().resources;
+
+
 
 	// Use this for initialization
 	void Start () 
@@ -24,12 +23,15 @@ public class ClickOnDrill : MonoBehaviour {
 	// When the drill is clicked
 	void OnMouseDown()
 	{
+		GameObject drill = GameObject.Find("Quad");
+		ResourceCollection resourcesScript = drill.GetComponent<ResourceCollection>();
+		float resources = drill.GetComponent<ResourceCollection>().resources;
 		// Do something
 		Debug.Log ("Click");
 		if (drill.GetComponent< ResourceCollection > ().resources >= price) 
 		{
 			drill.GetComponent< ResourceCollection > ().resources -= price;
-			drill.GetComponent< ResourceCollection > ().resourceModifier += 2;
+			drill.GetComponent< ResourceCollection > ().resourceModifier *= 2;
 			price *= 2;
 		} 
 		else 
