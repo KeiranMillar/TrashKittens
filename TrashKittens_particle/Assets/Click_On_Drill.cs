@@ -16,8 +16,10 @@ public class Click_On_Drill : MonoBehaviour {
 		
 	}
 
+	// When the drill is clicked
 	void OnMouseDown()
 	{
+		// Do something
 		Debug.Log ("Click");
 	}
 
