@@ -33,4 +33,6 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
+# Windows files
 Thumbs.db
+Thumbs.db.meta
