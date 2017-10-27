@@ -6,6 +6,7 @@ namespace UnityStandardAssets._2D
     public class PlatformerCharacter2D : MonoBehaviour
     {
         [SerializeField] private float m_MaxSpeed = 10f;                    // The fastest the player can travel in the x axis.
+		[SerializeField] private float m_Speed = -0.2f;
         [SerializeField] private float m_JumpForce = 400f;                  // Amount of force added when the player jumps.
         [Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;  // Amount of maxSpeed applied to crouching movement. 1 = 100%
         [SerializeField] private bool m_AirControl = false;                 // Whether or not a player can steer while jumping;
@@ -20,6 +21,14 @@ namespace UnityStandardAssets._2D
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 
+		private float m_Distance = 10;
+		private Vector2 beginTouch;
+		private Vector2 exitTouch;
+		private Vector2 forceToApply;
+
+		private Vector2 lastPos;
+		private Vector2 thisPos;
+
         private void Awake()
         {
             // Setting up references.
@@ -27,9 +36,49 @@ namespace UnityStandardAssets._2D
             m_CeilingCheck = transform.Find("CeilingCheck");
             m_Anim = GetComponent<Animator>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
+
+			// mouse drag
+			beginTouch = new Vector2(0.0f, 0.0f);
+			exitTouch = new Vector2(0.0f, 0.0f);
+			forceToApply = new Vector2(0.0f, 0.0f);
         }
 
+		void OnMouseEnter()
+		{
+			beginTouch.x = Input.mousePosition.x;
+			beginTouch.y = Input.mousePosition.y;
+		}
 
+		void OnMouseDrag()
+		{
+			lastPos = thisPos;
+			thisPos = transform.position;
+			Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, m_Distance);        
+			Vector3 objPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+			transform.position = objPosition;
+		}
+
+		void OnMouseUp()
+		{
+			thisPos = transform.position;
+			Vector2 velocity = thisPos - lastPos;
+			exitTouch.x = Input.mousePosition.x;
+			exitTouch.y = Input.mousePosition.y;
+
+//			Debug.Log(forceToApply);
+//			forceToApply = exitTouch - beginTouch;
+//			float xForce, yForce;
+			// if (forceToApply.x >= 150.0f) forceToApply.x = 150.0f;
+			// if (forceToApply.y >= 150.0f) forceToApply.y = 150.0f;
+			m_Rigidbody2D.velocity = velocity*3f;
+			//rb.AddForce(forceToApply * mult * Time.deltaTime, ForceMode2D.Impulse);
+		}
+
+		void OnDrawGizmos()
+		{
+			//Gizmos.color = Color.red;
+			//Gizmos.DrawLine(Camera.main.ViewportToWorldPoint( beginTouch), Camera.main.ViewportToWorldPoint(exitTouch));
+		}
         private void FixedUpdate()
         {
             m_Grounded = false;
@@ -46,6 +95,8 @@ namespace UnityStandardAssets._2D
 
             // Set the vertical animation
             m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
+
+			if (m_Grounded) Move(m_Speed, false, false);
         }
 
 
@@ -54,7 +105,8 @@ namespace UnityStandardAssets._2D
             // If crouching, check to see if the character can stand up
             if (!crouch && m_Anim.GetBool("Crouch"))
             {
-                // If the character has a ceiling preventing them from standing up, keep them crouching
+              
+				// If the character has a ceiling preventing them from standing up, keep them crouching
                 if (Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround))
                 {
                     crouch = true;
