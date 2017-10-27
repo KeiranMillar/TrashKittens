@@ -70,7 +70,7 @@ namespace UnityStandardAssets._2D
 //			float xForce, yForce;
 			// if (forceToApply.x >= 150.0f) forceToApply.x = 150.0f;
 			// if (forceToApply.y >= 150.0f) forceToApply.y = 150.0f;
-			m_Rigidbody2D.velocity = velocity*3f;
+			m_Rigidbody2D.velocity = velocity * 3.0f;
 			//rb.AddForce(forceToApply * mult * Time.deltaTime, ForceMode2D.Impulse);
 		}
 

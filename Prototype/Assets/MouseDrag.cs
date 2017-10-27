@@ -60,6 +60,7 @@ public class MouseDrag : MonoBehaviour {
         //Gizmos.color = Color.red;
         //Gizmos.DrawLine(Camera.main.ViewportToWorldPoint( beginTouch), Camera.main.ViewportToWorldPoint(exitTouch));
     }
+
     //bool isClicked()
     //{
     //    checkIfTouched();
