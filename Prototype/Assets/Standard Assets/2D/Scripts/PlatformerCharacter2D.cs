@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 namespace UnityStandardAssets._2D
@@ -28,6 +29,8 @@ namespace UnityStandardAssets._2D
 
 		private Vector2 lastPos;
 		private Vector2 thisPos;
+
+		public float speed = 0.1f;
 
         private void Awake()
         {
@@ -79,6 +82,35 @@ namespace UnityStandardAssets._2D
 			//Gizmos.color = Color.red;
 			//Gizmos.DrawLine(Camera.main.ViewportToWorldPoint( beginTouch), Camera.main.ViewportToWorldPoint(exitTouch));
 		}
+
+		private void Update()
+		{
+//			if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
+//			{
+//				// Get movement of the finger since last frame
+//				Vector2 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
+//
+//				// Move object across XY plane
+//				transform.Translate(-touchDeltaPosition.x * speed, -touchDeltaPosition.y * speed, 0);
+//			}
+			for (int i = 0; i < Input.touchCount; ++i)
+			{
+				if (Input.GetTouch (i).phase == TouchPhase.Began) {
+					Debug.Log ("touch began");
+				}
+					//clone = Instantiate(projectile, transform.position, transform.rotation) as GameObject;
+				if (Input.GetTouch (i).phase == TouchPhase.Moved) {
+					Debug.Log ("touch moved");
+					Vector2 touchDeltaPosition = Input.GetTouch (i).deltaPosition;
+				}
+
+				if (Input.GetTouch(i).phase == TouchPhase.Ended) {
+					Debug.Log ("touch ended");
+				}
+				
+			}
+		}
+
         private void FixedUpdate()
         {
             m_Grounded = false;
