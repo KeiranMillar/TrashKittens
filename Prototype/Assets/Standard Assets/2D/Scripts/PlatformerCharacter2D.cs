@@ -32,6 +32,9 @@ namespace UnityStandardAssets._2D
 
 		public float speed = 0.1f;
 
+		Vector3 enterPosition_;
+		Quaternion enterRotation_;
+
         private void Awake()
         {
             // Setting up references.
@@ -182,8 +185,7 @@ namespace UnityStandardAssets._2D
                 m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
             }
         }
-
-
+			
         private void Flip()
         {
             // Switch the way the player is labelled as facing.
@@ -194,5 +196,17 @@ namespace UnityStandardAssets._2D
             theScale.x *= -1;
             transform.localScale = theScale;
         }
+
+		private void OnTriggerEnter2D(Collider2D other)
+		{
+			//if (other.CompareTag == "reposition") {
+				enterPosition_ = this.transform.position;
+				enterPosition_.x = -enterPosition_.x;
+				
+				enterRotation_ = this.transform.rotation;
+
+				this.transform.SetPositionAndRotation (enterPosition_, enterRotation_);
+			//}
+		}
     }
 }
