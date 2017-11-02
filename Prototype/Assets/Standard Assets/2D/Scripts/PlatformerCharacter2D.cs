@@ -22,13 +22,14 @@ namespace UnityStandardAssets._2D
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 
-		private float m_Distance = 10;
-		private Vector2 beginTouch;
-		private Vector2 exitTouch;
-		private Vector2 forceToApply;
+		// my variables
+		private float distance_ = 10;
+		private Vector2 beginTouch_;
+		private Vector2 exitTouch_;
+		//private Vector2 forceToApply_;
 
-		private Vector2 lastPos;
-		private Vector2 thisPos;
+		private Vector2 lastPos_;
+		private Vector2 thisPos_;
 
 		public float speed = 0.1f;
 
@@ -44,35 +45,36 @@ namespace UnityStandardAssets._2D
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
 
 			// mouse drag
-			beginTouch = new Vector2(0.0f, 0.0f);
-			exitTouch = new Vector2(0.0f, 0.0f);
-			forceToApply = new Vector2(0.0f, 0.0f);
+			beginTouch_ = new Vector2(0.0f, 0.0f);
+			exitTouch_ = new Vector2(0.0f, 0.0f);
+			//forceToApply = new Vector2(0.0f, 0.0f);
         }
 
 		void OnMouseEnter()
 		{
-			beginTouch.x = Input.mousePosition.x;
-			beginTouch.y = Input.mousePosition.y;
+			beginTouch_.x = Input.mousePosition.x;
+			beginTouch_.y = Input.mousePosition.y;
 		}
 
 		void OnMouseDrag()
 		{
-			lastPos = thisPos;
-			thisPos = transform.position;
-			Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, m_Distance);        
+			lastPos_ = thisPos_;
+			thisPos_ = transform.position;
+			Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance_);        
 			Vector3 objPosition = Camera.main.ScreenToWorldPoint(mousePosition);
 			transform.position = objPosition;
 		}
 
 		void OnMouseUp()
 		{
-			thisPos = transform.position;
-			Vector2 velocity = thisPos - lastPos;
-			exitTouch.x = Input.mousePosition.x;
-			exitTouch.y = Input.mousePosition.y;
+			thisPos_ = transform.position;
+			Vector2 velocity = thisPos_ - lastPos_;
+			exitTouch_.x = Input.mousePosition.x;
+			exitTouch_.y = Input.mousePosition.y;
 
+			// Old code - probably should remove but keep for now
 //			Debug.Log(forceToApply);
-//			forceToApply = exitTouch - beginTouch;
+			//forceToApply = exitTouch_ - beginTouch_;
 //			float xForce, yForce;
 			// if (forceToApply.x >= 150.0f) forceToApply.x = 150.0f;
 			// if (forceToApply.y >= 150.0f) forceToApply.y = 150.0f;
@@ -80,14 +82,16 @@ namespace UnityStandardAssets._2D
 			//rb.AddForce(forceToApply * mult * Time.deltaTime, ForceMode2D.Impulse);
 		}
 
+		// Debug code - draw Gizoms
 		void OnDrawGizmos()
 		{
 			//Gizmos.color = Color.red;
-			//Gizmos.DrawLine(Camera.main.ViewportToWorldPoint( beginTouch), Camera.main.ViewportToWorldPoint(exitTouch));
+			//Gizmos.DrawLine(Camera.main.ViewportToWorldPoint( beginTouch_), Camera.main.ViewportToWorldPoint(exitTouch_));
 		}
 
 		private void Update()
 		{
+			// touch input code
 //			if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
 //			{
 //				// Get movement of the finger since last frame
@@ -112,6 +116,7 @@ namespace UnityStandardAssets._2D
 				}	
 			}
 
+			// Debug code - press R to restart the alien's position
 			if (Input.GetKey(KeyCode.R)) {
 				enterPosition_ = this.transform.position;
 				enterPosition_.x = 0.0f;
@@ -121,7 +126,6 @@ namespace UnityStandardAssets._2D
 
 				this.transform.SetPositionAndRotation (enterPosition_, enterRotation_);
 			}
-
 		}
 
         private void FixedUpdate()
@@ -141,8 +145,10 @@ namespace UnityStandardAssets._2D
             // Set the vertical animation
             m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
 
-			if (m_Grounded) Move(m_Speed, false, false);
+			// move the alien only when it touches the ground
+			if (m_Grounded) Move (m_Speed, false, false);
 
+			// teleport the alien to the right side of the screen if it's outside the left side screen boundries
 			if (this.transform.position.x < -45.0f) {
 				enterPosition_ = this.transform.position;
 				enterPosition_.x = 42.0f;
@@ -151,6 +157,7 @@ namespace UnityStandardAssets._2D
 
 				this.transform.SetPositionAndRotation (enterPosition_, enterRotation_);
 			}
+			// teleport the alien to the left side of the screen if it's outside the right side screen boundries
 			else if (this.transform.position.x > 45.0f) {
 				enterPosition_ = this.transform.position;
 				enterPosition_.x = -42.0f;
@@ -158,6 +165,13 @@ namespace UnityStandardAssets._2D
 				enterRotation_ = this.transform.rotation;
 
 				this.transform.SetPositionAndRotation (enterPosition_, enterRotation_);
+			}
+
+			// the alien is dead depending on its y or x velocity and its distance from the ground
+			if ((this.transform.position.y < 2.0f && m_Rigidbody2D.velocity.y < -30.0f) ||
+			    (this.transform.position.y < 2.0f && m_Rigidbody2D.velocity.x < -40.0f) ||
+			    (this.transform.position.y < 2.0f && m_Rigidbody2D.velocity.x > 40.0f)) {
+				Debug.Log ("dead");
 			}
         }
 
@@ -224,6 +238,7 @@ namespace UnityStandardAssets._2D
             transform.localScale = theScale;
         }
 
+		// maybe we'll need to trigger some collision
 //		private void OnTriggerEnter2D(Collider2D other)
 //		{
 //			if (other.CompareTag == "reposition") {
