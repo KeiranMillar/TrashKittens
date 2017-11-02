@@ -109,9 +109,19 @@ namespace UnityStandardAssets._2D
 
 				if (Input.GetTouch(i).phase == TouchPhase.Ended) {
 					Debug.Log ("touch ended");
-				}
-				
+				}	
 			}
+
+			if (Input.GetKey(KeyCode.R)) {
+				enterPosition_ = this.transform.position;
+				enterPosition_.x = 0.0f;
+				enterPosition_.y = 0.0f;
+
+				enterRotation_ = this.transform.rotation;
+
+				this.transform.SetPositionAndRotation (enterPosition_, enterRotation_);
+			}
+
 		}
 
         private void FixedUpdate()
@@ -132,6 +142,23 @@ namespace UnityStandardAssets._2D
             m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
 
 			if (m_Grounded) Move(m_Speed, false, false);
+
+			if (this.transform.position.x < -45.0f) {
+				enterPosition_ = this.transform.position;
+				enterPosition_.x = 42.0f;
+
+				enterRotation_ = this.transform.rotation;
+
+				this.transform.SetPositionAndRotation (enterPosition_, enterRotation_);
+			}
+			else if (this.transform.position.x > 45.0f) {
+				enterPosition_ = this.transform.position;
+				enterPosition_.x = -42.0f;
+
+				enterRotation_ = this.transform.rotation;
+
+				this.transform.SetPositionAndRotation (enterPosition_, enterRotation_);
+			}
         }
 
 
@@ -197,16 +224,16 @@ namespace UnityStandardAssets._2D
             transform.localScale = theScale;
         }
 
-		private void OnTriggerEnter2D(Collider2D other)
-		{
-			//if (other.CompareTag == "reposition") {
-				enterPosition_ = this.transform.position;
-				enterPosition_.x = -enterPosition_.x;
-				
-				enterRotation_ = this.transform.rotation;
-
-				this.transform.SetPositionAndRotation (enterPosition_, enterRotation_);
-			//}
-		}
+//		private void OnTriggerEnter2D(Collider2D other)
+//		{
+//			if (other.CompareTag == "reposition") {
+//				enterPosition_ = this.transform.position;
+//				enterPosition_.x = -enterPosition_.x + 5.0f;
+//				
+//				enterRotation_ = this.transform.rotation;
+//
+//				this.transform.SetPositionAndRotation (enterPosition_, enterRotation_);
+//			}
+//		}
     }
 }
