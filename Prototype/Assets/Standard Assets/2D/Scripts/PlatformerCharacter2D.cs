@@ -33,8 +33,14 @@ namespace UnityStandardAssets._2D
 
 		public float speed = 0.1f;
 
+		// teleport
 		Vector3 enterPosition_;
 		Quaternion enterRotation_;
+
+		// death velocity
+		public float deathYVelocity_;
+		public float deathRightXVelocity_;
+		public float deathLeftXVelocity_; 
 
         private void Awake()
         {
