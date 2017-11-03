@@ -146,7 +146,9 @@ namespace UnityStandardAssets._2D
             m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
 
 			// move the alien only when it touches the ground
-			if (m_Grounded) Move (m_Speed, false, false);
+			if (m_Grounded) {
+				Move (m_Speed, false, false);
+			}
 
 			// teleport the alien to the right side of the screen if it's outside the left side screen boundries
 			if (this.transform.position.x < -45.0f) {
@@ -168,10 +170,11 @@ namespace UnityStandardAssets._2D
 			}
 
 			// the alien is dead depending on its y or x velocity and its distance from the ground
-			if ((this.transform.position.y < 2.0f && m_Rigidbody2D.velocity.y < -30.0f) ||
-			    (this.transform.position.y < 2.0f && m_Rigidbody2D.velocity.x < -40.0f) ||
-			    (this.transform.position.y < 2.0f && m_Rigidbody2D.velocity.x > 40.0f)) {
+			if ((this.transform.position.y < 0.55f && m_Rigidbody2D.velocity.y < -30.0f) ||
+			    (this.transform.position.y < 0.55f && m_Rigidbody2D.velocity.x < -40.0f) ||
+			    (this.transform.position.y < 0.55f && m_Rigidbody2D.velocity.x > 40.0f)) {
 				Debug.Log ("dead");
+				m_Rigidbody2D.velocity = new Vector2(0.0f, 0.0f);
 			}
         }
 
