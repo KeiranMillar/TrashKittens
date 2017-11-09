@@ -7,6 +7,7 @@ public class ResourceCollection : MonoBehaviour
 	public float resources = 0;
 	public float resourcesPerSec = 1;
 	public float resourceModifier = 1;
+	public int upgradePrice = 5; 
 	public enum resourceCollectionType{Periodical,Constant};
 	public resourceCollectionType collectionType;
 	float lastUpdate = 0;
@@ -32,6 +33,23 @@ public class ResourceCollection : MonoBehaviour
 				lastUpdate = Time.time;
 				Debug.Log ("Resources = " + resources.ToString ());
 			}
+		}
+	}
+
+	// function intended to replace the ClickOnDrill script.
+	public void Upgrade()
+	{
+		// Do something
+		//Debug.Log ("Click");
+		if (resources >= upgradePrice) 
+		{
+			resources -= upgradePrice;
+			resourceModifier *= 2;
+			upgradePrice *= 2;
+		} 
+		else 
+		{
+			Debug.Log ("Need more Money");
 		}
 	}
 }
