@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ResourceCollection : MonoBehaviour 
 {
@@ -10,6 +11,7 @@ public class ResourceCollection : MonoBehaviour
 	public int upgradePrice = 5; 
 	public enum resourceCollectionType{Periodical,Constant};
 	public resourceCollectionType collectionType;
+	public Text upgradePriceDisplay;
 	float lastUpdate = 0;
 	// Use this for initialization
 	void Start () 
@@ -34,6 +36,7 @@ public class ResourceCollection : MonoBehaviour
 				Debug.Log ("Resources = " + resources.ToString ());
 			}
 		}
+		upgradePriceDisplay.text = upgradePrice.ToString();
 	}
 
 	// function intended to replace the ClickOnDrill script.

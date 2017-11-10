@@ -11,6 +11,7 @@ public class healthManagement : MonoBehaviour {
 	public float upgradePrice = 5;
 	public Slider healthBar;
 	public bool healthDrain = false;
+	public Text upgradePriceDisplay;
 	private GameObject drill;
 	float lastUpdate = 0.0f;
 
@@ -34,6 +35,7 @@ public class healthManagement : MonoBehaviour {
 			currentHealth -= 1.0f;
 			lastUpdate = Time.time;
 		}
+		upgradePriceDisplay.text = upgradePrice.ToString();
 	}
 
 	// called when the player upgrades the maximum health of the drill
