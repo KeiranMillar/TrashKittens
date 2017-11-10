@@ -5,6 +5,9 @@
 */[Bb]uilds/
 */Assets/AssetStoreTools*
 
+# ignore folder
+*/_NonVersioned/
+
 # Visual Studio 2015 cache directory
 */.vs/
 
@@ -13,7 +16,7 @@ ExportedObj/
 .consulo/
 *.csproj
 *.unityproj
-*.sln
+# *.sln
 *.suo
 *.tmp
 *.user
@@ -33,4 +36,6 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
+# Windows files
 Thumbs.db
+Thumbs.db.meta
