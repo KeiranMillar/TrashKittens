@@ -31,16 +31,16 @@ namespace UnityStandardAssets._2D
 		private Vector2 lastPos_;
 		private Vector2 thisPos_;
 
+		// death variables
+		private Vector2 highestPos_; // to keep the highest position after the flick
+		private bool dead_;
+		public float deathPos_;
+
 		public float speed = 0.1f;
 
 		// teleport
 		Vector3 enterPosition_;
 		Quaternion enterRotation_;
-
-		// death velocity
-		public float deathYVelocity_;
-		public float deathRightXVelocity_;
-		public float deathLeftXVelocity_; 
 
         private void Awake()
         {
@@ -53,7 +53,8 @@ namespace UnityStandardAssets._2D
 			// mouse drag
 			beginTouch_ = new Vector2(0.0f, 0.0f);
 			exitTouch_ = new Vector2(0.0f, 0.0f);
-			//forceToApply = new Vector2(0.0f, 0.0f);
+			highestPos_ = new Vector2(0.0f, 0.0f);
+			dead_ = false;
         }
 
 		void OnMouseEnter()
@@ -66,8 +67,8 @@ namespace UnityStandardAssets._2D
 		{
 			lastPos_ = thisPos_;
 			thisPos_ = transform.position;
-			Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance_);        
-			Vector3 objPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+			Vector3 mousePosition = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, distance_);        
+			Vector3 objPosition = Camera.main.ScreenToWorldPoint (mousePosition);
 			transform.position = objPosition;
 		}
 
@@ -78,22 +79,16 @@ namespace UnityStandardAssets._2D
 			exitTouch_.x = Input.mousePosition.x;
 			exitTouch_.y = Input.mousePosition.y;
 
-			// Old code - probably should remove but keep for now
-//			Debug.Log(forceToApply);
-			//forceToApply = exitTouch_ - beginTouch_;
-//			float xForce, yForce;
-			// if (forceToApply.x >= 150.0f) forceToApply.x = 150.0f;
-			// if (forceToApply.y >= 150.0f) forceToApply.y = 150.0f;
+			// set alien's velocity based on the flicks length
 			m_Rigidbody2D.velocity = velocity * 3.0f;
-			//rb.AddForce(forceToApply * mult * Time.deltaTime, ForceMode2D.Impulse);
 		}
 
 		// Debug code - draw Gizoms
-		void OnDrawGizmos()
-		{
-			//Gizmos.color = Color.red;
-			//Gizmos.DrawLine(Camera.main.ViewportToWorldPoint( beginTouch_), Camera.main.ViewportToWorldPoint(exitTouch_));
-		}
+//		void OnDrawGizmos()
+//		{
+//			//Gizmos.color = Color.red;
+//			//Gizmos.DrawLine(Camera.main.ViewportToWorldPoint( beginTouch_), Camera.main.ViewportToWorldPoint(exitTouch_));
+//		}
 
 		private void Update()
 		{
@@ -106,32 +101,45 @@ namespace UnityStandardAssets._2D
 //				// Move object across XY plane
 //				transform.Translate(-touchDeltaPosition.x * speed, -touchDeltaPosition.y * speed, 0);
 //			}
-			for (int i = 0; i < Input.touchCount; ++i)
-			{
-				if (Input.GetTouch (i).phase == TouchPhase.Began) {
-					Debug.Log ("touch began");
-				}
-					//clone = Instantiate(projectile, transform.position, transform.rotation) as GameObject;
-				if (Input.GetTouch (i).phase == TouchPhase.Moved) {
-					Debug.Log ("touch moved");
-					Vector2 touchDeltaPosition = Input.GetTouch (i).deltaPosition;
-				}
 
-				if (Input.GetTouch(i).phase == TouchPhase.Ended) {
-					Debug.Log ("touch ended");
-				}	
-			}
+			// touch input working but we'll see if it's needed
+//			for (int i = 0; i < Input.touchCount; ++i)
+//			{
+//				if (Input.GetTouch (i).phase == TouchPhase.Began) {
+//					Debug.Log ("touch began");
+//				}
+//					//clone = Instantiate(projectile, transform.position, transform.rotation) as GameObject;
+//				if (Input.GetTouch (i).phase == TouchPhase.Moved) {
+//					Debug.Log ("touch moved");
+//					Vector2 touchDeltaPosition = Input.GetTouch (i).deltaPosition;
+//				}
+//
+//				if (Input.GetTouch(i).phase == TouchPhase.Ended) {
+//					Debug.Log ("touch ended");
+//				}	
+//			}
 
 			// Debug code - press R to restart the alien's position
 			if (Input.GetKey(KeyCode.R)) {
 				enterPosition_ = this.transform.position;
 				enterPosition_.x = 0.0f;
-				enterPosition_.y = 0.0f;
+				enterPosition_.y = 2.5f;
 
 				enterRotation_ = this.transform.rotation;
 
 				this.transform.SetPositionAndRotation (enterPosition_, enterRotation_);
 			}
+
+			// remember the heighest position
+			if (highestPos_.y < this.transform.position.y)
+				highestPos_.y = this.transform.position.y;
+
+			// death height
+			if (highestPos_.y > deathPos_) {
+				dead_ = true;
+			}
+
+//			Debug.Log (highestPos_);
 		}
 
         private void FixedUpdate()
@@ -150,10 +158,18 @@ namespace UnityStandardAssets._2D
 
             // Set the vertical animation
             m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
-
-			// move the alien only when it touches the ground
-			if (m_Grounded) {
+		
+			// death animation
+			if (m_Grounded && dead_ && !m_Anim.GetBool("Dead")) {
+				// death animation
+				// delete the object after death animation is finished
+				m_Anim.SetBool("Dead", true);
+				Debug.Log ("DEAD");
+			}
+			// move the alien only when it touches the ground and reset the heighest position back to zero for the next flick
+			else if (m_Grounded && !dead_) {
 				Move (m_Speed, false, false);
+				highestPos_.y = 0.0f;
 			}
 
 			// teleport the alien to the right side of the screen if it's outside the left side screen boundries
@@ -173,14 +189,6 @@ namespace UnityStandardAssets._2D
 				enterRotation_ = this.transform.rotation;
 
 				this.transform.SetPositionAndRotation (enterPosition_, enterRotation_);
-			}
-
-			// the alien is dead depending on its y or x velocity and its distance from the ground
-			if ((this.transform.position.y < 2.55f && m_Rigidbody2D.velocity.y < -30.0f) ||
-			    (this.transform.position.y < 2.55f && m_Rigidbody2D.velocity.x < -40.0f) ||
-			    (this.transform.position.y < 2.55f && m_Rigidbody2D.velocity.x > 40.0f)) {
-				Debug.Log ("dead");
-				m_Rigidbody2D.velocity = new Vector2(0.0f, 0.0f);
 			}
         }
 
