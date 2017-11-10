@@ -67,8 +67,8 @@ namespace UnityStandardAssets._2D
 		{
 			lastPos_ = thisPos_;
 			thisPos_ = transform.position;
-			Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance_);        
-			Vector3 objPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+			Vector3 mousePosition = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, distance_);        
+			Vector3 objPosition = Camera.main.ScreenToWorldPoint (mousePosition);
 			transform.position = objPosition;
 		}
 
