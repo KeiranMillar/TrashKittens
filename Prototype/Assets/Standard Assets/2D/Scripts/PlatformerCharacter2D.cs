@@ -172,10 +172,11 @@ namespace UnityStandardAssets._2D
             m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
 		
 			// death animation
-			if (m_Grounded && dead_) {
+			if (m_Grounded && dead_ && !m_Anim.GetBool("Dead")) {
 				// death animation
 				// delete the object after death animation is finished
-				Debug.Log ("Play Death Animation");
+				m_Anim.SetBool("Dead", true);
+				Debug.Log ("DEAD");
 			}
 			// move the alien only when it touches the ground and reset the heighest position back to zero for the next flick
 			else if (m_Grounded && !dead_) {
