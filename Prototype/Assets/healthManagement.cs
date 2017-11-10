@@ -12,6 +12,7 @@ public class healthManagement : MonoBehaviour {
 	public Slider healthBar;
 	public bool healthDrain = false;
 	public Text upgradePriceDisplay;
+
 	private GameObject drill;
 	float lastUpdate = 0.0f;
 
@@ -36,6 +37,19 @@ public class healthManagement : MonoBehaviour {
 			lastUpdate = Time.time;
 		}
 		upgradePriceDisplay.text = upgradePrice.ToString();
+	}
+
+
+	// check when object enter the drill's collider
+	// if its an enemy then do damage to the drill
+	void OnCollisionEnter2D(Collision2D coll)
+	{
+		Debug.Log ("Collision detected!");
+		if (coll.gameObject.tag == "Enemy")
+		{
+			currentHealth -= 1.0f;
+			coll.gameObject.SetActive (false);
+		}
 	}
 
 	// called when the player upgrades the maximum health of the drill

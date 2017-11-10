@@ -1933,7 +1933,7 @@ MonoBehaviour:
   maxHealth: 100
   upgradePrice: 5
   healthBar: {fileID: 598567504}
-  healthDrain: 1
+  healthDrain: 0
   upgradePriceDisplay: {fileID: 225067914}
 --- !u!114 &105657984
 MonoBehaviour:
@@ -18578,7 +18578,7 @@ GameObject:
   - component: {fileID: 920846915}
   m_Layer: 0
   m_Name: 2DCharacter
-  m_TagString: Player
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
