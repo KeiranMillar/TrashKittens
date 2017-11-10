@@ -12,6 +12,7 @@ public class healthManagement : MonoBehaviour {
 	public Slider healthBar;
 	public bool healthDrain = false;
 	private GameObject drill;
+	float lastUpdate = 0.0f;
 
 	// Use this for initialization
 	void Start () 
@@ -28,9 +29,10 @@ public class healthManagement : MonoBehaviour {
 			DrillDead ();
 		}
 		// drains health at a constant rate for testing purposes
-		if (healthDrain == true)
+		if ((healthDrain == true) && (Time.time - lastUpdate >= 1.0f))
 		{
-			currentHealth -= 0.25f;
+			currentHealth -= 1.0f;
+			lastUpdate = Time.time;
 		}
 	}
 
