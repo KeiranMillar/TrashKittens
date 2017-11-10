@@ -163,6 +163,7 @@ namespace UnityStandardAssets._2D
 			if (m_Grounded && dead_ && !m_Anim.GetBool("Dead")) {
 				// death animation
 				// delete the object after death animation is finished
+				m_Rigidbody2D.velocity = new Vector2(0.0f, 0.0f);
 				m_Anim.SetBool("Dead", true);
 				Debug.Log ("DEAD");
 			}
