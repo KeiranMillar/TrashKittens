@@ -42,11 +42,6 @@ namespace UnityStandardAssets._2D
 		Vector3 enterPosition_;
 		Quaternion enterRotation_;
 
-		// death velocity
-//		public float deathYVelocity_;
-//		public float deathRightXVelocity_;
-//		public float deathLeftXVelocity_; 
-
         private void Awake()
         {
             // Setting up references.
@@ -60,7 +55,6 @@ namespace UnityStandardAssets._2D
 			exitTouch_ = new Vector2(0.0f, 0.0f);
 			highestPos_ = new Vector2(0.0f, 0.0f);
 			dead_ = false;
-			//forceToApply = new Vector2(0.0f, 0.0f);
         }
 
 		void OnMouseEnter()
@@ -85,22 +79,16 @@ namespace UnityStandardAssets._2D
 			exitTouch_.x = Input.mousePosition.x;
 			exitTouch_.y = Input.mousePosition.y;
 
-			// Old code - probably should remove but keep for now
-//			Debug.Log(forceToApply);
-			//forceToApply = exitTouch_ - beginTouch_;
-//			float xForce, yForce;
-			// if (forceToApply.x >= 150.0f) forceToApply.x = 150.0f;
-			// if (forceToApply.y >= 150.0f) forceToApply.y = 150.0f;
+			// set alien's velocity based on the flicks length
 			m_Rigidbody2D.velocity = velocity * 3.0f;
-			//rb.AddForce(forceToApply * mult * Time.deltaTime, ForceMode2D.Impulse);
 		}
 
 		// Debug code - draw Gizoms
-		void OnDrawGizmos()
-		{
-			//Gizmos.color = Color.red;
-			//Gizmos.DrawLine(Camera.main.ViewportToWorldPoint( beginTouch_), Camera.main.ViewportToWorldPoint(exitTouch_));
-		}
+//		void OnDrawGizmos()
+//		{
+//			//Gizmos.color = Color.red;
+//			//Gizmos.DrawLine(Camera.main.ViewportToWorldPoint( beginTouch_), Camera.main.ViewportToWorldPoint(exitTouch_));
+//		}
 
 		private void Update()
 		{
@@ -202,14 +190,6 @@ namespace UnityStandardAssets._2D
 
 				this.transform.SetPositionAndRotation (enterPosition_, enterRotation_);
 			}
-
-			// the alien is dead depending on its y or x velocity and its distance from the ground
-//			if ((this.transform.position.y < 2.55f && m_Rigidbody2D.velocity.y < -30.0f) ||
-//			    (this.transform.position.y < 2.55f && m_Rigidbody2D.velocity.x < -40.0f) ||
-//			    (this.transform.position.y < 2.55f && m_Rigidbody2D.velocity.x > 40.0f)) {
-//				Debug.Log ("dead");
-//				m_Rigidbody2D.velocity = new Vector2(0.0f, 0.0f);
-//			}
         }
 
 
