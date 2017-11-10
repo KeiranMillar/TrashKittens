@@ -31,6 +31,8 @@ namespace UnityStandardAssets._2D
 		private Vector2 lastPos_;
 		private Vector2 thisPos_;
 
+		private Vector2 highestPos_;
+
 		public float speed = 0.1f;
 
 		// teleport
@@ -53,6 +55,7 @@ namespace UnityStandardAssets._2D
 			// mouse drag
 			beginTouch_ = new Vector2(0.0f, 0.0f);
 			exitTouch_ = new Vector2(0.0f, 0.0f);
+			highestPos_ = new Vector2(0.0f, 0.0f);
 			//forceToApply = new Vector2(0.0f, 0.0f);
         }
 
@@ -126,12 +129,17 @@ namespace UnityStandardAssets._2D
 			if (Input.GetKey(KeyCode.R)) {
 				enterPosition_ = this.transform.position;
 				enterPosition_.x = 0.0f;
-				enterPosition_.y = 0.0f;
+				enterPosition_.y = 2.5f;
 
 				enterRotation_ = this.transform.rotation;
 
 				this.transform.SetPositionAndRotation (enterPosition_, enterRotation_);
 			}
+
+			if (highestPos_.y < this.transform.position.y)
+				highestPos_.y = this.transform.position.y;
+
+			Debug.Log (highestPos_);
 		}
 
         private void FixedUpdate()
@@ -154,6 +162,7 @@ namespace UnityStandardAssets._2D
 			// move the alien only when it touches the ground
 			if (m_Grounded) {
 				Move (m_Speed, false, false);
+				highestPos_.y = 0.0f;
 			}
 
 			// teleport the alien to the right side of the screen if it's outside the left side screen boundries
