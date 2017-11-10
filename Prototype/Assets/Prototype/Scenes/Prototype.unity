@@ -17558,10 +17558,8 @@ MonoBehaviour:
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 4294967295
+  deathPos_: 0
   speed: 0.1
-  deathYVelocity_: 0
-  deathRightXVelocity_: 0
-  deathLeftXVelocity_: 0
 --- !u!50 &920846918
 Rigidbody2D:
   serializedVersion: 4
@@ -28016,10 +28014,8 @@ MonoBehaviour:
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 4294967295
+  deathPos_: 20
   speed: 0.1
-  deathYVelocity_: 0
-  deathRightXVelocity_: 0
-  deathLeftXVelocity_: 0
 --- !u!50 &1495422051
 Rigidbody2D:
   serializedVersion: 4

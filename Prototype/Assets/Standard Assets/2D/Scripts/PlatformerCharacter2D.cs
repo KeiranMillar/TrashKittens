@@ -31,7 +31,10 @@ namespace UnityStandardAssets._2D
 		private Vector2 lastPos_;
 		private Vector2 thisPos_;
 
-		private Vector2 highestPos_;
+		// death variables
+		private Vector2 highestPos_; // to keep the highest position after the flick
+		private bool dead_;
+		public float deathPos_;
 
 		public float speed = 0.1f;
 
@@ -40,9 +43,9 @@ namespace UnityStandardAssets._2D
 		Quaternion enterRotation_;
 
 		// death velocity
-		public float deathYVelocity_;
-		public float deathRightXVelocity_;
-		public float deathLeftXVelocity_; 
+//		public float deathYVelocity_;
+//		public float deathRightXVelocity_;
+//		public float deathLeftXVelocity_; 
 
         private void Awake()
         {
@@ -56,6 +59,7 @@ namespace UnityStandardAssets._2D
 			beginTouch_ = new Vector2(0.0f, 0.0f);
 			exitTouch_ = new Vector2(0.0f, 0.0f);
 			highestPos_ = new Vector2(0.0f, 0.0f);
+			dead_ = false;
 			//forceToApply = new Vector2(0.0f, 0.0f);
         }
 
@@ -109,21 +113,23 @@ namespace UnityStandardAssets._2D
 //				// Move object across XY plane
 //				transform.Translate(-touchDeltaPosition.x * speed, -touchDeltaPosition.y * speed, 0);
 //			}
-			for (int i = 0; i < Input.touchCount; ++i)
-			{
-				if (Input.GetTouch (i).phase == TouchPhase.Began) {
-					Debug.Log ("touch began");
-				}
-					//clone = Instantiate(projectile, transform.position, transform.rotation) as GameObject;
-				if (Input.GetTouch (i).phase == TouchPhase.Moved) {
-					Debug.Log ("touch moved");
-					Vector2 touchDeltaPosition = Input.GetTouch (i).deltaPosition;
-				}
 
-				if (Input.GetTouch(i).phase == TouchPhase.Ended) {
-					Debug.Log ("touch ended");
-				}	
-			}
+			// touch input working but we'll see if it's needed
+//			for (int i = 0; i < Input.touchCount; ++i)
+//			{
+//				if (Input.GetTouch (i).phase == TouchPhase.Began) {
+//					Debug.Log ("touch began");
+//				}
+//					//clone = Instantiate(projectile, transform.position, transform.rotation) as GameObject;
+//				if (Input.GetTouch (i).phase == TouchPhase.Moved) {
+//					Debug.Log ("touch moved");
+//					Vector2 touchDeltaPosition = Input.GetTouch (i).deltaPosition;
+//				}
+//
+//				if (Input.GetTouch(i).phase == TouchPhase.Ended) {
+//					Debug.Log ("touch ended");
+//				}	
+//			}
 
 			// Debug code - press R to restart the alien's position
 			if (Input.GetKey(KeyCode.R)) {
@@ -136,10 +142,16 @@ namespace UnityStandardAssets._2D
 				this.transform.SetPositionAndRotation (enterPosition_, enterRotation_);
 			}
 
+			// remember the heighest position
 			if (highestPos_.y < this.transform.position.y)
 				highestPos_.y = this.transform.position.y;
 
-			Debug.Log (highestPos_);
+			// death height
+			if (highestPos_.y > deathPos_) {
+				dead_ = true;
+			}
+
+//			Debug.Log (highestPos_);
 		}
 
         private void FixedUpdate()
@@ -158,9 +170,15 @@ namespace UnityStandardAssets._2D
 
             // Set the vertical animation
             m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
-
-			// move the alien only when it touches the ground
-			if (m_Grounded) {
+		
+			// death animation
+			if (m_Grounded && dead_) {
+				// death animation
+				// delete the object after death animation is finished
+				Debug.Log ("Play Death Animation");
+			}
+			// move the alien only when it touches the ground and reset the heighest position back to zero for the next flick
+			else if (m_Grounded && !dead_) {
 				Move (m_Speed, false, false);
 				highestPos_.y = 0.0f;
 			}
@@ -185,12 +203,12 @@ namespace UnityStandardAssets._2D
 			}
 
 			// the alien is dead depending on its y or x velocity and its distance from the ground
-			if ((this.transform.position.y < 2.55f && m_Rigidbody2D.velocity.y < -30.0f) ||
-			    (this.transform.position.y < 2.55f && m_Rigidbody2D.velocity.x < -40.0f) ||
-			    (this.transform.position.y < 2.55f && m_Rigidbody2D.velocity.x > 40.0f)) {
-				Debug.Log ("dead");
-				m_Rigidbody2D.velocity = new Vector2(0.0f, 0.0f);
-			}
+//			if ((this.transform.position.y < 2.55f && m_Rigidbody2D.velocity.y < -30.0f) ||
+//			    (this.transform.position.y < 2.55f && m_Rigidbody2D.velocity.x < -40.0f) ||
+//			    (this.transform.position.y < 2.55f && m_Rigidbody2D.velocity.x > 40.0f)) {
+//				Debug.Log ("dead");
+//				m_Rigidbody2D.velocity = new Vector2(0.0f, 0.0f);
+//			}
         }
 
 
