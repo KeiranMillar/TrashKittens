@@ -10,7 +10,6 @@ public class healthManagement : MonoBehaviour {
 	public float maxHealth = 100;
 	public float upgradePrice = 5;
 	public Slider healthBar;
-	public bool healthDrain = false;
 	public Text upgradePriceDisplay;
 
 	private GameObject drill;
@@ -30,25 +29,20 @@ public class healthManagement : MonoBehaviour {
 		{
 			DrillDead ();
 		}
-		// drains health at a constant rate for testing purposes
-		if ((healthDrain == true) && (Time.time - lastUpdate >= 1.0f))
-		{
-			currentHealth -= 1.0f;
-			lastUpdate = Time.time;
-		}
 		upgradePriceDisplay.text = upgradePrice.ToString();
 	}
 
 
-	// check when object enter the drill's collider
+	// Check if there is an object colliding with the drill
 	// if its an enemy then do damage to the drill
-	void OnCollisionEnter2D(Collision2D coll)
+	void OnCollisionStay(Collision coll)
 	{
-		Debug.Log ("Collision detected!");
-		if (coll.gameObject.tag == "Enemy")
+		if ((coll.gameObject.tag == "Enemy") && ((Time.time - lastUpdate) >= 1.0f))
 		{
 			currentHealth -= 1.0f;
-			coll.gameObject.SetActive (false);
+			Debug.Log ("Drill is taking damage");
+			//coll.gameObject.SetActive (false);
+			lastUpdate = Time.time;
 		}
 	}
 
