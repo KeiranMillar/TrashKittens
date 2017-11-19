@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4200141193383216}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Master_controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,7 +34,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4198295998626584}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CeilingCheck
   m_TagString: Untagged
   m_Icon: {fileID: -2065832391, guid: 0000000000000000d000000000000000, type: 0}
@@ -49,7 +49,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4942146495881046}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R_hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4056608261668992}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L_arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,7 +79,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4476540054713182}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R_arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4761872468414798}
   - component: {fileID: 137630148219243258}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Slimebody_mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4359895965309248}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BabySlimeMobile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,7 +126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4292229320962838}
   - component: {fileID: 137251111745966456}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L_eye_mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4103717938705072}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R_lowerarm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4577937134312096}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4109322695014150}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: middle_jaw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,7 +186,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4065466459956878}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Top_jaw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4650184226771308}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L_lowerarm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -216,7 +216,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4407989576829816}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: -2065832391, guid: 0000000000000000d000000000000000, type: 0}
@@ -231,7 +231,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4526781637136530}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R_Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,7 +246,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4621301018149964}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +261,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4219314216128542}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Lower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,7 +276,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4247785413549216}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Jaw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -291,7 +291,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4167899650605898}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L_Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -306,7 +306,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4938251204511652}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -321,7 +321,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4148133941606332}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -337,7 +337,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4989541661429322}
   - component: {fileID: 137480466059269898}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R_eye_mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -356,7 +356,7 @@ GameObject:
   - component: {fileID: 54381647840466248}
   - component: {fileID: 114334150497567894}
   - component: {fileID: 65124977907325668}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PrototypeEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -371,7 +371,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4416879636480570}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Slime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -386,7 +386,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4814989341230740}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: skelentongroup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -401,7 +401,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4171983414296596}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: torso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,7 +416,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4636256215850876}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L_hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
