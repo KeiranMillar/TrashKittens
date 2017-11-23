@@ -58,7 +58,7 @@ public class EnemyController : MonoBehaviour {
 						{
 							if (touchRayHit.collider == gameObject.GetComponent<Collider> ()) 
 							{
-								Debug.Log ("Enemy has been touched");
+								//Debug.Log ("Enemy has been touched");
 								grabbed = true;
 							}
 						}
@@ -68,7 +68,7 @@ public class EnemyController : MonoBehaviour {
 						if (grabbed == true) 
 						{
 							forceToApply = new Vector3 (touch.deltaPosition.x, touch.deltaPosition.y, 0.0f);
-							Debug.Log ("Moving rigidbody with touch");
+							//Debug.Log ("Moving rigidbody with touch");
 						}
 						break;
 					case TouchPhase.Ended:
@@ -89,13 +89,13 @@ public class EnemyController : MonoBehaviour {
 		if (coll.gameObject.layer == 8) 
 		{
 			grounded = true;
-			Debug.Log (enemyRigidbody.velocity.magnitude.ToString());
-			Debug.Log (killVelocity.ToString());
+			//Debug.Log (enemyRigidbody.velocity.magnitude.ToString());
+			//Debug.Log (killVelocity.ToString());
 			// death check
 			if (killVelocity <= enemyRigidbody.velocity.magnitude)
 			{
 				// alive = false;
-				Debug.Log("am dead");
+				//Debug.Log("am dead");
 				enemyRigidbody.velocity = new Vector3(0.0f, 0.0f, 0.0f);
 				gameObject.SetActive(false);
 			}
