@@ -9,8 +9,7 @@ using UnityEngine.UI;
 public class GameUI : MonoBehaviour 
 {
 	// Public Variables
-	public Text mainResourceCounter;
-	public Text upgradeResourceCounter;
+	public Text resourceCounter;
 	public GameObject drillObject;
 
 	// PrivateVariables
@@ -20,7 +19,6 @@ public class GameUI : MonoBehaviour
 	void Update () 
 	{
 		drillResource = drillObject.GetComponent<ResourceCollection>().resources;
-		mainResourceCounter.text = drillResource.ToString();
-		upgradeResourceCounter.text = drillResource.ToString();
+		resourceCounter.text = drillResource.ToString();
 	}
 }

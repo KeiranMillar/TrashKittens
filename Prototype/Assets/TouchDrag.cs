@@ -38,7 +38,7 @@ public class TouchDrag : MonoBehaviour
 				{
 					forceToApply = touch.deltaPosition;
 					enemyRigidbody.AddForce (forceToApply);
-					//Debug.Log ("Moving rigidbody with touch");
+					Debug.Log ("Moving rigidbody with touch");
 				}
 				break;
 			// touch ended
