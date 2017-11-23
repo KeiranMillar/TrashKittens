@@ -11,7 +11,7 @@ public class EnemySpawning : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		spawn.Set(10.0f, 2.0f, 0.0f);
+		//spawn.Set(10.0f, 2.0f, 0.0f);
 		StartCoroutine (SpawnBaby ());
 		StartCoroutine (SpawnTank ());
 	}
