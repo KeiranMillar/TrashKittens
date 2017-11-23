@@ -1,0 +1,135 @@
+fileFormatVersion: 2
+guid: c7f7f5b802fb25c4898b46ba615a76a9
+timeCreated: 1511448040
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: skelentongroup
+    100002: Slime
+    100004: //RootNode
+    100006: Slime_back
+    100008: Slime_head
+    100010: Slime_Jaw
+    100012: Slime_L_arm
+    100014: Slime_L_Eye
+    100016: Slime_L_eye_mesh
+    100018: Slime_L_hand
+    100020: Slime_L_lowerarm
+    100022: Slime_Lower
+    100024: Slime_middle_jaw
+    100026: Slime_R_arm
+    100028: Slime_R_Eye
+    100030: Slime_R_eye_mesh
+    100032: Slime_R_hand
+    100034: Slime_R_lowerarm
+    100036: Slime_Spine
+    100038: Slime_Tail
+    100040: Slime_Top_jaw
+    100042: Slime_torso
+    100044: Slimebody_mesh
+    400000: skelentongroup
+    400002: //RootNode
+    400004: Slime
+    400006: Slime_back
+    400008: Slime_head
+    400010: Slime_Jaw
+    400012: Slime_L_arm
+    400014: Slime_L_Eye
+    400016: Slime_L_eye_mesh
+    400018: Slime_L_hand
+    400020: Slime_L_lowerarm
+    400022: Slime_Lower
+    400024: Slime_middle_jaw
+    400026: Slime_R_arm
+    400028: Slime_R_Eye
+    400030: Slime_R_eye_mesh
+    400032: Slime_R_hand
+    400034: Slime_R_lowerarm
+    400036: Slime_Spine
+    400038: Slime_Tail
+    400040: Slime_Top_jaw
+    400042: Slime_torso
+    400044: Slimebody_mesh
+    4300000: Slime_L_eye_mesh
+    4300002: Slime_R_eye_mesh
+    4300004: Slimebody_mesh
+    9500000: //RootNode
+    13700000: Slime_L_eye_mesh
+    13700002: Slime_R_eye_mesh
+    13700004: Slimebody_mesh
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

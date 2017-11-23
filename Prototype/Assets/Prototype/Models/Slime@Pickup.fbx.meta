@@ -1,65 +1,48 @@
 fileFormatVersion: 2
-guid: 329fa1d7202bac447b7d16132e552827
-timeCreated: 1510322105
+guid: 5318cd8e2bbe91e4a84fb493a9964db7
+timeCreated: 1511448039
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
     100000: //RootNode
-    100002: back
-    100004: head
-    100006: Jaw
-    100008: L_arm
-    100010: L_Eye
-    100012: L_eye_mesh
-    100014: L_hand
-    100016: L_lowerarm
-    100018: Lower
-    100020: Master_controller
-    100022: middle_jaw
-    100024: R_arm
-    100026: R_Eye
-    100028: R_eye_mesh
-    100030: R_hand
-    100032: R_lowerarm
-    100034: skelentongroup
-    100036: Slime
-    100038: Slimebody_mesh
-    100040: Spine
-    100042: Tail
-    100044: Top_jaw
-    100046: torso
+    100002: Slime_back
+    100004: Slime_head
+    100006: Slime_Jaw
+    100008: Slime_L_arm
+    100010: Slime_L_Eye
+    100012: Slime_L_hand
+    100014: Slime_L_lowerarm
+    100016: Slime_Lower
+    100018: Slime_middle_jaw
+    100020: Slime_R_arm
+    100022: Slime_R_Eye
+    100024: Slime_R_hand
+    100026: Slime_R_lowerarm
+    100028: Slime_Spine
+    100030: Slime_Tail
+    100032: Slime_Top_jaw
+    100034: Slime_torso
     400000: //RootNode
-    400002: back
-    400004: head
-    400006: Jaw
-    400008: L_arm
-    400010: L_Eye
-    400012: L_eye_mesh
-    400014: L_hand
-    400016: L_lowerarm
-    400018: Lower
-    400020: Master_controller
-    400022: middle_jaw
-    400024: R_arm
-    400026: R_Eye
-    400028: R_eye_mesh
-    400030: R_hand
-    400032: R_lowerarm
-    400034: skelentongroup
-    400036: Slime
-    400038: Slimebody_mesh
-    400040: Spine
-    400042: Tail
-    400044: Top_jaw
-    400046: torso
-    4300000: L_eye_mesh
-    4300002: R_eye_mesh
-    4300004: Slimebody_mesh
+    400002: Slime_back
+    400004: Slime_head
+    400006: Slime_Jaw
+    400008: Slime_L_arm
+    400010: Slime_L_Eye
+    400012: Slime_L_hand
+    400014: Slime_L_lowerarm
+    400016: Slime_Lower
+    400018: Slime_middle_jaw
+    400020: Slime_R_arm
+    400022: Slime_R_Eye
+    400024: Slime_R_hand
+    400026: Slime_R_lowerarm
+    400028: Slime_Spine
+    400030: Slime_Tail
+    400032: Slime_Top_jaw
+    400034: Slime_torso
+    7400000: Take 001
     9500000: //RootNode
-    13700000: L_eye_mesh
-    13700002: R_eye_mesh
-    13700004: Slimebody_mesh
   materials:
     importMaterials: 1
     materialName: 0
