@@ -26281,21 +26281,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 95145336798344372, guid: 8bc85636a530b2740ba9a8f73a6d538b,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 95145336798344372, guid: 8bc85636a530b2740ba9a8f73a6d538b,
-        type: 2}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 0d0c7b084c464154fa0b357df542849d, type: 2}
-    - target: {fileID: 95145336798344372, guid: 8bc85636a530b2740ba9a8f73a6d538b,
-        type: 2}
-      propertyPath: m_Avatar
-      value: 
-      objectReference: {fileID: 9000000, guid: c7f7f5b802fb25c4898b46ba615a76a9, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8bc85636a530b2740ba9a8f73a6d538b, type: 2}
   m_IsPrefabParent: 0
