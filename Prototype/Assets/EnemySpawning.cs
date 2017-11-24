@@ -12,7 +12,7 @@ public class EnemySpawning : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		spawn.Set(spawnX, 2.0f, 0.0f);
+		spawn.Set(spawnX, 0.0f, 0.0f);
 		StartCoroutine (SpawnBaby ());
 		StartCoroutine (SpawnTank ());
 	}
