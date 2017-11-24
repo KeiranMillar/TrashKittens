@@ -10,6 +10,7 @@ public class GameUI : MonoBehaviour
 {
 	// Public Variables
 	public Text resourceCounter;
+	public Text upgradeResourceCounter;
 	public GameObject drillObject;
 
 	// PrivateVariables
@@ -20,5 +21,6 @@ public class GameUI : MonoBehaviour
 	{
 		drillResource = drillObject.GetComponent<ResourceCollection>().resources;
 		resourceCounter.text = drillResource.ToString();
+		upgradeResourceCounter.text = drillResource.ToString ();
 	}
 }

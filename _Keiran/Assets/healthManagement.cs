@@ -12,6 +12,9 @@ public class healthManagement : MonoBehaviour {
 	public Slider healthBar;
 	public bool healthDrain = false;
 	private GameObject drill;
+	public Image fill;
+	public Sprite greenFill;
+	public Sprite redFill;
 
 	// Use this for initialization
 	void Start () 
@@ -31,6 +34,16 @@ public class healthManagement : MonoBehaviour {
 		if (healthDrain == true)
 		{
 			currentHealth -= 0.25f;
+		}
+
+		// Change healthbar colour dependant on health
+		if (currentHealth <= 25.0f) 
+		{
+			fill.sprite = redFill;
+		}
+		if (currentHealth > 25.0f) 
+		{
+			fill.sprite = greenFill;
 		}
 	}
 

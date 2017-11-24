@@ -1171,7 +1171,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1640845621}
-        m_MethodName: loadPrototype
+        m_MethodName: loadPrototype2D
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2035,6 +2035,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenuScene: 0
   prototypeScene: 1
+  prototypeScene2D: 2
+  prototypeScene3D: 3
 --- !u!4 &1640845622
 Transform:
   m_ObjectHideFlags: 0
