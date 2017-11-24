@@ -14,6 +14,7 @@ public class EnemyCollisionSettings : MonoBehaviour {
 		if (allowEnemyOnEnemyCollision == false) 
 		{
 			Physics.IgnoreLayerCollision (9, 9, true);
+			Physics2D.IgnoreLayerCollision (9, 9, true);
 		}
 	}
 }

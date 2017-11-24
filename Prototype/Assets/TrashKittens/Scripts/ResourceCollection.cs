@@ -13,7 +13,7 @@ public class ResourceCollection : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		Debug.Log("Resources = " + resources.ToString());
+		//Debug.Log("Resources = " + resources.ToString());
 	}
 
 	// Update is called once per frame
@@ -22,7 +22,7 @@ public class ResourceCollection : MonoBehaviour
 		if (collectionType == resourceCollectionType.Constant) 
 		{
 			resources += resourcesPerSec * resourceModifier * Time.deltaTime;
-			Debug.Log ("Resources = " + resources.ToString ());
+			//Debug.Log ("Resources = " + resources.ToString ());
 		} 
 		else if (collectionType == resourceCollectionType.Periodical)
 		{
@@ -30,7 +30,7 @@ public class ResourceCollection : MonoBehaviour
 			{
 				resources += resourcesPerSec * resourceModifier;
 				lastUpdate = Time.time;
-				Debug.Log ("Resources = " + resources.ToString ());
+				//Debug.Log ("Resources = " + resources.ToString ());
 			}
 		}
 	}

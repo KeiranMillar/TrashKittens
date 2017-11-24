@@ -69,6 +69,7 @@ namespace UnityStandardAssets._2D
 			thisPos_ = transform.position;
 			Vector3 mousePosition = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, distance_);        
 			Vector3 objPosition = Camera.main.ScreenToWorldPoint (mousePosition);
+			objPosition.z = transform.position.z;
 			transform.position = objPosition;
 		}
 
@@ -174,18 +175,18 @@ namespace UnityStandardAssets._2D
 			}
 
 			// teleport the alien to the right side of the screen if it's outside the left side screen boundries
-			if (this.transform.position.x < -45.0f) {
+			if (this.transform.position.x < -270.0f) {
 				enterPosition_ = this.transform.position;
-				enterPosition_.x = 42.0f;
+				enterPosition_.x = 270.0f;
 
 				enterRotation_ = this.transform.rotation;
 
 				this.transform.SetPositionAndRotation (enterPosition_, enterRotation_);
 			}
 			// teleport the alien to the left side of the screen if it's outside the right side screen boundries
-			else if (this.transform.position.x > 45.0f) {
+			else if (this.transform.position.x > 270.0f) {
 				enterPosition_ = this.transform.position;
-				enterPosition_.x = -42.0f;
+				enterPosition_.x = -270.0f;
 
 				enterRotation_ = this.transform.rotation;
 
