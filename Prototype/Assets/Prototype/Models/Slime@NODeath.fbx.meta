@@ -70,7 +70,7 @@ ModelImporter:
     - serializedVersion: 16
       name: NODeath
       takeName: Take 001
-      firstFrame: 9
+      firstFrame: 11.3
       lastFrame: 33
       wrapMode: 0
       orientationOffsetY: 0
