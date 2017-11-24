@@ -881,6 +881,7 @@ MonoBehaviour:
   collisionLayer:
     serializedVersion: 2
     m_Bits: 256
+  deathPos: 125
 --- !u!137 &137656989922548136
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
