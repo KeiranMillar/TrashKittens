@@ -398,10 +398,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4503965618025806}
-  - component: {fileID: 95237101046590030}
   - component: {fileID: 114577871405466640}
   - component: {fileID: 50053214163336786}
   - component: {fileID: 61593871881109670}
+  - component: {fileID: 95145336798344372}
   m_Layer: 9
   m_Name: PrototypeEnemy2D
   m_TagString: Enemy
@@ -817,7 +817,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 1}
   m_EdgeRadius: 0
---- !u!95 &95237101046590030
+--- !u!95 &95145336798344372
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -826,7 +826,7 @@ Animator:
   m_GameObject: {fileID: 1929230483903220}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0d0c7b084c464154fa0b357df542849d, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5fc43f0c4b413534ba12c51c0e5e5f6f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
