@@ -10,9 +10,9 @@ public class ClickOnDrill : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-
+		
 	}
-
+	
 	// Update is called once per frame
 	void Update () 
 	{
@@ -23,7 +23,7 @@ public class ClickOnDrill : MonoBehaviour {
 	void OnMouseDown()
 	{
 		ResourceCollection resourcesScript = drill.GetComponent<ResourceCollection>();
-		HealthbarPlaceholderScript healthScript = drill.GetComponent<HealthbarPlaceholderScript> ();
+		healthManagement healthScript = drill.GetComponent<healthManagement> ();
 		float resources = resourcesScript.resources;
 		// Do something
 		//Debug.Log ("Click");
@@ -32,7 +32,7 @@ public class ClickOnDrill : MonoBehaviour {
 			resources -= price;
 			resourcesScript.resourceModifier *= 2;
 			price *= 2;
-			healthScript.health = 100;
+			healthScript.currentHealth = 100;
 		} 
 		else 
 		{

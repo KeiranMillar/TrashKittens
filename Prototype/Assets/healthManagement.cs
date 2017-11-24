@@ -10,10 +10,11 @@ public class healthManagement : MonoBehaviour {
 	public float maxHealth = 100;
 	public float upgradePrice = 5;
 	public Slider healthBar;
-	public Text upgradePriceDisplay;
-
+	public bool healthDrain = false;
 	private GameObject drill;
-	float lastUpdate = 0.0f;
+	public Image fill;
+	public Sprite greenFill;
+	public Sprite redFill;
 
 	// Use this for initialization
 	void Start () 
@@ -29,20 +30,20 @@ public class healthManagement : MonoBehaviour {
 		{
 			DrillDead ();
 		}
-		upgradePriceDisplay.text = upgradePrice.ToString();
-	}
-
-
-	// Check if there is an object colliding with the drill
-	// if its an enemy then do damage to the drill
-	void OnCollisionStay(Collision coll)
-	{
-		if ((coll.gameObject.tag == "Enemy") && ((Time.time - lastUpdate) >= 1.0f))
+		// drains health at a constant rate for testing purposes
+		if (healthDrain == true)
 		{
-			currentHealth -= 1.0f;
-			//Debug.Log ("Drill is taking damage");
-			//coll.gameObject.SetActive (false);
-			lastUpdate = Time.time;
+			currentHealth -= 0.25f;
+		}
+
+		// Change healthbar colour dependant on health
+		if (currentHealth <= 25.0f) 
+		{
+			fill.sprite = redFill;
+		}
+		if (currentHealth > 25.0f) 
+		{
+			fill.sprite = greenFill;
 		}
 	}
 

@@ -12,7 +12,7 @@ public class HealthbarPlaceholderScript : MonoBehaviour
 	// public variables
 	public float health = 100;
 	public Slider healthbarSlider;
-
+	
 	// Update is called once per frame
 	void Update () 
 	{
