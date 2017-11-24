@@ -38043,7 +38043,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d6913c73e8a6c04f822b56c7feaedaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawn: {x: 265, y: 0, z: 0}
+  spawn: {x: 0, y: 0, z: 0}
+  spawnX: 300
   babySpawnRate: 5
   tankSpawnRate: 7
 --- !u!114 &1871525062
