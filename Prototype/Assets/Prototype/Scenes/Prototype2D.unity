@@ -1235,7 +1235,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &51724167
 Animator:
   serializedVersion: 3
@@ -1358,7 +1358,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 51724166}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 36.85, y: 7.6, z: 0}
+  m_LocalPosition: {x: 174.9, y: 7.6, z: 0}
   m_LocalScale: {x: 11.3, y: 10.65, z: 3.8}
   m_Children:
   - {fileID: 176330513}
@@ -1847,10 +1847,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 105657982}
-  - component: {fileID: 105657984}
   - component: {fileID: 105657983}
-  - component: {fileID: 105657980}
   - component: {fileID: 105657979}
+  - component: {fileID: 105657980}
+  - component: {fileID: 105657981}
   m_Layer: 0
   m_Name: Drill
   m_TagString: Untagged
@@ -1938,18 +1938,47 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!65 &105657980
-BoxCollider:
+--- !u!61 &105657980
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 105657978}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.99999994, y: 1.0000001, z: 1}
-  m_Center: {x: 0, y: 0, z: -0.000000007450581}
+  m_Size: {x: 0.8, y: 1.5}
+  m_EdgeRadius: 0
+--- !u!114 &105657981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 105657978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f15ce57b5b9364baf2c5f4c136f8e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 100
+  maxHealth: 100
+  upgradePrice: 5
+  healthBar: {fileID: 1182672456}
+  upgradePriceDisplay: {fileID: 1260385633}
 --- !u!4 &105657982
 Transform:
   m_ObjectHideFlags: 0
@@ -1979,22 +2008,6 @@ MonoBehaviour:
   resourcesPerSec: 1
   resourceModifier: 1
   collectionType: 0
---- !u!114 &105657984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 105657978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3e9b6ed4f322074eafe906a219a5213, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHealth: 100
-  maxHealth: 100
-  upgradePrice: 5
-  healthBar: {fileID: 1182672456}
-  upgradePriceDisplay: {fileID: 1260385633}
 --- !u!1 &112797686
 GameObject:
   m_ObjectHideFlags: 0
@@ -3800,15 +3813,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 329fa1d7202bac447b7d16132e552827, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.06
+      value: -0.13
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 329fa1d7202bac447b7d16132e552827, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.25
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 329fa1d7202bac447b7d16132e552827, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.7
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 329fa1d7202bac447b7d16132e552827, type: 3}
       propertyPath: m_LocalRotation.x
@@ -11789,7 +11802,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 105657984}
+      - m_Target: {fileID: 0}
         m_MethodName: Upgrade
         m_Mode: 1
         m_Arguments:
@@ -12170,6 +12183,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenuScene: 0
   prototypeScene: 1
+  prototypeScene2D: 2
+  prototypeScene3D: 3
 --- !u!4 &645014759
 Transform:
   m_ObjectHideFlags: 0
@@ -17309,18 +17324,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &848882482
-BoxCollider:
+--- !u!61 &848882482
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 848882481}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.4999997}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5, y: 1, z: 5}
-  m_Center: {x: 0, y: -0.4999997, z: 0}
+  m_Size: {x: 3.9999998, y: 1}
+  m_EdgeRadius: 0
 --- !u!23 &848882483
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21984,7 +22012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f737a1e21b113794ab79e27c235a607e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourceCounter: {fileID: 0}
+  resourceCounter: {fileID: 131323760}
   drillObject: {fileID: 105657978}
 --- !u!4 &1053007954
 Transform:
@@ -37692,7 +37720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa929d24f212cfc44b6a3fc9dba93063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pooledObjectTank: {fileID: 1816051900544678, guid: 8319a2913ca41b741a04d3908b4a2032,
+  pooledObjectTank: {fileID: 1929230483903220, guid: 8bc85636a530b2740ba9a8f73a6d538b,
     type: 2}
   pooledAmount: 0
   willGrow: 0
@@ -37708,7 +37736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 171b9337ed3c2f143b697eade01e7167, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pooledObjectBaby: {fileID: 1816051900544678, guid: 8319a2913ca41b741a04d3908b4a2032,
+  pooledObjectBaby: {fileID: 1929230483903220, guid: 8bc85636a530b2740ba9a8f73a6d538b,
     type: 2}
   pooledAmount: 4
   willGrow: 0
@@ -42015,7 +42043,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2088158228}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.7, y: 88.4, z: -392.4}
+  m_LocalPosition: {x: 0, y: 90, z: -392}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 496437303}

@@ -17,6 +17,7 @@ public class EnemyController : MonoBehaviour {
 	private Vector3 forceToApply;
 	private Animator anim;
 	private Rigidbody enemyRigidbody;
+	private Collision lastCollision;
 
 	// Use this for initialization
 	void Start () 
@@ -32,6 +33,15 @@ public class EnemyController : MonoBehaviour {
 	// fixed update, put physics related things here
 	void FixedUpdate()
 	{
+		// if the enemy is in contact with ground, check if they are moving over the lethal velocity
+		if (lastCollision != null) 
+		{
+			if ((lastCollision.gameObject.layer == 8) && (alive == true))
+			{
+				enemyRigidbody.velocity = new Vector3 ((-1 * speed), enemyRigidbody.velocity.y, 0);
+			}
+		}
+
 		// if the enemy is being swiped, force applied calculated in update function
 		if (grabbed == true) 
 		{
@@ -72,7 +82,7 @@ public class EnemyController : MonoBehaviour {
 						}
 						break;
 					case TouchPhase.Ended:
-						if (grabbed = true) 
+						if (grabbed == true) 
 						{
 							grabbed = false;
 						}
@@ -86,6 +96,7 @@ public class EnemyController : MonoBehaviour {
 	void OnCollisionEnter(Collision coll)
 	{
 		// for hitting the ground (ground layer is layer 8)
+		lastCollision = coll;
 		if (coll.gameObject.layer == 8) 
 		{
 			grounded = true;
@@ -102,22 +113,10 @@ public class EnemyController : MonoBehaviour {
 		}
 	}
 
-	// for continued contact with something (the floor mostly, maybe the drill as well)
-	void OnCollisionStay(Collision coll)
+	void OnCollisionExit(Collision collisionInfo)
 	{
-		if (coll.gameObject.layer == 8)
-		{
-			Debug.Log ("Contact with floor");
-			if (alive == true) 
-			{
-				enemyRigidbody.velocity = new Vector3 ((-1 * speed), enemyRigidbody.velocity.y, 0);
-			}
-		}
-	}
-
-	void OnCollisionExit(Collision coll)
-	{
-		if (coll.gameObject.layer == 8) 
+		lastCollision = null;
+		if (collisionInfo.gameObject.layer == 8) 
 		{
 			grounded = false;
 		}

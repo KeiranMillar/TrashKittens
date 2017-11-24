@@ -11,6 +11,8 @@ public class SceneLoader : MonoBehaviour {
 
 	public int mainMenuScene;
 	public int prototypeScene;
+	public int prototypeScene2D;
+	public int prototypeScene3D;
 	
 	public void loadMainMenu ()
 	{
@@ -20,5 +22,15 @@ public class SceneLoader : MonoBehaviour {
 	public void loadPrototype ()
 	{
 		SceneManager.LoadScene (prototypeScene, LoadSceneMode.Single);
+	}
+
+	public void loadPrototype2D ()
+	{
+		SceneManager.LoadScene (prototypeScene2D, LoadSceneMode.Single);
+	}
+
+	public void loadPrototype3D ()
+	{
+		SceneManager.LoadScene (prototypeScene3D, LoadSceneMode.Single);
 	}
 }

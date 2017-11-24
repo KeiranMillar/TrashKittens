@@ -1826,9 +1826,7 @@ MonoBehaviour:
   resources: 0
   resourcesPerSec: 1
   resourceModifier: 1
-  upgradePrice: 5
   collectionType: 0
-  upgradePriceDisplay: {fileID: 604386073}
 --- !u!114 &105657984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11901,6 +11899,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenuScene: 0
   prototypeScene: 1
+  prototypeScene2D: 3
+  prototypeScene3D: 4
 --- !u!4 &645014759
 Transform:
   m_ObjectHideFlags: 0
@@ -21715,8 +21715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f737a1e21b113794ab79e27c235a607e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainResourceCounter: {fileID: 131323760}
-  upgradeResourceCounter: {fileID: 482326503}
+  resourceCounter: {fileID: 131323760}
   drillObject: {fileID: 105657978}
 --- !u!4 &1053007954
 Transform:

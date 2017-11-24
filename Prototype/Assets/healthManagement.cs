@@ -40,7 +40,7 @@ public class healthManagement : MonoBehaviour {
 		if ((coll.gameObject.tag == "Enemy") && ((Time.time - lastUpdate) >= 1.0f))
 		{
 			currentHealth -= 1.0f;
-			Debug.Log ("Drill is taking damage");
+			//Debug.Log ("Drill is taking damage");
 			//coll.gameObject.SetActive (false);
 			lastUpdate = Time.time;
 		}
