@@ -5,14 +5,12 @@ using UnityEngine;
 public class EnemySpawning : MonoBehaviour {
 
 	public Vector3 spawn;
-    public float spawnX;
 	public float babySpawnRate = 5.0f;
 	public float tankSpawnRate = 7.0f;
 
 
 	// Use this for initialization
 	void Start () {
-		spawn.Set(spawnX, 0.0f, 0.0f);
 		StartCoroutine (SpawnBaby ());
 		StartCoroutine (SpawnTank ());
 	}
