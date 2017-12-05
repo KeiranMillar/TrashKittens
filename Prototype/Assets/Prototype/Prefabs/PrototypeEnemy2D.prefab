@@ -863,8 +863,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   swipeForceMultiplier: 2
-  speed: 10
-  killVelocity: 0.5
+  speed: 20
+  killVelocity: 160
   dieOnAttack: 0
   gravScale: 10
   collisionLayer:
