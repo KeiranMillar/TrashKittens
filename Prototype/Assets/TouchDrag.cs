@@ -3,50 +3,53 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // Script for proper touch input flicking.
-// Currently setup for 1 touch, can be changed if needed.
+// Script is a work in progress and is non-fuctional
+// Based on the old code used for enemy touch detection, which it is intended to replace.
+// Touch response is the domain of the dragable object class and it's derivatives.
 
 public class TouchDrag : MonoBehaviour 
 {
 	Vector2 forceToApply;
 
-	public Rigidbody2D enemyRigidbody;
+	private DragableObject touchedObject;
+	private Vector3 touchWorldPos;
 
 	// Use this for initialization
 	void Start () 
 	{
-		//enemyRigidbody = null;
-		forceToApply = new Vector2(0.0f, 0.0f);
+		
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		if (Input.touchCount > 0) 
-		{
-			Touch touch = Input.GetTouch(0);
-			switch (touch.phase) 
-			{
-			// touch start
-			// uses a raycast to get the rigidbody associated with an enemy
+		// touch input
+		if (Input.touchCount > 0) {
+			Touch touch = Input.GetTouch (0);
+			RaycastHit hit;
+			int collisionNumber;
+			Collider2D[] touchedColliders = new Collider2D[10];
+			float distance = 30;
+			switch (touch.phase) {
 			case TouchPhase.Began:
-				
-				break;
-			// finger drag
-			// moves the rigid body to the touch position
-			case TouchPhase.Moved:
-				if (enemyRigidbody != null)
+				// get the touches coords in world space
+				touchWorldPos = Camera.main.ScreenToWorldPoint (new Vector3 (touch.position.x, touch.position.y, distance));
+				collisionNumber = Physics2D.OverlapCircleNonAlloc(new Vector2 (touchWorldPos.x, touchWorldPos.y), (touch.radius + touch.radiusVariance), touchedColliders);
+				if (collisionNumber > 0)
 				{
-					forceToApply = touch.deltaPosition;
-					enemyRigidbody.AddForce (forceToApply);
-					Debug.Log ("Moving rigidbody with touch");
+					Debug.Log ("New Touch Input Response");
+
 				}
 				break;
-			// touch ended
-			// drop the enemy with its current velocity
+			case TouchPhase.Moved:
+				// sets the force to be applied to the enemy
+				// calculate the force and use the DragableObject to apply it to the object.
+				break;
 			case TouchPhase.Ended:
-				enemyRigidbody = null;
+				// set the object as not grabbed
 				break;
 			}
 		}
 	}
+
 }
