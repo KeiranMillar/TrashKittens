@@ -1201,7 +1201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f737a1e21b113794ab79e27c235a607e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainResourceCounter: {fileID: 114716140428185260}
+  resourceCounter: {fileID: 0}
   upgradeResourceCounter: {fileID: 114264117309758794}
   drillObject: {fileID: 0}
 --- !u!114 &114495515976778514
