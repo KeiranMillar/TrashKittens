@@ -5,15 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Prototype/Scenes/PrototypeMainMenu.unity
+  - enabled: 1
+    path: Assets/Scenes/PrototypeMainMenu.unity
     guid: 27e7f1cda44c6bd45b6dde10cfa0860e
   - enabled: 0
-    path: Assets/Prototype/Scenes/Prototype.unity
+    path: Assets/Scenes/Prototype.unity
     guid: fa3344696ac80cf4abf2a50dde7e7b2d
   - enabled: 1
-    path: Assets/Prototype/Scenes/Prototype2D.unity
+    path: Assets/Scenes/Prototype2D.unity
     guid: 5b8824a2ab2af624182826e8f3ca23ae
   - enabled: 0
-    path: Assets/Prototype/Scenes/Prototype3D.unity
+    path: Assets/Scenes/Prototype3D.unity
     guid: 2ece27adbf6f90842b53bac30a502c3b

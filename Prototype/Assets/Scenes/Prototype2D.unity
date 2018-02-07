@@ -1662,9 +1662,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenuScene: 0
-  prototypeScene: 1
-  prototypeScene2D: 2
-  prototypeScene3D: 3
+  prototypeScene: 12
+  prototypeScene2D: 1
+  prototypeScene3D: 12
 --- !u!4 &645014759
 Transform:
   m_ObjectHideFlags: 0
