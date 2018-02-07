@@ -6,7 +6,7 @@ public class ObjectPoolingBaby : MonoBehaviour {
 
 	public static ObjectPoolingBaby current;
 	public GameObject pooledObjectBaby;
-	public int pooledAmount = 12;
+	public int [,] pooledAmount = gameObject.GetComponent<EnemySpawning> ().spawnLimit;
 	public bool willGrow = true;
 
 	public List<GameObject> pooledObjectsBaby;
@@ -19,7 +19,7 @@ public class ObjectPoolingBaby : MonoBehaviour {
 	void Start () 
 	{
 		pooledObjectsBaby = new List<GameObject> ();
-		for (int i = 0; i < pooledAmount; i++) 
+		for (int i = 0; i < pooledAmount[pooledAmount.GetLength(),0]; i++) 
 		{
 			GameObject obj = (GameObject)Instantiate (pooledObjectBaby);
 			obj.SetActive (false);

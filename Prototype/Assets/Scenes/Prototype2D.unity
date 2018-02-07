@@ -3719,6 +3719,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pooledObjectBaby: {fileID: 1929230483903220, guid: 8bc85636a530b2740ba9a8f73a6d538b,
     type: 2}
+  poolScript: {fileID: 0}
   pooledAmount: 4
   willGrow: 0
   pooledObjectsBaby: []
@@ -3734,8 +3735,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawn: {x: 325, y: 0, z: 0}
-  babySpawnRate: 5
-  tankSpawnRate: 7
+  babySpawnRateMin: 1
+  babySpawnRateMax: 2
+  tankSpawnRateMin: 0
+  tankSpawnRateMax: 7
 --- !u!114 &1871525062
 MonoBehaviour:
   m_ObjectHideFlags: 0
