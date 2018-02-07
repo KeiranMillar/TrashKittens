@@ -24,9 +24,14 @@ public class SceneLoader : MonoBehaviour {
 		SceneManager.LoadScene (prototypeScene, LoadSceneMode.Single);
 	}
 
-	public void loadPrototype2D ()
+	public IEnumerator loadPrototype2D (string sceneName)
 	{
-		SceneManager.LoadScene (prototypeScene2D, LoadSceneMode.Single);
+		AsyncOperation loadingOperation = SceneManager.LoadSceneAsync (sceneName);
+
+		while (!loadingOperation.isDone) 
+		{
+			yield return null;
+		}
 	}
 
 	public void loadPrototype3D ()
