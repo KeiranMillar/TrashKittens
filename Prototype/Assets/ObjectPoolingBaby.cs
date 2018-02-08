@@ -6,8 +6,9 @@ public class ObjectPoolingBaby : MonoBehaviour {
 
 	public static ObjectPoolingBaby current;
 	public GameObject pooledObjectBaby;
-	public int [,] pooledAmount = gameObject.GetComponent<EnemySpawning> ().spawnLimit;
 	public bool willGrow = true;
+	//The size of the array is the number of waves
+	int [] pooledAmount = new int[2];
 
 	public List<GameObject> pooledObjectsBaby;
 
@@ -15,11 +16,17 @@ public class ObjectPoolingBaby : MonoBehaviour {
 	void Awake()
 	{
 		current = this;
+		int[,] tempSpawns = this.gameObject.GetComponent<EnemySpawning> ().spawnLimit;
+
+		for (int i = 0; i < (tempSpawns.GetLength(0)); i++) 
+		{
+			pooledAmount[i] = tempSpawns[i, 0];
+		}
 	}
 	void Start () 
 	{
 		pooledObjectsBaby = new List<GameObject> ();
-		for (int i = 0; i < pooledAmount[pooledAmount.GetLength(),0]; i++) 
+		for (int i = 0; i < pooledAmount[(pooledAmount.GetLength(0)- 1)]; i++) 
 		{
 			GameObject obj = (GameObject)Instantiate (pooledObjectBaby);
 			obj.SetActive (false);

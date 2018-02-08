@@ -5,7 +5,9 @@ using UnityEngine;
 public class EnemySpawning : MonoBehaviour {
 
 	public Vector3 spawn;
-	public int [,] spawnLimit = new int [2,2] {{5, 2},{7 , 3}};
+	public int [,] spawnLimit = new int [2,2] {{5, 2},
+											   {7, 3}};
+
 	public float babySpawnRateMin = 2.0f;
 	public float babySpawnRateMax = 4.0f;
 
