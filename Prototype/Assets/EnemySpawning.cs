@@ -6,6 +6,7 @@ public class EnemySpawning : MonoBehaviour {
 
 	public GameStateManager stateManager;
 	public Vector3 spawn;
+	// Game state enum
 	//Each value in this 2D array corresponds to the 
 	//number of enemies spawning per wave.
 	//So, for the first wave, 5 babies and 2 tanks
