@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class EnemySpawning : MonoBehaviour {
 
+	public GameStateManager stateManager;
 	public Vector3 spawn;
+	//Each value in this 2D array corresponds to the 
+	//number of enemies spawning per wave.
+	//So, for the first wave, 5 babies and 2 tanks
 	public int [,] spawnLimit = new int [2,2] {{5, 2},
 											   {7, 3}};
 
@@ -14,9 +18,11 @@ public class EnemySpawning : MonoBehaviour {
 	public float tankSpawnRateMin = 0.0f;
 	public float tankSpawnRateMax = 7.0f;
 
+	public int wave = 0;
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		StartCoroutine (SpawnBaby ());
 		StartCoroutine (SpawnTank ());
 	}
@@ -26,17 +32,20 @@ public class EnemySpawning : MonoBehaviour {
 	{
 		while (true) 
 		{
-			GameObject obj = ObjectPoolingBaby.current.GetPooledObjectBaby ();
+			while (stateManager.getState() == GameState.active) {
+				{
+					GameObject obj = ObjectPoolingBaby.current.GetPooledObjectBaby ();
 
-			if (obj == null) 
-			{
+					if (obj == null) {
 
-			} else {
-				obj.transform.position = spawn;
-				obj.transform.rotation.Set (0, 0, 0, 0);
-				obj.SetActive (true);
+					} else {
+						obj.transform.position = spawn;
+						obj.transform.rotation.Set (0, 0, 0, 0);
+						obj.SetActive (true);
+					}
+					yield return new WaitForSeconds (Random.Range (babySpawnRateMin, babySpawnRateMax));
+				}
 			}
-			yield return new WaitForSeconds (Random.Range(babySpawnRateMin, babySpawnRateMax));
 		}
 	}
 
@@ -44,17 +53,19 @@ public class EnemySpawning : MonoBehaviour {
 	{
 		while (true) 
 		{
-			GameObject obj = ObjectPoolingTank.current.GetPooledObjectTank ();
-
-			if (obj == null) 
+			while (stateManager.getState() == GameState.active) 
 			{
+				GameObject obj = ObjectPoolingTank.current.GetPooledObjectTank ();
 
-			} else {
-				obj.transform.position = spawn;
-				obj.transform.rotation.Set (0, 0, 0, 0);
-				obj.SetActive (true);
+				if (obj == null) {
+
+				} else {
+					obj.transform.position = spawn;
+					obj.transform.rotation.Set (0, 0, 0, 0);
+					obj.SetActive (true);
+				}
+				yield return new WaitForSeconds (Random.Range (tankSpawnRateMin, tankSpawnRateMax));
 			}
-			yield return new WaitForSeconds (Random.Range(tankSpawnRateMin, tankSpawnRateMax));
 		}
 	}
 }

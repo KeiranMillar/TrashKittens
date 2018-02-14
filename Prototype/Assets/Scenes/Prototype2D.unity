@@ -1461,6 +1461,11 @@ Prefab:
       propertyPath: sceneLoader
       value: 
       objectReference: {fileID: 645014758}
+    - target: {fileID: 114620471959911090, guid: ad2682600db4e744ebaf451e962e6947,
+        type: 2}
+      propertyPath: startDelayTimer
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad2682600db4e744ebaf451e962e6947, type: 2}
   m_IsPrefabParent: 0
@@ -3703,7 +3708,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pooledObjectTank: {fileID: 1929230483903220, guid: 8bc85636a530b2740ba9a8f73a6d538b,
     type: 2}
-  pooledAmount: 0
   willGrow: 0
   pooledObjectsTank: []
 --- !u!114 &1871525060
@@ -3719,8 +3723,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pooledObjectBaby: {fileID: 1929230483903220, guid: 8bc85636a530b2740ba9a8f73a6d538b,
     type: 2}
-  poolScript: {fileID: 0}
-  pooledAmount: 4
   willGrow: 0
   pooledObjectsBaby: []
 --- !u!114 &1871525061
@@ -3734,11 +3736,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d6913c73e8a6c04f822b56c7feaedaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateManager: {fileID: 303840707}
   spawn: {x: 325, y: 0, z: 0}
   babySpawnRateMin: 1
   babySpawnRateMax: 2
   tankSpawnRateMin: 0
   tankSpawnRateMax: 7
+  wave: 0
 --- !u!114 &1871525062
 MonoBehaviour:
   m_ObjectHideFlags: 0
