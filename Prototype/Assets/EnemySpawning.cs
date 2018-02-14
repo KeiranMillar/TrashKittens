@@ -24,6 +24,7 @@ public class EnemySpawning : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
+		wave = 1;
 		StartCoroutine (SpawnBaby ());
 		StartCoroutine (SpawnTank ());
 	}
@@ -33,12 +34,12 @@ public class EnemySpawning : MonoBehaviour {
 	{
 		while (true) 
 		{
-			while (stateManager.getState() == GameState.active) {
+			while (stateManager.getState () == GameState.active) {
 				{
 					GameObject obj = ObjectPoolingBaby.current.GetPooledObjectBaby ();
 
 					if (obj == null) {
-
+					
 					} else {
 						obj.transform.position = spawn;
 						obj.transform.rotation.Set (0, 0, 0, 0);
@@ -47,19 +48,18 @@ public class EnemySpawning : MonoBehaviour {
 					yield return new WaitForSeconds (Random.Range (babySpawnRateMin, babySpawnRateMax));
 				}
 			}
+			yield return new WaitForSeconds (Random.Range (babySpawnRateMin, babySpawnRateMax));
 		}
 	}
 
 	IEnumerator SpawnTank () 
 	{
-		while (true) 
-		{
-			while (stateManager.getState() == GameState.active) 
-			{
+		while (true) {
+			while (stateManager.getState () == GameState.active) {
 				GameObject obj = ObjectPoolingTank.current.GetPooledObjectTank ();
 
 				if (obj == null) {
-
+				
 				} else {
 					obj.transform.position = spawn;
 					obj.transform.rotation.Set (0, 0, 0, 0);
@@ -67,6 +67,7 @@ public class EnemySpawning : MonoBehaviour {
 				}
 				yield return new WaitForSeconds (Random.Range (tankSpawnRateMin, tankSpawnRateMax));
 			}
+			yield return new WaitForSeconds (Random.Range (tankSpawnRateMin, tankSpawnRateMax));
 		}
 	}
 }
