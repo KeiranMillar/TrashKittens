@@ -5,13 +5,13 @@ PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 12
   productGUID: 2221e83478b293745a37e6c39691a44f
-  AndroidProfiler: 0
+  AndroidProfiler: 1
   defaultScreenOrientation: 3
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: Prototype
+  productName: PrototypePerformanceTest
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -145,7 +145,7 @@ PlayerSettings:
   targetPixelDensity: 0
   resolutionScalingMode: 0
   applicationIdentifier:
-    Android: com.TrashKittens.MineatonPrototype
+    Android: com.TrashKittens.MineatonPrototypePerformanceTest
   buildNumber: {}
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
