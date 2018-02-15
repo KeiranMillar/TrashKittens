@@ -612,7 +612,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1929230483903220}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 23.2, z: 0}
   m_LocalScale: {x: 22.6, y: 21.3, z: 7.6}
   m_Children:
   - {fileID: 4835702312725948}
@@ -962,7 +962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b87f681b4e40fb145997337da0fbc60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swipeForceMultiplier: 150
+  swipeForceMultiplier: 200
   speed: 20
   killVelocity: 160
   dieOnAttack: 0
