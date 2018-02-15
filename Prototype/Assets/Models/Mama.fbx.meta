@@ -1,0 +1,163 @@
+fileFormatVersion: 2
+guid: 6225acac1b725de42b979abd0994f7ab
+timeCreated: 1518697580
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Head
+    100002: Head_Top
+    100004: Jaw
+    100006: JawTip
+    100008: joint1
+    100010: joint10
+    100012: joint2
+    100014: joint5
+    100016: joint6
+    100018: joint7
+    100020: joint8
+    100022: joint9
+    100024: L_Clavical
+    100026: L_Eye
+    100028: L_Handtip
+    100030: L_lowerArm
+    100032: L_UpperArm
+    100034: L_Wrist
+    100036: LOW
+    100038: MainJaw
+    100040: //RootNode
+    100042: Mama_Body
+    100044: Mama_L_eye
+    100046: Mama_R_eye
+    100048: Mama_SharpTeeth
+    100050: Mama_teeth
+    100052: Neck
+    100054: R_Clavical
+    100056: R_Eye
+    100058: R_Handtip
+    100060: R_lowerArm
+    100062: R_UpperArm
+    100064: R_Wrist
+    100066: Upper_Jaw
+    100068: Upper_Jaw_Tip
+    400000: Head
+    400002: Head_Top
+    400004: Jaw
+    400006: JawTip
+    400008: joint1
+    400010: joint10
+    400012: joint2
+    400014: joint5
+    400016: joint6
+    400018: joint7
+    400020: joint8
+    400022: joint9
+    400024: L_Clavical
+    400026: L_Eye
+    400028: L_Handtip
+    400030: L_lowerArm
+    400032: L_UpperArm
+    400034: L_Wrist
+    400036: LOW
+    400038: MainJaw
+    400040: //RootNode
+    400042: Mama_Body
+    400044: Mama_L_eye
+    400046: Mama_R_eye
+    400048: Mama_SharpTeeth
+    400050: Mama_teeth
+    400052: Neck
+    400054: R_Clavical
+    400056: R_Eye
+    400058: R_Handtip
+    400060: R_lowerArm
+    400062: R_UpperArm
+    400064: R_Wrist
+    400066: Upper_Jaw
+    400068: Upper_Jaw_Tip
+    4300000: Mama_L_eye
+    4300002: Mama_R_eye
+    4300004: Mama_Body
+    4300006: Mama_teeth
+    4300008: Mama_SharpTeeth
+    9500000: //RootNode
+    13700000: Mama_Body
+    13700002: Mama_L_eye
+    13700004: Mama_R_eye
+    13700006: Mama_SharpTeeth
+    13700008: Mama_teeth
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
