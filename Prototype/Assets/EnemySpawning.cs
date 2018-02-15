@@ -21,53 +21,77 @@ public class EnemySpawning : MonoBehaviour {
 
 	public int wave = 0;
 
+	bool emptyField = true;
+	bool babyFinished = true;
+	bool tankFinished = true;
+
 	// Use this for initialization
 	void Start () 
 	{
 		wave = 1;
-		StartCoroutine (SpawnBaby ());
-		StartCoroutine (SpawnTank ());
 	}
-	
-	// Update is called once per frame
+
+	void Update()
+	{
+		if (stateManager.getState () == GameState.active) 
+		{
+			if (stateManager.getState () == GameState.active && emptyField == true && babyFinished == true && tankFinished == true) 
+			{
+				babyFinished = false;
+				tankFinished = false;
+				emptyField = false;
+				StartCoroutine (SpawnBaby ());
+				StartCoroutine (SpawnTank ());
+			}
+			Debug.Log (wave);
+			CheckEnemiesDead ();
+		}
+	}
+
+	void CheckEnemiesDead()
+	{
+		if(ObjectPoolingBaby.current.DeadBabies() == true && ObjectPoolingTank.current.DeadTanks() == true
+		)
+		{
+			emptyField = true;
+			wave++;
+			Debug.Log ("dumb");
+		}
+	}
+
 	IEnumerator SpawnBaby () 
 	{
-		while (true) 
+		for (int i = 0; i < spawnLimit[(wave - 1),0]; i++) 
 		{
-			while (stateManager.getState () == GameState.active) {
-				{
-					GameObject obj = ObjectPoolingBaby.current.GetPooledObjectBaby ();
+			GameObject obj = ObjectPoolingBaby.current.GetPooledObjectBaby ();
 
-					if (obj == null) {
+			if (obj == null) {
 					
-					} else {
-						obj.transform.position = spawn;
-						obj.transform.rotation.Set (0, 0, 0, 0);
-						obj.SetActive (true);
-					}
-					yield return new WaitForSeconds (Random.Range (babySpawnRateMin, babySpawnRateMax));
-				}
+			} else {
+				obj.transform.position = spawn;
+				obj.transform.rotation.Set (0, 0, 0, 0);
+				obj.SetActive (true);
 			}
-			yield return new WaitForSeconds (Random.Range (babySpawnRateMin, babySpawnRateMax));
+		yield return new WaitForSeconds (Random.Range (babySpawnRateMin, babySpawnRateMax));
 		}
+		babyFinished = true;
 	}
 
 	IEnumerator SpawnTank () 
 	{
-		while (true) {
-			while (stateManager.getState () == GameState.active) {
-				GameObject obj = ObjectPoolingTank.current.GetPooledObjectTank ();
+		for (int i = 0; i < spawnLimit[(wave - 1),1]; i++) 
+		{
+			GameObject obj = ObjectPoolingTank.current.GetPooledObjectTank ();
 
-				if (obj == null) {
+			if (obj == null) {
 				
-				} else {
-					obj.transform.position = spawn;
-					obj.transform.rotation.Set (0, 0, 0, 0);
-					obj.SetActive (true);
-				}
-				yield return new WaitForSeconds (Random.Range (tankSpawnRateMin, tankSpawnRateMax));
+			} else {
+				obj.transform.position = spawn;
+				obj.transform.rotation.Set (0, 0, 0, 0);
+				obj.SetActive (true);
 			}
 			yield return new WaitForSeconds (Random.Range (tankSpawnRateMin, tankSpawnRateMax));
 		}
+		tankFinished = true;
 	}
 }

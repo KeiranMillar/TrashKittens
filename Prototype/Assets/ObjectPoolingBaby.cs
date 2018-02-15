@@ -34,6 +34,17 @@ public class ObjectPoolingBaby : MonoBehaviour {
 		}
 	}
 
+	public bool DeadBabies()
+	{
+		for (int i = 0; i < pooledObjectsBaby.Count; i++) 
+		{
+			if (pooledObjectsBaby [i].activeInHierarchy) 
+			{
+				return false;
+			}
+		}
+		return true;
+	}
 
 	public GameObject GetPooledObjectBaby()
 	{

@@ -36,6 +36,17 @@ public class ObjectPoolingTank : MonoBehaviour {
 		}
 	}
 
+	public bool DeadTanks()
+	{
+		for (int i = 0; i < pooledObjectsTank.Count; i++) 
+		{
+			if (pooledObjectsTank [i].activeInHierarchy) 
+			{
+				return false;
+			}
+		}
+		return true;
+	}
 
 	public GameObject GetPooledObjectTank()
 	{
