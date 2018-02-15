@@ -8,7 +8,7 @@ public class ObjectPoolingTank : MonoBehaviour {
 	public GameObject pooledObjectTank;
 	public bool willGrow = true;
 	//The size of the array is the number of waves
-	int [] pooledAmount = new int[2];
+	int [] pooledAmount = new int[3];
 
 
 	public List<GameObject> pooledObjectsTank;
