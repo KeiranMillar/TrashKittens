@@ -43,7 +43,6 @@ public class EnemySpawning : MonoBehaviour {
 				StartCoroutine (SpawnBaby ());
 				StartCoroutine (SpawnTank ());
 			}
-			Debug.Log (wave);
 			CheckEnemiesDead ();
 		}
 	}
@@ -55,7 +54,6 @@ public class EnemySpawning : MonoBehaviour {
 		{
 			emptyField = true;
 			wave++;
-			Debug.Log ("dumb");
 		}
 	}
 
