@@ -10,7 +10,6 @@ public class ObjectPoolingTank : MonoBehaviour {
 	//The size of the array is the number of waves
 	int [] pooledAmount = new int[3];
 
-
 	public List<GameObject> pooledObjectsTank;
 
 	// Use this for initialization

@@ -19,6 +19,8 @@ public class EnemySpawning : MonoBehaviour {
 	public float tankSpawnRateMin = 0.0f;
 	public float tankSpawnRateMax = 7.0f;
 
+	public float tankSpawnDelay = 2.0f;
+
 	public int wave = 0;
 
 	bool emptyField = true;
@@ -54,6 +56,7 @@ public class EnemySpawning : MonoBehaviour {
 		{
 			emptyField = true;
 			wave++;
+			stateManager.WaveEnd ();
 		}
 	}
 
@@ -77,6 +80,7 @@ public class EnemySpawning : MonoBehaviour {
 
 	IEnumerator SpawnTank () 
 	{
+		yield return new WaitForSeconds (tankSpawnDelay);
 		for (int i = 0; i < spawnLimit[(wave - 1),1]; i++) 
 		{
 			GameObject obj = ObjectPoolingTank.current.GetPooledObjectTank ();
