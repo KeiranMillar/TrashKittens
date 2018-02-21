@@ -965,7 +965,7 @@ MonoBehaviour:
   hitpoints: 1
   swipeForceMultiplier: 5
   speed: 0.5
-  killVelocity: 6
+  killVelocity: 5
   dieOnAttack: 0
   gravScale: 1
   collisionLayer:

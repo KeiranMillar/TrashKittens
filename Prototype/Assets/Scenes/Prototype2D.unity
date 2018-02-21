@@ -410,6 +410,21 @@ Prefab:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224162113113729040, guid: d2efc67af5f832d449bb6f274dffc41c,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224162113113729040, guid: d2efc67af5f832d449bb6f274dffc41c,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224162113113729040, guid: d2efc67af5f832d449bb6f274dffc41c,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d2efc67af5f832d449bb6f274dffc41c, type: 2}
   m_IsPrefabParent: 0
@@ -712,7 +727,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 249, y: -370.5}
+  m_AnchoredPosition: {x: 484, y: -530.625}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &137845456
@@ -1191,7 +1206,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 249, y: -51.5}
+  m_AnchoredPosition: {x: 484, y: -74.375}
   m_SizeDelta: {x: 96, y: 96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &501829113
@@ -1634,6 +1649,11 @@ Prefab:
       propertyPath: sceneLoader
       value: 
       objectReference: {fileID: 645014758}
+    - target: {fileID: 114620471959911090, guid: ad2682600db4e744ebaf451e962e6947,
+        type: 2}
+      propertyPath: startDelayTimer
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad2682600db4e744ebaf451e962e6947, type: 2}
   m_IsPrefabParent: 0
@@ -1709,7 +1729,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 249, y: -263.5}
+  m_AnchoredPosition: {x: 484, y: -377.875}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &624410567
@@ -2157,7 +2177,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 249, y: -156.5}
+  m_AnchoredPosition: {x: 484, y: -225.125}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &764881379
@@ -4032,7 +4052,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pooledObjectTank: {fileID: 1929230483903220, guid: 8bc85636a530b2740ba9a8f73a6d538b,
     type: 2}
-  pooledAmount: 0
   willGrow: 0
   pooledObjectsTank: []
 --- !u!114 &1871525060
@@ -4048,7 +4067,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pooledObjectBaby: {fileID: 1929230483903220, guid: 8bc85636a530b2740ba9a8f73a6d538b,
     type: 2}
-  pooledAmount: 4
   willGrow: 0
   pooledObjectsBaby: []
 --- !u!114 &1871525061
@@ -4062,9 +4080,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d6913c73e8a6c04f822b56c7feaedaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   spawn: {x: 325, y: 16, z: 0}
   babySpawnRate: 5
   tankSpawnRate: 7
+=======
+  stateManager: {fileID: 303840707}
+  spawn: {x: 325, y: 0, z: 0}
+  babySpawnRateMin: 1
+  babySpawnRateMax: 2
+  tankSpawnRateMin: 0
+  tankSpawnRateMax: 7
+  tankSpawnDelay: 2
+  wave: 0
+>>>>>>> 78d12b8cb4399f734b16b8b1856af790e03b01c1
 --- !u!114 &1871525062
 MonoBehaviour:
   m_ObjectHideFlags: 0

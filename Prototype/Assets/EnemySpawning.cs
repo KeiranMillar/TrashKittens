@@ -4,51 +4,96 @@ using UnityEngine;
 
 public class EnemySpawning : MonoBehaviour {
 
+	public GameStateManager stateManager;
 	public Vector3 spawn;
-	public float babySpawnRate = 5.0f;
-	public float tankSpawnRate = 7.0f;
+	// Game state enum
+	//Each value in this 2D array corresponds to the 
+	//number of enemies spawning per wave.
+	//So, for the first wave, 5 babies and 2 tanks
+	public int [,] spawnLimit = new int [3,2] {{5, 2},
+		{7, 3}, {10, 5}};
 
+	public float babySpawnRateMin = 2.0f;
+	public float babySpawnRateMax = 4.0f;
+
+	public float tankSpawnRateMin = 0.0f;
+	public float tankSpawnRateMax = 7.0f;
+
+	public float tankSpawnDelay = 2.0f;
+
+	public int wave = 0;
+
+	bool emptyField = true;
+	bool babyFinished = true;
+	bool tankFinished = true;
 
 	// Use this for initialization
-	void Start () {
-		StartCoroutine (SpawnBaby ());
-		StartCoroutine (SpawnTank ());
+	void Start () 
+	{
+		wave = 1;
 	}
-	
-	// Update is called once per frame
+
+	void Update()
+	{
+		if (stateManager.getState () == GameState.active) 
+		{
+			if (stateManager.getState () == GameState.active && emptyField == true && babyFinished == true && tankFinished == true) 
+			{
+				babyFinished = false;
+				tankFinished = false;
+				emptyField = false;
+				StartCoroutine (SpawnBaby ());
+				StartCoroutine (SpawnTank ());
+			}
+			CheckEnemiesDead ();
+		}
+	}
+
+	void CheckEnemiesDead()
+	{
+		if(ObjectPoolingBaby.current.DeadBabies() == true && ObjectPoolingTank.current.DeadTanks() == true
+		)
+		{
+			emptyField = true;
+			wave++;
+			stateManager.WaveEnd ();
+		}
+	}
+
 	IEnumerator SpawnBaby () 
 	{
-		while (true) 
+		for (int i = 0; i < spawnLimit[(wave - 1),0]; i++) 
 		{
 			GameObject obj = ObjectPoolingBaby.current.GetPooledObjectBaby ();
 
-			if (obj == null) 
-			{
-
+			if (obj == null) {
+					
 			} else {
 				obj.transform.position = spawn;
 				obj.transform.rotation.Set (0, 0, 0, 0);
 				obj.SetActive (true);
 			}
-			yield return new WaitForSeconds (babySpawnRate);
+		yield return new WaitForSeconds (Random.Range (babySpawnRateMin, babySpawnRateMax));
 		}
+		babyFinished = true;
 	}
 
 	IEnumerator SpawnTank () 
 	{
-		while (true) 
+		yield return new WaitForSeconds (tankSpawnDelay);
+		for (int i = 0; i < spawnLimit[(wave - 1),1]; i++) 
 		{
 			GameObject obj = ObjectPoolingTank.current.GetPooledObjectTank ();
 
-			if (obj == null) 
-			{
-
+			if (obj == null) {
+				
 			} else {
 				obj.transform.position = spawn;
 				obj.transform.rotation.Set (0, 0, 0, 0);
 				obj.SetActive (true);
 			}
-			yield return new WaitForSeconds (tankSpawnRate);
+			yield return new WaitForSeconds (Random.Range (tankSpawnRateMin, tankSpawnRateMax));
 		}
+		tankFinished = true;
 	}
 }
