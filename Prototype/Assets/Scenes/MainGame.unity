@@ -147,10 +147,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 1377416199800738, guid: 8abc44a9eabcd3c4e8d06ed6843e7404, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8abc44a9eabcd3c4e8d06ed6843e7404, type: 2}
   m_IsPrefabParent: 0
@@ -1312,20 +1308,6 @@ Prefab:
     - target: {fileID: 4768740113696602, guid: 41b41208e7eb965458c59a4a5eb61b03, type: 2}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1895576350866784, guid: 41b41208e7eb965458c59a4a5eb61b03, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114224626587649790, guid: 41b41208e7eb965458c59a4a5eb61b03,
-        type: 2}
-      propertyPath: hitpoints
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114224626587649790, guid: 41b41208e7eb965458c59a4a5eb61b03,
-        type: 2}
-      propertyPath: killVelocity
-      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 41b41208e7eb965458c59a4a5eb61b03, type: 2}

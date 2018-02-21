@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Miro's script, unused as it has been incorperated into enemyController2D
+
 public class RandomSoundTrigger : MonoBehaviour {
 
 	public AudioSource source;

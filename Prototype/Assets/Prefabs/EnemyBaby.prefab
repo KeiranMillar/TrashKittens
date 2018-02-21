@@ -190,14 +190,13 @@ GameObject:
   - component: {fileID: 61494473856015780}
   - component: {fileID: 95705178716107352}
   - component: {fileID: 82741324778702774}
-  - component: {fileID: 114228052761003842}
   m_Layer: 9
   m_Name: EnemyBaby
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1382917605549496
 GameObject:
   m_ObjectHideFlags: 1
@@ -825,11 +824,11 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1377416199800738}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 4c6adfe3876f0104883a44e1f8c7dfd8, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -933,24 +932,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114228052761003842
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1377416199800738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a7b9b2fc6f4b4c4ea71301db9788635, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  source: {fileID: 82741324778702774}
-  clips:
-  - {fileID: 8300000, guid: 4c6adfe3876f0104883a44e1f8c7dfd8, type: 3}
-  - {fileID: 8300000, guid: 1521967125203004e8714b0531d7ec29, type: 3}
-  - {fileID: 8300000, guid: e29b8588310a87b47960871d19a221d3, type: 3}
-  - {fileID: 8300000, guid: 889b503f365b16349ae6adf6328ac2cf, type: 3}
-  - {fileID: 8300000, guid: 10738464020479141a845e85d0a3b192, type: 3}
 --- !u!114 &114254629503546518
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -968,6 +949,13 @@ MonoBehaviour:
   killVelocity: 5
   dieOnAttack: 0
   gravScale: 1
+  source: {fileID: 82741324778702774}
+  clips:
+  - {fileID: 8300000, guid: 4c6adfe3876f0104883a44e1f8c7dfd8, type: 3}
+  - {fileID: 8300000, guid: 1521967125203004e8714b0531d7ec29, type: 3}
+  - {fileID: 8300000, guid: e29b8588310a87b47960871d19a221d3, type: 3}
+  - {fileID: 8300000, guid: 889b503f365b16349ae6adf6328ac2cf, type: 3}
+  - {fileID: 8300000, guid: 10738464020479141a845e85d0a3b192, type: 3}
   collisionLayer:
     serializedVersion: 2
     m_Bits: 256
