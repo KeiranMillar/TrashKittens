@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 4ba11fe91e84064408b21e2e7e9f5122
-timeCreated: 1518697580
+timeCreated: 1519220898
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
@@ -144,7 +144,7 @@ ModelImporter:
     tangentImportMode: 3
     normalCalculationMode: 4
   importAnimation: 1
-  copyAvatar: 0
+  copyAvatar: 1
   humanDescription:
     serializedVersion: 2
     human: []
@@ -161,7 +161,8 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 6225acac1b725de42b979abd0994f7ab,
+    type: 3}
   animationType: 2
   humanoidOversampling: 1
   additionalBone: 0

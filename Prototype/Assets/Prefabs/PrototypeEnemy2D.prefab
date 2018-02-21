@@ -962,6 +962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b87f681b4e40fb145997337da0fbc60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitpoints: 3
   swipeForceMultiplier: 200
   speed: 20
   killVelocity: 160
