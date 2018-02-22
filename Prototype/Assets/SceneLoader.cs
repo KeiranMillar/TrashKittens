@@ -9,33 +9,16 @@ public class SceneLoader : MonoBehaviour {
 
 	// Public Variables, check build settings for appropriate values
 
-	public int mainMenuScene;
-	public int prototypeScene;
-	public int prototypeScene2D;
-	public int prototypeScene3D;
+	public int menuScene;
+	public int mainScene;
 	
 	public void loadMainMenu ()
 	{
-		SceneManager.LoadScene (mainMenuScene, LoadSceneMode.Single);
+		SceneManager.LoadScene (menuScene, LoadSceneMode.Single);
 	}
 
-	public void loadPrototype ()
+	public void loadMainScene ()
 	{
-		SceneManager.LoadScene (prototypeScene, LoadSceneMode.Single);
-	}
-
-	public IEnumerator loadPrototype2D (string sceneName)
-	{
-		AsyncOperation loadingOperation = SceneManager.LoadSceneAsync (sceneName);
-
-		while (!loadingOperation.isDone) 
-		{
-			yield return null;
-		}
-	}
-
-	public void loadPrototype3D ()
-	{
-		SceneManager.LoadScene (prototypeScene3D, LoadSceneMode.Single);
+		SceneManager.LoadScene (mainScene, LoadSceneMode.Single);
 	}
 }

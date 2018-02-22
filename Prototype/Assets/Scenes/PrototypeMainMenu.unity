@@ -1168,9 +1168,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1092438240}
-        m_MethodName: LoadScene
-        m_Mode: 5
+      - m_Target: {fileID: 1640845621}
+        m_MethodName: loadMainScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1226,12 +1226,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1052743795}
---- !u!114 &1092438240 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114620471959911090, guid: ad2682600db4e744ebaf451e962e6947,
-    type: 2}
-  m_PrefabInternal: {fileID: 1611218164}
-  m_Script: {fileID: 11500000, guid: 445da4165fa0a2c4aa1c1642ae409a68, type: 3}
 --- !u!1 &1228253774
 GameObject:
   m_ObjectHideFlags: 0
@@ -1705,10 +1699,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 358833391d203bf4d8ac5dd3818ed7ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenuScene: 0
-  prototypeScene: 12
-  prototypeScene2D: 1
-  prototypeScene3D: 12
+  menuScene: 0
+  mainScene: 1
 --- !u!4 &1640845622
 Transform:
   m_ObjectHideFlags: 0
