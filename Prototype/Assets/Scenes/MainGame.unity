@@ -355,7 +355,7 @@ Prefab:
     - target: {fileID: 114238618725194724, guid: d2efc67af5f832d449bb6f274dffc41c,
         type: 2}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.13235295
       objectReference: {fileID: 0}
     - target: {fileID: 114238618725194724, guid: d2efc67af5f832d449bb6f274dffc41c,
         type: 2}
@@ -365,8 +365,14 @@ Prefab:
     - target: {fileID: 114238618725194724, guid: d2efc67af5f832d449bb6f274dffc41c,
         type: 2}
       propertyPath: m_Color.b
-      value: 1
+      value: 0.3537524
       objectReference: {fileID: 0}
+    - target: {fileID: 114238618725194724, guid: d2efc67af5f832d449bb6f274dffc41c,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5b0d82450c01f5748990ab1447529c07,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d2efc67af5f832d449bb6f274dffc41c, type: 2}
   m_IsPrefabParent: 0
@@ -513,8 +519,6 @@ MonoBehaviour:
   healthBar: {fileID: 1449600613}
   upgradePriceDisplay: {fileID: 1260385633}
   fill: {fileID: 331160341}
-  greenFill: {fileID: 21300000, guid: f0b17e1ac1875d145ab672327d4c8d89, type: 3}
-  redFill: {fileID: 21300000, guid: 624371eff972ff844a486867dfb30b80, type: 3}
   damageColour: {r: 0, g: 0, b: 0, a: 0}
   warningColour: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &105657982
@@ -2395,16 +2399,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 100
-  healthWarningThreshold: 80
+  healthWarningThreshold: 25
   maxHealth: 100
   upgradePrice: 5
   healthBar: {fileID: 1449600613}
   upgradePriceDisplay: {fileID: 1260385633}
   fill: {fileID: 331160341}
-  greenFill: {fileID: 21300000, guid: f0b17e1ac1875d145ab672327d4c8d89, type: 3}
-  redFill: {fileID: 21300000, guid: 624371eff972ff844a486867dfb30b80, type: 3}
   damageColour: {r: 1, g: 0, b: 0, a: 0}
-  warningColour: {r: 1, g: 0.5955882, b: 0.92190653, a: 0}
+  warningColour: {r: 0.89705884, g: 0.7609534, b: 0, a: 1}
 --- !u!4 &1010371794 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400060, guid: b485a727456fb0943ba2edc18d627482, type: 3}
