@@ -56,6 +56,12 @@ public class EnemySpawning : MonoBehaviour {
 		{
 			emptyField = true;
 			wave++;
+			// PLACEHOLDER
+			if (wave > 3) 
+			{
+				wave = 1;
+			}
+			// PLACEHOLDER END
 			stateManager.WaveEnd ();
 		}
 	}
