@@ -147,6 +147,20 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1377416199800738, guid: 8abc44a9eabcd3c4e8d06ed6843e7404, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 137650595952255128, guid: 8abc44a9eabcd3c4e8d06ed6843e7404,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fcd8247f91b863f44af696f64797a2ec, type: 2}
+    - target: {fileID: 137934369348314124, guid: 8abc44a9eabcd3c4e8d06ed6843e7404,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fcd8247f91b863f44af696f64797a2ec, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8abc44a9eabcd3c4e8d06ed6843e7404, type: 2}
   m_IsPrefabParent: 0
@@ -338,6 +352,27 @@ Prefab:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114238618725194724, guid: d2efc67af5f832d449bb6f274dffc41c,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.13235295
+      objectReference: {fileID: 0}
+    - target: {fileID: 114238618725194724, guid: d2efc67af5f832d449bb6f274dffc41c,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114238618725194724, guid: d2efc67af5f832d449bb6f274dffc41c,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.3537524
+      objectReference: {fileID: 0}
+    - target: {fileID: 114238618725194724, guid: d2efc67af5f832d449bb6f274dffc41c,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5b0d82450c01f5748990ab1447529c07,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d2efc67af5f832d449bb6f274dffc41c, type: 2}
   m_IsPrefabParent: 0
@@ -484,8 +519,8 @@ MonoBehaviour:
   healthBar: {fileID: 1449600613}
   upgradePriceDisplay: {fileID: 1260385633}
   fill: {fileID: 331160341}
-  greenFill: {fileID: 21300000, guid: f0b17e1ac1875d145ab672327d4c8d89, type: 3}
-  redFill: {fileID: 21300000, guid: 624371eff972ff844a486867dfb30b80, type: 3}
+  damageColour: {r: 0, g: 0, b: 0, a: 0}
+  warningColour: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &105657982
 Transform:
   m_ObjectHideFlags: 0
@@ -997,7 +1032,7 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
-    m_Resolution: -1
+    m_Resolution: 3
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.05
@@ -1037,13 +1072,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 474346117}
-  m_LocalRotation: {x: 0.40004626, y: -0.17587313, z: 0.13626868, w: 0.8890796}
-  m_LocalPosition: {x: 0.03364563, y: 8.768091, z: 0}
+  m_LocalRotation: {x: 0.4161285, y: -0.33315417, z: 0.09663732, w: 0.8405395}
+  m_LocalPosition: {x: -1.18, y: 4.94, z: -5.11}
   m_LocalScale: {x: 1, y: 1.0033458, z: 1.0033461}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 49.401, y: -18.241001, z: 8.981001}
+  m_LocalEulerAnglesHint: {x: 49.812004, y: -48.011, z: -10.249001}
 --- !u!1 &482326502
 GameObject:
   m_ObjectHideFlags: 0
@@ -1307,6 +1342,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4768740113696602, guid: 41b41208e7eb965458c59a4a5eb61b03, type: 2}
       propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1895576350866784, guid: 41b41208e7eb965458c59a4a5eb61b03, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2360,14 +2399,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 100
-  healthWarningThreshold: 50
+  healthWarningThreshold: 25
   maxHealth: 100
   upgradePrice: 5
   healthBar: {fileID: 1449600613}
   upgradePriceDisplay: {fileID: 1260385633}
   fill: {fileID: 331160341}
-  greenFill: {fileID: 21300000, guid: f0b17e1ac1875d145ab672327d4c8d89, type: 3}
-  redFill: {fileID: 21300000, guid: 624371eff972ff844a486867dfb30b80, type: 3}
+  damageColour: {r: 1, g: 0, b: 0, a: 0}
+  warningColour: {r: 0.89705884, g: 0.7609534, b: 0, a: 1}
 --- !u!4 &1010371794 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400060, guid: b485a727456fb0943ba2edc18d627482, type: 3}
