@@ -20,7 +20,7 @@ public class ObjectPoolingTank : MonoBehaviour {
 
 		for (int i = 0; i < (tempSpawns.GetLength(0)); i++) 
 		{
-			pooledAmount[i] = tempSpawns[i, 1];
+			pooledAmount[i] = tempSpawns[i, 2];
 		}
 	}
 

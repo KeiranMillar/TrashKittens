@@ -10,22 +10,28 @@ public class EnemySpawning : MonoBehaviour {
 	//Each value in this 2D array corresponds to the 
 	//number of enemies spawning per wave.
 	//So, for the first wave, 5 babies and 2 tanks
-	public int [,] spawnLimit = new int [3,2] {{5, 2},
-		{7, 3}, {10, 5}};
+	public int [,] spawnLimit = new int [3,3] {{5, 2, 0},
+		{7, 3, 1}, {10, 5, 2}};
 
 	public float babySpawnRateMin = 2.0f;
 	public float babySpawnRateMax = 4.0f;
 
-	public float tankSpawnRateMin = 0.0f;
+	public float mamaSpawnRateMin = 4.0f;
+	public float mamaSpawnRateMax = 5.0f;
+
+	public float tankSpawnRateMin = 3.0f;
 	public float tankSpawnRateMax = 7.0f;
 
-	public float tankSpawnDelay = 2.0f;
+	public float mamaSpawnDelay = 2.0f;
+
+	public float tankSpawnDelay = 4.0f;
 
 	public int wave = 0;
 
 	bool emptyField = true;
 	bool babyFinished = true;
 	bool tankFinished = true;
+	bool mamaFinished = true;
 
 	// Use this for initialization
 	void Start () 
@@ -37,13 +43,15 @@ public class EnemySpawning : MonoBehaviour {
 	{
 		if (stateManager.getState () == GameState.active) 
 		{
-			if (stateManager.getState () == GameState.active && emptyField == true && babyFinished == true && tankFinished == true) 
+			if (stateManager.getState () == GameState.active && emptyField == true && babyFinished == true && tankFinished == true && mamaFinished == true) 
 			{
 				babyFinished = false;
+				mamaFinished = false;
 				tankFinished = false;
 				emptyField = false;
 				StartCoroutine (SpawnBaby ());
 				StartCoroutine (SpawnTank ());
+				StartCoroutine (SpawnMama ());
 			}
 			CheckEnemiesDead ();
 		}
@@ -51,8 +59,7 @@ public class EnemySpawning : MonoBehaviour {
 
 	void CheckEnemiesDead()
 	{
-		if(ObjectPoolingBaby.current.DeadBabies() == true && ObjectPoolingTank.current.DeadTanks() == true
-		)
+		if(ObjectPoolingBaby.current.DeadBabies() == true && ObjectPoolingTank.current.DeadTanks() == true && ObjectPoolingMama.current.DeadMamas() == true)
 		{
 			emptyField = true;
 			wave++;
@@ -84,10 +91,29 @@ public class EnemySpawning : MonoBehaviour {
 		babyFinished = true;
 	}
 
+	IEnumerator SpawnMama () 
+	{
+		yield return new WaitForSeconds (mamaSpawnDelay);
+		for (int i = 0; i < spawnLimit[(wave - 1),1]; i++) 
+		{
+			GameObject obj = ObjectPoolingMama.current.GetPooledObjectMama ();
+
+			if (obj == null) {
+
+			} else {
+				obj.transform.position = spawn;
+				obj.transform.rotation.Set (0, 0, 0, 0);
+				obj.SetActive (true);
+			}
+			yield return new WaitForSeconds (Random.Range (mamaSpawnRateMin, mamaSpawnRateMax));
+		}
+		mamaFinished = true;
+	}
+
 	IEnumerator SpawnTank () 
 	{
 		yield return new WaitForSeconds (tankSpawnDelay);
-		for (int i = 0; i < spawnLimit[(wave - 1),1]; i++) 
+		for (int i = 0; i < spawnLimit[(wave - 1),2]; i++) 
 		{
 			GameObject obj = ObjectPoolingTank.current.GetPooledObjectTank ();
 
