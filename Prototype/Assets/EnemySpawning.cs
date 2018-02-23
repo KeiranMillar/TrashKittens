@@ -53,7 +53,10 @@ public class EnemySpawning : MonoBehaviour {
 				StartCoroutine (SpawnTank ());
 				StartCoroutine (SpawnMama ());
 			}
+			if (stateManager.getState () == GameState.active && babyFinished == true && tankFinished == true && mamaFinished == true) 
+			{
 			CheckEnemiesDead ();
+			}
 		}
 	}
 
