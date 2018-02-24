@@ -1464,7 +1464,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1343582076}
         m_MethodName: Upgrade
         m_Mode: 1
         m_Arguments:
@@ -5660,6 +5660,7 @@ MonoBehaviour:
   currentHealth: 100
   healthWarningThreshold: 25
   maxHealth: 100
+  upgradeLevel: 1
   upgradePrice: 5
   healthBar: {fileID: 1449600613}
   upgradePriceDisplay: {fileID: 1260385633}
@@ -6610,6 +6611,7 @@ MonoBehaviour:
   currentHealth: 100
   healthWarningThreshold: 25
   maxHealth: 100
+  upgradeLevel: 1
   upgradePrice: 5
   healthBar: {fileID: 1449600613}
   upgradePriceDisplay: {fileID: 1260385633}
