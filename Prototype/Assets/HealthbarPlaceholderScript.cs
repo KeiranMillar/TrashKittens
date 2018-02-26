@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 // Placeholder script that changes a slider based on the "health value" of a quad
 // Be careful with scale of slider
+// Deprecated, slated for removal
 
 public class HealthbarPlaceholderScript : MonoBehaviour 
 {
