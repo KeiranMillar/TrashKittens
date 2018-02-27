@@ -826,17 +826,18 @@ AudioSource:
   m_GameObject: {fileID: 1377416199800738}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243444745383249526, guid: 4d09bd68aa2b4484ba86310febd222ee,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 4c6adfe3876f0104883a44e1f8c7dfd8, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
+  DopplerLevel: 0
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
@@ -1033,7 +1034,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 8ce17c300a7209a48964d6fcf2e94450, type: 2}
+  - {fileID: 2100000, guid: fcd8247f91b863f44af696f64797a2ec, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1082,7 +1083,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 8ce17c300a7209a48964d6fcf2e94450, type: 2}
+  - {fileID: 2100000, guid: fcd8247f91b863f44af696f64797a2ec, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

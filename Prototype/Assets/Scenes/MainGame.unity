@@ -147,41 +147,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 1377416199800738, guid: 8abc44a9eabcd3c4e8d06ed6843e7404, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 137650595952255128, guid: 8abc44a9eabcd3c4e8d06ed6843e7404,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: fcd8247f91b863f44af696f64797a2ec, type: 2}
-    - target: {fileID: 137934369348314124, guid: 8abc44a9eabcd3c4e8d06ed6843e7404,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: fcd8247f91b863f44af696f64797a2ec, type: 2}
-    - target: {fileID: 82741324778702774, guid: 8abc44a9eabcd3c4e8d06ed6843e7404,
-        type: 2}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 243444745383249526, guid: 4d09bd68aa2b4484ba86310febd222ee,
-        type: 2}
-    - target: {fileID: 82741324778702774, guid: 8abc44a9eabcd3c4e8d06ed6843e7404,
-        type: 2}
-      propertyPath: DopplerLevel
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 82741324778702774, guid: 8abc44a9eabcd3c4e8d06ed6843e7404,
-        type: 2}
-      propertyPath: m_Volume
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 82741324778702774, guid: 8abc44a9eabcd3c4e8d06ed6843e7404,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8abc44a9eabcd3c4e8d06ed6843e7404, type: 2}
   m_IsPrefabParent: 0
@@ -5667,6 +5632,9 @@ MonoBehaviour:
   fill: {fileID: 331160341}
   damageColour: {r: 1, g: 0, b: 0, a: 0}
   warningColour: {r: 0.89705884, g: 0.7609534, b: 0, a: 1}
+  upgradeClip: {fileID: 0}
+  upgradeFailClip: []
+  audioSource: {fileID: 0}
 --- !u!1 &1024334449
 GameObject:
   m_ObjectHideFlags: 0
@@ -6618,6 +6586,9 @@ MonoBehaviour:
   fill: {fileID: 331160341}
   damageColour: {r: 1, g: 0, b: 0, a: 0}
   warningColour: {r: 0.89705884, g: 0.7609534, b: 0, a: 1}
+  upgradeClip: {fileID: 0}
+  upgradeFailClip: []
+  audioSource: {fileID: 0}
 --- !u!114 &1343582077
 MonoBehaviour:
   m_ObjectHideFlags: 0
