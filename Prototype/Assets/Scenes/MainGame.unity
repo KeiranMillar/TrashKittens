@@ -1424,7 +1424,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 624410568}
   m_OnClick:
     m_PersistentCalls:
@@ -5819,7 +5819,8 @@ AudioSource:
   m_GameObject: {fileID: 1053007949}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243444745383249526, guid: 4d09bd68aa2b4484ba86310febd222ee,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -6586,9 +6587,10 @@ MonoBehaviour:
   fill: {fileID: 331160341}
   damageColour: {r: 1, g: 0, b: 0, a: 0}
   warningColour: {r: 0.89705884, g: 0.7609534, b: 0, a: 1}
-  upgradeClip: {fileID: 0}
-  upgradeFailClip: []
-  audioSource: {fileID: 0}
+  upgradeClip: {fileID: 8300000, guid: 026b760afb64fad40a8e091bf07896a0, type: 3}
+  upgradeFailClip:
+  - {fileID: 8300000, guid: f4f43bad8243fe341a41cf67355180f4, type: 3}
+  audioSource: {fileID: 1053007952}
 --- !u!114 &1343582077
 MonoBehaviour:
   m_ObjectHideFlags: 0
