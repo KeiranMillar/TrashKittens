@@ -824,11 +824,11 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1377416199800738}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243444745383249526, guid: 4d09bd68aa2b4484ba86310febd222ee,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 4c6adfe3876f0104883a44e1f8c7dfd8, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.3
   m_Pitch: 1
@@ -950,13 +950,13 @@ MonoBehaviour:
   killVelocity: 5
   dieOnAttack: 0
   gravScale: 1
-  source: {fileID: 82741324778702774}
   clips:
-  - {fileID: 8300000, guid: 4c6adfe3876f0104883a44e1f8c7dfd8, type: 3}
-  - {fileID: 8300000, guid: 1521967125203004e8714b0531d7ec29, type: 3}
-  - {fileID: 8300000, guid: e29b8588310a87b47960871d19a221d3, type: 3}
-  - {fileID: 8300000, guid: 889b503f365b16349ae6adf6328ac2cf, type: 3}
-  - {fileID: 8300000, guid: 10738464020479141a845e85d0a3b192, type: 3}
+  - {fileID: 8300000, guid: 572885f06e1292f4babef54bd6a43e71, type: 3}
+  - {fileID: 8300000, guid: 558b1e2f872289e4e924b4633ab872fc, type: 3}
+  - {fileID: 8300000, guid: dad0dfe03928a3b42a7445df3665c9a1, type: 3}
+  - {fileID: 8300000, guid: b009b463a3d959344b460ffe1e2852a9, type: 3}
+  - {fileID: 8300000, guid: ae1bad8d2b3fbfa4f80f46ae96a26acc, type: 3}
+  output: {fileID: 243530379698239108, guid: 4d09bd68aa2b4484ba86310febd222ee, type: 2}
   collisionLayer:
     serializedVersion: 2
     m_Bits: 256
