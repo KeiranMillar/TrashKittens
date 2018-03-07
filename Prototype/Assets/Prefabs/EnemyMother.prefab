@@ -1194,13 +1194,13 @@ MonoBehaviour:
   killVelocity: 5
   dieOnAttack: 0
   gravScale: 1
-  source: {fileID: 82301985558135614}
   clips:
-  - {fileID: 8300000, guid: 4c6adfe3876f0104883a44e1f8c7dfd8, type: 3}
-  - {fileID: 8300000, guid: 1521967125203004e8714b0531d7ec29, type: 3}
-  - {fileID: 8300000, guid: e29b8588310a87b47960871d19a221d3, type: 3}
-  - {fileID: 8300000, guid: 889b503f365b16349ae6adf6328ac2cf, type: 3}
-  - {fileID: 8300000, guid: 10738464020479141a845e85d0a3b192, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  output: {fileID: 243530379698239108, guid: 4d09bd68aa2b4484ba86310febd222ee, type: 2}
   collisionLayer:
     serializedVersion: 2
     m_Bits: 256
