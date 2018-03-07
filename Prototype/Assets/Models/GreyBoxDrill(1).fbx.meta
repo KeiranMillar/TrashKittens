@@ -1,0 +1,222 @@
+fileFormatVersion: 2
+guid: 1b395587c3d621b42ad9227f2c9035a3
+timeCreated: 1519772675
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: DrillUpgrade1:pCube1
+    100002: DrillUpgrade1:pCube10
+    100004: DrillUpgrade1:pCube2
+    100006: DrillUpgrade1:pCube3
+    100008: DrillUpgrade1:pCube4
+    100010: DrillUpgrade1:pCube5
+    100012: DrillUpgrade1:pCube6
+    100014: DrillUpgrade1:pCube7
+    100016: DrillUpgrade1:pCube8
+    100018: DrillUpgrade1:pCube9
+    100020: DrillUpgrade1:pCylinder1
+    100022: DrillUpgrade1:pCylinder2
+    100024: DrillUpgrade1:transform1
+    100026: DrillUpgrade1:transform10
+    100028: DrillUpgrade1:transform11
+    100030: DrillUpgrade1:transform2
+    100032: DrillUpgrade1:transform3
+    100034: DrillUpgrade1:transform4
+    100036: DrillUpgrade1:transform5
+    100038: DrillUpgrade1:transform6
+    100040: DrillUpgrade1:transform7
+    100042: DrillUpgrade1:transform8
+    100044: DrillUpgrade1:transform9
+    100046: DrillUpgrade2:pCube1
+    100048: DrillUpgrade2:pCube2
+    100050: DrillUpgrade2:pCube3
+    100052: DrillUpgrade2:pCylinder1
+    100054: DrillUpgrade2:transform1
+    100056: DrillUpgrade2:transform2
+    100058: DrillUpgrade2:transform3
+    100060: //RootNode
+    100062: pCone1
+    100064: pCone2
+    100066: pCube1
+    100068: pCube10
+    100070: pCube11
+    100072: pCube2
+    100074: pCube3
+    100076: pCube4
+    100078: pCube5
+    100080: pCube6
+    100082: pCube7
+    100084: pCube8
+    100086: pCube9
+    100088: pCylinder1
+    100090: pCylinder2
+    100092: pCylinder3
+    100094: pCylinder4
+    100096: pCylinder5
+    100098: transform1
+    100100: transform10
+    100102: transform11
+    100104: transform12
+    100106: transform13
+    100108: transform14
+    100110: transform15
+    100112: transform16
+    100114: transform17
+    100116: transform18
+    100118: transform19
+    100120: transform2
+    100122: transform3
+    100124: transform4
+    100126: transform5
+    100128: transform6
+    100130: transform7
+    100132: transform8
+    100134: transform9
+    400000: DrillUpgrade1:pCube1
+    400002: DrillUpgrade1:pCube10
+    400004: DrillUpgrade1:pCube2
+    400006: DrillUpgrade1:pCube3
+    400008: DrillUpgrade1:pCube4
+    400010: DrillUpgrade1:pCube5
+    400012: DrillUpgrade1:pCube6
+    400014: DrillUpgrade1:pCube7
+    400016: DrillUpgrade1:pCube8
+    400018: DrillUpgrade1:pCube9
+    400020: DrillUpgrade1:pCylinder1
+    400022: DrillUpgrade1:pCylinder2
+    400024: DrillUpgrade1:transform1
+    400026: DrillUpgrade1:transform10
+    400028: DrillUpgrade1:transform11
+    400030: DrillUpgrade1:transform2
+    400032: DrillUpgrade1:transform3
+    400034: DrillUpgrade1:transform4
+    400036: DrillUpgrade1:transform5
+    400038: DrillUpgrade1:transform6
+    400040: DrillUpgrade1:transform7
+    400042: DrillUpgrade1:transform8
+    400044: DrillUpgrade1:transform9
+    400046: DrillUpgrade2:pCube1
+    400048: DrillUpgrade2:pCube2
+    400050: DrillUpgrade2:pCube3
+    400052: DrillUpgrade2:pCylinder1
+    400054: DrillUpgrade2:transform1
+    400056: DrillUpgrade2:transform2
+    400058: DrillUpgrade2:transform3
+    400060: //RootNode
+    400062: pCone1
+    400064: pCone2
+    400066: pCube1
+    400068: pCube10
+    400070: pCube11
+    400072: pCube2
+    400074: pCube3
+    400076: pCube4
+    400078: pCube5
+    400080: pCube6
+    400082: pCube7
+    400084: pCube8
+    400086: pCube9
+    400088: pCylinder1
+    400090: pCylinder2
+    400092: pCylinder3
+    400094: pCylinder4
+    400096: pCylinder5
+    400098: transform1
+    400100: transform10
+    400102: transform11
+    400104: transform12
+    400106: transform13
+    400108: transform14
+    400110: transform15
+    400112: transform16
+    400114: transform17
+    400116: transform18
+    400118: transform19
+    400120: transform2
+    400122: transform3
+    400124: transform4
+    400126: transform5
+    400128: transform6
+    400130: transform7
+    400132: transform8
+    400134: transform9
+    2300000: pCube11
+    3300000: pCube11
+    4300000: pCube11
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

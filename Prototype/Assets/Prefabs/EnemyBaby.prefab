@@ -764,8 +764,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1377416199800738}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0.096, z: -0.45}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
+  m_LocalPosition: {x: 15.78, y: 5.43, z: -0.45}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 4543937299173448}
   - {fileID: 4248356976335046}
@@ -805,7 +805,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.06070137, y: 0.22095308}
+  m_Offset: {x: 0.027303219, y: 0.25232285}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -816,7 +816,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5630301, y: 0.4242292}
+  m_Size: {x: 0.69319725, y: 0.48696876}
   m_EdgeRadius: 0
 --- !u!82 &82741324778702774
 AudioSource:
@@ -824,11 +824,11 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1377416199800738}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243444745383249526, guid: 4d09bd68aa2b4484ba86310febd222ee,
     type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4c6adfe3876f0104883a44e1f8c7dfd8, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.3
   m_Pitch: 1
@@ -945,18 +945,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitpoints: 1
-  swipeForceMultiplier: 5
-  speed: 0.5
-  killVelocity: 5
+  swipeForceMultiplier: 10
+  speed: 2
+  killVelocity: 10
   dieOnAttack: 0
   gravScale: 1
+  source: {fileID: 82741324778702774}
   clips:
-  - {fileID: 8300000, guid: 572885f06e1292f4babef54bd6a43e71, type: 3}
-  - {fileID: 8300000, guid: 558b1e2f872289e4e924b4633ab872fc, type: 3}
-  - {fileID: 8300000, guid: dad0dfe03928a3b42a7445df3665c9a1, type: 3}
-  - {fileID: 8300000, guid: b009b463a3d959344b460ffe1e2852a9, type: 3}
-  - {fileID: 8300000, guid: ae1bad8d2b3fbfa4f80f46ae96a26acc, type: 3}
-  output: {fileID: 243530379698239108, guid: 4d09bd68aa2b4484ba86310febd222ee, type: 2}
+  - {fileID: 8300000, guid: 4c6adfe3876f0104883a44e1f8c7dfd8, type: 3}
+  - {fileID: 8300000, guid: 1521967125203004e8714b0531d7ec29, type: 3}
+  - {fileID: 8300000, guid: e29b8588310a87b47960871d19a221d3, type: 3}
+  - {fileID: 8300000, guid: 889b503f365b16349ae6adf6328ac2cf, type: 3}
+  - {fileID: 8300000, guid: 10738464020479141a845e85d0a3b192, type: 3}
   collisionLayer:
     serializedVersion: 2
     m_Bits: 256
