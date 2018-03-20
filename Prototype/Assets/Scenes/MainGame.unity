@@ -1875,7 +1875,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4883736934664866, guid: 492c473609bb9eb41a27979daa329f5f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.54
       objectReference: {fileID: 0}
     - target: {fileID: 4883736934664866, guid: 492c473609bb9eb41a27979daa329f5f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1903,7 +1903,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1521684310707032, guid: 492c473609bb9eb41a27979daa329f5f, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 492c473609bb9eb41a27979daa329f5f, type: 2}
@@ -2277,7 +2277,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 362159878
+  randomSeed: -422413618
   InitialModule:
     serializedVersion: 3
     enabled: 1
