@@ -65,4 +65,10 @@ public class PickupResource : MonoBehaviour {
 		resourceManager.resources += pickupValue;
 		uiAudioSource.PlayOneShot (pickupNoise);
 	}
+
+	public void Spawn(Vector3 spawnPosition)
+	{
+		gameObject.transform.position = spawnPosition;
+		gameObject.SetActive (true);
+	}
 }
