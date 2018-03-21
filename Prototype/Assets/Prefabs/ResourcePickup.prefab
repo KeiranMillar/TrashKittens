@@ -397,6 +397,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da58fcf204b759242ac08b8ba8934367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animatedFloatingValue: 0.5
+  floatHeight: 0.5
   pickupValue: 10
   rotationIncrement: 25
   displayObject: {fileID: 1130811763365954}
