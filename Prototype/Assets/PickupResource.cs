@@ -9,15 +9,18 @@ public class PickupResource : MonoBehaviour {
 	[SerializeField] private float pickupValue = 10;
 	[SerializeField] private float rotationIncrement = 1;
 	[SerializeField] private GameObject displayObject;
-	//public ResourceCollection resourceManager;
+	[SerializeField] private AudioClip pickupNoise;
 
-	public ResourceCollection resourceManager;
+	private ResourceCollection resourceManager;
+	private AudioSource uiAudioSource;
 
 	// Use this for initialization
 	void Start () 
 	{
 		GameObject drillObject = GameObject.Find ("DrillObject");
+		GameObject uiObject = GameObject.Find ("Main Game UI");
 		resourceManager = drillObject.GetComponent<ResourceCollection> ();
+		uiAudioSource = uiObject.GetComponent<AudioSource> ();
 	}
 
 	// Mouse Control
@@ -25,6 +28,7 @@ public class PickupResource : MonoBehaviour {
 	{
 		gameObject.SetActive (false);
 		resourceManager.resources += pickupValue;
+		uiAudioSource.PlayOneShot (pickupNoise);
 	}
 
 	// Update is called once per frame

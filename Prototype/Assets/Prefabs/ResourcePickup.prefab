@@ -400,4 +400,4 @@ MonoBehaviour:
   pickupValue: 10
   rotationIncrement: 25
   displayObject: {fileID: 1130811763365954}
-  resourceManager: {fileID: 0}
+  pickupNoise: {fileID: 8300000, guid: 8bf0c1293ee662e47ad148bea858e910, type: 3}
