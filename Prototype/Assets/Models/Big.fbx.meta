@@ -1,0 +1,167 @@
+fileFormatVersion: 2
+guid: cf284eb8fc8609548a95186d2b0cdf28
+timeCreated: 1521737272
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Big_Body_LP
+    100004: Big_Hair_Medium
+    100006: Big_Hair_Small
+    100008: Big_Hair_Tall
+    100010: Big_Head
+    100012: Big_Jaw
+    100014: Big_Jaw_Smaller
+    100016: Big_Jaw_Tip
+    100018: Big_L_Arm
+    100020: Big_L_Clavicle
+    100022: Big_L_Eye
+    100024: Big_L_Eye 1
+    100026: Big_L_Finger
+    100028: Big_L_Forearm
+    100030: Big_L_Hand
+    100032: Big_L_Wrist
+    100034: Big_R_Arm
+    100036: Big_R_Clavicle
+    100038: Big_R_Eye
+    100040: Big_R_eye
+    100042: Big_R_Finger
+    100044: Big_R_Forearm
+    100046: Big_R_Hand
+    100048: Big_R_Wrist
+    100050: Big_Teeth
+    100052: joint16
+    100054: joint17
+    100056: joint18
+    100058: joint19
+    100060: joint20
+    100062: joint22
+    100064: joint23
+    100066: joint25
+    100068: joint26
+    100070: joint28
+    100072: Neck
+    100074: Root
+    400000: //RootNode
+    400002: Big_Body_LP
+    400004: Big_Hair_Medium
+    400006: Big_Hair_Small
+    400008: Big_Hair_Tall
+    400010: Big_Head
+    400012: Big_Jaw
+    400014: Big_Jaw_Smaller
+    400016: Big_Jaw_Tip
+    400018: Big_L_Arm
+    400020: Big_L_Clavicle
+    400022: Big_L_Eye
+    400024: Big_L_Eye 1
+    400026: Big_L_Finger
+    400028: Big_L_Forearm
+    400030: Big_L_Hand
+    400032: Big_L_Wrist
+    400034: Big_R_Arm
+    400036: Big_R_Clavicle
+    400038: Big_R_Eye
+    400040: Big_R_eye
+    400042: Big_R_Finger
+    400044: Big_R_Forearm
+    400046: Big_R_Hand
+    400048: Big_R_Wrist
+    400050: Big_Teeth
+    400052: joint16
+    400054: joint17
+    400056: joint18
+    400058: joint19
+    400060: joint20
+    400062: joint22
+    400064: joint23
+    400066: joint25
+    400068: joint26
+    400070: joint28
+    400072: Neck
+    400074: Root
+    4300000: Big_R_eye
+    4300002: Big_Body_LP
+    4300004: Big_L_Eye
+    4300006: Big_Teeth
+    9500000: //RootNode
+    13700000: Big_Body_LP
+    13700002: Big_L_Eye
+    13700004: Big_R_eye
+    13700006: Big_Teeth
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
