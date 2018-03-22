@@ -20,7 +20,7 @@ public class GameUI : MonoBehaviour
 	void Update () 
 	{
 		drillResource = drillObject.GetComponent<ResourceCollection>().resources;
-		resourceCounter.text = drillResource.ToString();
+		resourceCounter.text = Mathf.FloorToInt(drillResource).ToString();
 		upgradeResourceCounter.text = drillResource.ToString ();
 	}
 }
