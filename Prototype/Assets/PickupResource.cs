@@ -11,6 +11,7 @@ public class PickupResource : MonoBehaviour {
 	public float floatHeight = 2f;
 
 	[SerializeField] private float pickupValue = 10;
+	[SerializeField] private float spawnJumpModifier = 1;
 	[SerializeField] private float rotationIncrement = 1;
 	[SerializeField] private GameObject displayObject;
 	[SerializeField] private AudioClip pickupNoise;
@@ -66,9 +67,12 @@ public class PickupResource : MonoBehaviour {
 		uiAudioSource.PlayOneShot (pickupNoise);
 	}
 
-	public void Spawn(Vector3 spawnPosition)
+	public void Spawn(Vector3 spawnPosition, float value)
 	{
+		pickupValue = value;
 		gameObject.transform.position = spawnPosition;
 		gameObject.SetActive (true);
+		Rigidbody2D objectRigidbody = GetComponent<Rigidbody2D> ();
+		objectRigidbody.AddForce (Vector2.up * spawnJumpModifier);
 	}
 }

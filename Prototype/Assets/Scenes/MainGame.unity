@@ -1430,6 +1430,16 @@ Prefab:
       propertyPath: resourceSpawnPoint
       value: 
       objectReference: {fileID: 691025926}
+    - target: {fileID: 114620471959911090, guid: ad2682600db4e744ebaf451e962e6947,
+        type: 2}
+      propertyPath: baseResourcesPerWave
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114620471959911090, guid: ad2682600db4e744ebaf451e962e6947,
+        type: 2}
+      propertyPath: spawnManager
+      value: 
+      objectReference: {fileID: 1871525061}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad2682600db4e744ebaf451e962e6947, type: 2}
   m_IsPrefabParent: 0
@@ -1764,7 +1774,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 691025926}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.21, y: 0.26, z: -1.025}
+  m_LocalPosition: {x: -2.21, y: 0.614, z: -1.025}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1991,7 +2001,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1521684310707032, guid: 492c473609bb9eb41a27979daa329f5f, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 492c473609bb9eb41a27979daa329f5f, type: 2}
@@ -6930,7 +6940,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resources: 0
-  resourcesPerSec: 1
+  resourcesPerSec: 0
   resourceModifier: 1
   upgradePrice: 5
   upgradePriceDisplay: {fileID: 604386073}

@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/PrototypeMainMenu.unity
     guid: 27e7f1cda44c6bd45b6dde10cfa0860e
   - enabled: 0
-    path: Assets/Scenes/Prototype.unity
+    path: 
     guid: fa3344696ac80cf4abf2a50dde7e7b2d
   - enabled: 0
     path: Assets/Scenes/Prototype2D.unity
