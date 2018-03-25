@@ -34,7 +34,7 @@ public class TurretFiring : MonoBehaviour {
 		tanks = tankScript.pooledObjectsTank;
 		targetLocation = GetClosestEnemy(babies, mamas, tanks);
 
-		if(targetLocation)
+		if(targetLocation && !bullet.activeInHierarchy)
 		{
 			ShootEnemy (targetLocation);
 		}
@@ -102,6 +102,8 @@ public class TurretFiring : MonoBehaviour {
 	{
 		bullet.SetActive (true);
 		bullet.transform.position = this.transform.position;
+		bullet.transform.LookAt(targetLocation);
 		bullet.transform.Translate(Vector3.forward * bulletSpeed * Time.deltaTime);
+		//bulletBody.AddForce(this.transform.position * bulletSpeed);
 	}
 }
