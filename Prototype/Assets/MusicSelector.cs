@@ -23,7 +23,7 @@ public class MusicSelector : MonoBehaviour {
 	public void NextTrack()
 	{
 		musicObjects [selectionIndex].SetActive (false);
-		if (selectionIndex < 2) {
+		if (selectionIndex < musicObjects.Length - 1) {
 			selectionIndex++;
 		} else {
 			selectionIndex = 0;
