@@ -8,14 +8,17 @@ public class TurretFiring : MonoBehaviour {
 	public List<GameObject> mamas;
 	public List<GameObject> tanks;
 
-	public GameObject ObjectPoolBaby;
-	public GameObject ObjectPoolMama;
-	public GameObject ObjectPoolTank;
+	public GameObject bullet;
+	Rigidbody bulletBody;
+	public float bulletLife = 5.0f;
+	public int bulletSpeed = 1000000;
+
+	public GameObject SpawnManager;
 
 	// Use this for initialization
 	void Start () 
 	{
-		
+		bulletBody = bullet.GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame
@@ -23,18 +26,32 @@ public class TurretFiring : MonoBehaviour {
 	{
 		Transform targetLocation;
 		//ResourceCollection resourcesScript = drill.GetComponent<ResourceCollection>();
-		ObjectPoolingBaby babiesScript = ObjectPoolBaby.GetComponent<ObjectPoolingBaby>();
-		ObjectPoolingMama mamaScript = ObjectPoolMama.GetComponent<ObjectPoolingMama>();
-		ObjectPoolingTank tankScript = ObjectPoolTank.GetComponent<ObjectPoolingTank>();
+		ObjectPoolingBaby babiesScript = SpawnManager.GetComponent<ObjectPoolingBaby>();
+		ObjectPoolingMama mamaScript = SpawnManager.GetComponent<ObjectPoolingMama>();
+		ObjectPoolingTank tankScript = SpawnManager.GetComponent<ObjectPoolingTank>();
 		babies = babiesScript.pooledObjectsBaby;
 		mamas = mamaScript.pooledObjectsMama;
 		tanks = tankScript.pooledObjectsTank;
 		targetLocation = GetClosestEnemy(babies, mamas, tanks);
-		ShootEnemy (targetLocation);
+
+		if(targetLocation)
+		{
+			ShootEnemy (targetLocation);
+		}
+
+		if(bullet.activeInHierarchy)
+		{
+			bulletLife -= Time.deltaTime;
+			if(bulletLife < 0)
+			{
+				bullet.SetActive(false);
+				bulletLife = 5.0f;
+			}
+		}
 		
 	}
 
-	Transform GetClosestEnemy (List<GameObject> babies)
+	Transform GetClosestEnemy (List<GameObject> babies, List<GameObject> mamas, List<GameObject> tanks)
 	{
 		Transform bestTarget = null;
 		float closestDistanceSqr = Mathf.Infinity;
@@ -42,31 +59,40 @@ public class TurretFiring : MonoBehaviour {
 		for(int i = 0; i < babies.Count; i++)
 		{
 			Vector3 directionToTarget = babies[i].transform.position - currentPosition;
-			float dSqrToTarget = directionToTarget.sqrMagnitude;
-			if(dSqrToTarget < closestDistanceSqr)
+			if(babies[i].activeInHierarchy == true)
 			{
-				closestDistanceSqr = dSqrToTarget;
-				bestTarget = babies[i].transform;
+				float dSqrToTarget = directionToTarget.sqrMagnitude;
+				if(dSqrToTarget < closestDistanceSqr)
+				{
+					closestDistanceSqr = dSqrToTarget;
+					bestTarget = babies[i].transform;
+				}
 			}
 		}
 		for(int i = 0; i < mamas.Count; i++)
 		{
 			Vector3 directionToTarget = mamas[i].transform.position - currentPosition;
-			float dSqrToTarget = directionToTarget.sqrMagnitude;
-			if(dSqrToTarget < closestDistanceSqr)
+			if(mamas[i].activeInHierarchy == true)
 			{
-				closestDistanceSqr = dSqrToTarget;
-				bestTarget = mamas[i].transform;
+				float dSqrToTarget = directionToTarget.sqrMagnitude;
+				if(dSqrToTarget < closestDistanceSqr)
+				{
+					closestDistanceSqr = dSqrToTarget;
+					bestTarget = mamas[i].transform;
+				}
 			}
 		}
 		for(int i = 0; i < tanks.Count; i++)
 		{
 			Vector3 directionToTarget = tanks[i].transform.position - currentPosition;
-			float dSqrToTarget = directionToTarget.sqrMagnitude;
-			if(dSqrToTarget < closestDistanceSqr)
+			if(tanks[i].activeInHierarchy == true)
 			{
-				closestDistanceSqr = dSqrToTarget;
-				bestTarget = tanks[i].transform;
+				float dSqrToTarget = directionToTarget.sqrMagnitude;
+				if(dSqrToTarget < closestDistanceSqr)
+				{
+					closestDistanceSqr = dSqrToTarget;
+					bestTarget = tanks[i].transform;
+				}
 			}
 		}
 		return bestTarget;
@@ -74,16 +100,8 @@ public class TurretFiring : MonoBehaviour {
 
 	void ShootEnemy(Transform targetLocation)
 	{
-		//GameObject obj;// = ObjectPoolingBullets.current.GetPooledObjectBullet ();
-
-		//if (obj == null) 
-		//{
-
-		//} else {
-		//	obj.transform.position = this.transform.position;
-		//	obj.transform.LookAt(targetLocation);
-		//	obj.SetActive (true);
-		//}
+		bullet.SetActive (true);
+		bullet.transform.position = this.transform.position;
+		bullet.transform.Translate(Vector3.forward * bulletSpeed * Time.deltaTime);
 	}
-
 }
