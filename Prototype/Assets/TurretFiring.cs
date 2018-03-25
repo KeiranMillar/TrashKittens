@@ -9,16 +9,15 @@ public class TurretFiring : MonoBehaviour {
 	public List<GameObject> tanks;
 
 	public GameObject bullet;
-	Rigidbody bulletBody;
 	public float bulletLife = 5.0f;
 	public int bulletSpeed = 1000000;
 
 	public GameObject SpawnManager;
 
+
 	// Use this for initialization
 	void Start () 
 	{
-		bulletBody = bullet.GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame
@@ -41,6 +40,7 @@ public class TurretFiring : MonoBehaviour {
 
 		if(bullet.activeInHierarchy)
 		{
+			bullet.transform.Translate(this.transform.forward * bulletSpeed * Time.deltaTime, Space.Self);
 			bulletLife -= Time.deltaTime;
 			if(bulletLife < 0)
 			{
@@ -50,7 +50,7 @@ public class TurretFiring : MonoBehaviour {
 		}
 		
 	}
-
+		
 	Transform GetClosestEnemy (List<GameObject> babies, List<GameObject> mamas, List<GameObject> tanks)
 	{
 		Transform bestTarget = null;
@@ -103,7 +103,5 @@ public class TurretFiring : MonoBehaviour {
 		bullet.SetActive (true);
 		bullet.transform.position = this.transform.position;
 		bullet.transform.LookAt(targetLocation);
-		bullet.transform.Translate(Vector3.forward * bulletSpeed * Time.deltaTime);
-		//bulletBody.AddForce(this.transform.position * bulletSpeed);
 	}
 }
