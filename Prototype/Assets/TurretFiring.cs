@@ -21,7 +21,7 @@ public class TurretFiring : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () 
+	public void Fire () 
 	{
 		Transform targetLocation;
 		//ResourceCollection resourcesScript = drill.GetComponent<ResourceCollection>();
