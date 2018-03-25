@@ -14,6 +14,7 @@ public class TurretFiring : MonoBehaviour {
 
 	public GameObject SpawnManager;
 
+	public bool fireNow = false;
 
 	// Use this for initialization
 	void Start () 
@@ -21,23 +22,26 @@ public class TurretFiring : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	public void Fire () 
+	void Update () 
 	{
-		Transform targetLocation;
-		//ResourceCollection resourcesScript = drill.GetComponent<ResourceCollection>();
-		ObjectPoolingBaby babiesScript = SpawnManager.GetComponent<ObjectPoolingBaby>();
-		ObjectPoolingMama mamaScript = SpawnManager.GetComponent<ObjectPoolingMama>();
-		ObjectPoolingTank tankScript = SpawnManager.GetComponent<ObjectPoolingTank>();
-		babies = babiesScript.pooledObjectsBaby;
-		mamas = mamaScript.pooledObjectsMama;
-		tanks = tankScript.pooledObjectsTank;
-		targetLocation = GetClosestEnemy(babies, mamas, tanks);
-
-		if(targetLocation && !bullet.activeInHierarchy)
+		if(fireNow)
 		{
-			ShootEnemy (targetLocation);
-		}
+			Transform targetLocation;
+			//ResourceCollection resourcesScript = drill.GetComponent<ResourceCollection>();
+			ObjectPoolingBaby babiesScript = SpawnManager.GetComponent<ObjectPoolingBaby>();
+			ObjectPoolingMama mamaScript = SpawnManager.GetComponent<ObjectPoolingMama>();
+			ObjectPoolingTank tankScript = SpawnManager.GetComponent<ObjectPoolingTank>();
+			babies = babiesScript.pooledObjectsBaby;
+			mamas = mamaScript.pooledObjectsMama;
+			tanks = tankScript.pooledObjectsTank;
+			targetLocation = GetClosestEnemy(babies, mamas, tanks);
 
+			if(targetLocation && !bullet.activeInHierarchy)
+			{
+				ShootEnemy (targetLocation);
+			}
+			fireNow = false;
+		}
 		if(bullet.activeInHierarchy)
 		{
 			bullet.transform.Translate(this.transform.forward * bulletSpeed * Time.deltaTime, Space.Self);
@@ -48,7 +52,6 @@ public class TurretFiring : MonoBehaviour {
 				bulletLife = 5.0f;
 			}
 		}
-		
 	}
 		
 	Transform GetClosestEnemy (List<GameObject> babies, List<GameObject> mamas, List<GameObject> tanks)
