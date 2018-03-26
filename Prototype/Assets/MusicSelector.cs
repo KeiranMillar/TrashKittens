@@ -7,6 +7,7 @@ using UnityEngine;
 public class MusicSelector : MonoBehaviour {
 
 	[SerializeField] private GameObject[] musicObjects;
+	private AudioSource currentAudioSource;
 	private int selectionIndex = 0;
 
 
@@ -29,5 +30,12 @@ public class MusicSelector : MonoBehaviour {
 			selectionIndex = 0;
 		}
 		musicObjects [selectionIndex].SetActive (true);
+		currentAudioSource = musicObjects [selectionIndex].GetComponent<AudioSource> ();
+		currentAudioSource.Play ();
+	}
+
+	public void StopCurrentTrack()
+	{
+		musicObjects [selectionIndex].SetActive (false);
 	}
 }
