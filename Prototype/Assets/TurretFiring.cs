@@ -116,6 +116,7 @@ public class TurretFiring : MonoBehaviour {
 	void ShootEnemy(Transform targetLocation)
 	{
 		//Activate the bullet and set it location at the turret, looking at its target
+		this.GetComponent<AudioSource>().Play();
 		bullet.SetActive (true);
 		bullet.transform.position = this.transform.position;
 		bullet.transform.LookAt(targetLocation);
