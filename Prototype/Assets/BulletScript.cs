@@ -23,7 +23,7 @@ public class BulletScript : MonoBehaviour {
 		if (coll.gameObject.tag == "Enemy")
 		{
 			script = coll.gameObject.GetComponent<EnemyController2D>();
-			script.hitpoints--;
+			script.DealDamage(1);
 		}
 		this.gameObject.SetActive(false);
 	}

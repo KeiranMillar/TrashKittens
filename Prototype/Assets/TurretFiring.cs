@@ -107,4 +107,9 @@ public class TurretFiring : MonoBehaviour {
 		bullet.transform.position = this.transform.position;
 		bullet.transform.LookAt(targetLocation);
 	}
+
+	public void FireNow(bool fireState)
+	{
+		fireNow = fireState;
+	}
 }
