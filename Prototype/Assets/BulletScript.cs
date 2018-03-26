@@ -5,6 +5,8 @@ using UnityEngine;
 public class BulletScript : MonoBehaviour {
 
 	public EnemyController2D script;
+	public TurretFiring scriptTimer;
+	public GameObject timerReset;
 
 	// Use this for initialization
 	void Start () {
@@ -19,12 +21,16 @@ public class BulletScript : MonoBehaviour {
 	// for when the bullet hits something
 	void OnCollisionEnter2D(Collision2D coll)
 	{
-		Debug.Log(coll.gameObject.tag);
+		//If the target is an enemy, take health off them
 		if (coll.gameObject.tag == "Enemy")
 		{
 			script = coll.gameObject.GetComponent<EnemyController2D>();
 			script.DealDamage(1);
 		}
 		this.gameObject.SetActive(false);
+
+		//Reset the timer for the bullet being reset
+		scriptTimer = timerReset.GetComponent<TurretFiring>();
+		scriptTimer.ResetTimer();
 	}
 }

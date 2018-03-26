@@ -24,6 +24,7 @@ public class TurretFiring : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+		//If the gun has been fired
 		if(fireNow)
 		{
 			Transform targetLocation;
@@ -34,18 +35,27 @@ public class TurretFiring : MonoBehaviour {
 			babies = babiesScript.pooledObjectsBaby;
 			mamas = mamaScript.pooledObjectsMama;
 			tanks = tankScript.pooledObjectsTank;
+
+			//Get the closest enemy to the turret
 			targetLocation = GetClosestEnemy(babies, mamas, tanks);
 
+			//If the target is valid and the bullet isn't already fired
 			if(targetLocation && !bullet.activeInHierarchy)
 			{
+				//Shoot the enemy
 				ShootEnemy (targetLocation);
 			}
+			//Reset the turret to not fire again
 			fireNow = false;
 		}
+		//If the bullet is fired
 		if(bullet.activeInHierarchy)
 		{
+			//Move it towards its target
 			bullet.transform.Translate(this.transform.forward * bulletSpeed * Time.deltaTime, Space.Self);
+			//Tick down its timer
 			bulletLife -= Time.deltaTime;
+			//If it's less than bulletLife then assume the bullet has missed and reset it
 			if(bulletLife < 0)
 			{
 				bullet.SetActive(false);
@@ -59,6 +69,8 @@ public class TurretFiring : MonoBehaviour {
 		Transform bestTarget = null;
 		float closestDistanceSqr = Mathf.Infinity;
 		Vector3 currentPosition = transform.position;
+
+		//Cycle through all the enemies and find which one is closest to the turret
 		for(int i = 0; i < babies.Count; i++)
 		{
 			Vector3 directionToTarget = babies[i].transform.position - currentPosition;
@@ -103,6 +115,7 @@ public class TurretFiring : MonoBehaviour {
 
 	void ShootEnemy(Transform targetLocation)
 	{
+		//Activate the bullet and set it location at the turret, looking at its target
 		bullet.SetActive (true);
 		bullet.transform.position = this.transform.position;
 		bullet.transform.LookAt(targetLocation);
@@ -110,6 +123,13 @@ public class TurretFiring : MonoBehaviour {
 
 	public void FireNow(bool fireState)
 	{
+		//Allows changing of the firestate;
 		fireNow = fireState;
+	}
+
+	public void ResetTimer()
+	{
+		//Reset the life of the bullet, used when the bullet hits its target
+		bulletLife = 5.0f;
 	}
 }
