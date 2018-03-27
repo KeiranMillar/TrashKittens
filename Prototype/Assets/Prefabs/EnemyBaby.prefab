@@ -959,10 +959,17 @@ MonoBehaviour:
   - {fileID: 8300000, guid: dad0dfe03928a3b42a7445df3665c9a1, type: 3}
   - {fileID: 8300000, guid: b009b463a3d959344b460ffe1e2852a9, type: 3}
   - {fileID: 8300000, guid: ae1bad8d2b3fbfa4f80f46ae96a26acc, type: 3}
+  clipsLaser:
+  - {fileID: 8300000, guid: 0ae6afaa9fa1ed7468675f960a7f3dd0, type: 3}
+  - {fileID: 8300000, guid: 0e51328c6017b4044acbcc6a8b2579d6, type: 3}
+  - {fileID: 8300000, guid: 85e67e37671cd55499b8a4769ce78ac6, type: 3}
+  - {fileID: 8300000, guid: f928cd20a5038384083c419981617cdf, type: 3}
+  - {fileID: 8300000, guid: 8ac9e7bed5999f7458d693ec82ddb39f, type: 3}
   output: {fileID: 243530379698239108, guid: 4d09bd68aa2b4484ba86310febd222ee, type: 2}
   collisionLayer:
     serializedVersion: 2
     m_Bits: 256
+  silent: 0
 --- !u!137 &137243152761799792
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

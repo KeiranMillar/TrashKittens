@@ -25,7 +25,7 @@ public class BulletScript : MonoBehaviour {
 		if (coll.gameObject.tag == "Enemy")
 		{
 			script = coll.gameObject.GetComponent<EnemyController2D>();
-			script.DealDamage(1);
+			script.DealLaserDamage(1);
 		}
 		this.gameObject.SetActive(false);
 
