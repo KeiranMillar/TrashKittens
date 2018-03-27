@@ -1784,7 +1784,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1895576350866784, guid: 41b41208e7eb965458c59a4a5eb61b03, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 41b41208e7eb965458c59a4a5eb61b03, type: 2}
@@ -9047,7 +9047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa929d24f212cfc44b6a3fc9dba93063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pooledObjectTank: {fileID: 1895576350866784, guid: 41b41208e7eb965458c59a4a5eb61b03,
+  pooledObjectTank: {fileID: 1713270533532436, guid: 39cfc963eb94a7c46a6613a9816e6304,
     type: 2}
   willGrow: 0
   pooledObjectsTank: []
@@ -9083,7 +9083,7 @@ MonoBehaviour:
   babySpawnRateMax: 4
   mamaSpawnRateMin: 4
   mamaSpawnRateMax: 5
-  tankSpawnRateMin: 0
+  tankSpawnRateMin: 4
   tankSpawnRateMax: 7
   mamaSpawnDelay: 2
   tankSpawnDelay: 2
@@ -9184,7 +9184,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4175195000985950, guid: 39cfc963eb94a7c46a6613a9816e6304, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.959
       objectReference: {fileID: 0}
     - target: {fileID: 4175195000985950, guid: 39cfc963eb94a7c46a6613a9816e6304, type: 2}
       propertyPath: m_LocalPosition.z
@@ -9212,19 +9212,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4797393523189224, guid: 39cfc963eb94a7c46a6613a9816e6304, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0.6231437
+      value: 0.6231436
       objectReference: {fileID: 0}
     - target: {fileID: 4797393523189224, guid: 39cfc963eb94a7c46a6613a9816e6304, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0.3342036
+      value: -0.33420357
       objectReference: {fileID: 0}
     - target: {fileID: 4797393523189224, guid: 39cfc963eb94a7c46a6613a9816e6304, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0.6231437
+      value: -0.6231436
       objectReference: {fileID: 0}
     - target: {fileID: 4797393523189224, guid: 39cfc963eb94a7c46a6613a9816e6304, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -0.3342036
+      value: -0.33420357
+      objectReference: {fileID: 0}
+    - target: {fileID: 1713270533532436, guid: 39cfc963eb94a7c46a6613a9816e6304, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 39cfc963eb94a7c46a6613a9816e6304, type: 2}
