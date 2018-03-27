@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 // Script to control the behaviour of collectable resource pickups.
 
@@ -17,6 +18,7 @@ public class PickupResource : MonoBehaviour {
 	[SerializeField] private AudioClip pickupNoise;
 	private ResourceCollection resourceManager;
 	private AudioSource uiAudioSource;
+	public AudioMixerGroup output;
 	private bool floatingRises;
 
 	// Use this for initialization
@@ -64,6 +66,7 @@ public class PickupResource : MonoBehaviour {
 	{
 		gameObject.SetActive (false);
 		resourceManager.resources += pickupValue;
+		uiAudioSource.outputAudioMixerGroup = output;
 		uiAudioSource.PlayOneShot (pickupNoise);
 	}
 
