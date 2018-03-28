@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: c4fbbe9109d717a4a8e5ccbae1690ffd
-timeCreated: 1522261237
+guid: 8ac8e5230b23da64a988773b10a6f3d0
+timeCreated: 1522260957
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
@@ -17,11 +17,8 @@ ModelImporter:
     100018: Shooter_Spine3
     100020: Shooter_Spine4
     100022: Shooter_Spine5
-    100024: ShooterBody
-    100026: ShooterEye
-    100028: ShooterTeeth
-    100030: UpperJaw
-    100032: WeeJaw
+    100024: UpperJaw
+    100026: WeeJaw
     400000: Eye
     400002: Head
     400004: Jaw
@@ -34,18 +31,10 @@ ModelImporter:
     400018: Shooter_Spine3
     400020: Shooter_Spine4
     400022: Shooter_Spine5
-    400024: ShooterBody
-    400026: ShooterEye
-    400028: ShooterTeeth
-    400030: UpperJaw
-    400032: WeeJaw
-    4300000: ShooterTeeth
-    4300002: ShooterBody
-    4300004: ShooterEye
+    400024: UpperJaw
+    400026: WeeJaw
+    7400000: Take 001
     9500000: //RootNode
-    13700000: ShooterBody
-    13700002: ShooterEye
-    13700004: ShooterTeeth
   materials:
     importMaterials: 1
     materialName: 0
