@@ -590,6 +590,7 @@ MonoBehaviour:
   speed: 0.5
   killVelocity: 5
   dieOnAttack: 0
+  isShooter: 1
   gravScale: 1
   damageParticleCount: 10
   clips:
@@ -822,7 +823,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 653005182
+  randomSeed: -660829841
   InitialModule:
     serializedVersion: 3
     enabled: 1
