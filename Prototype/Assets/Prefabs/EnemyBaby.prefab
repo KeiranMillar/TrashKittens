@@ -198,7 +198,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1382917605549496
 GameObject:
   m_ObjectHideFlags: 1
@@ -951,6 +951,7 @@ MonoBehaviour:
   speed: 0.5
   killVelocity: 5
   dieOnAttack: 0
+  silent: 0
   gravScale: 1
   damageParticleCount: 10
   clips:
@@ -969,7 +970,10 @@ MonoBehaviour:
   collisionLayer:
     serializedVersion: 2
     m_Bits: 256
-  silent: 0
+  isShooter: 0
+  projectileForce: 1
+  projectilePool: {fileID: 0}
+  projectileSpawnPoint: {fileID: 0}
 --- !u!137 &137243152761799792
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
