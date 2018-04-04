@@ -8758,31 +8758,13 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114539383162688092, guid: 05846b69334dce941beca4a6f4fdb760,
-        type: 2}
-      propertyPath: projectilePool
-      value: 
-      objectReference: {fileID: 1619610436}
     - target: {fileID: 1924653079851122, guid: 05846b69334dce941beca4a6f4fdb760, type: 2}
       propertyPath: m_Name
       value: Shooter
       objectReference: {fileID: 0}
-    - target: {fileID: 4709947313656338, guid: 05846b69334dce941beca4a6f4fdb760, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.71
-      objectReference: {fileID: 0}
-    - target: {fileID: 4709947313656338, guid: 05846b69334dce941beca4a6f4fdb760, type: 2}
-      propertyPath: m_LocalPosition.x
+    - target: {fileID: 1924653079851122, guid: 05846b69334dce941beca4a6f4fdb760, type: 2}
+      propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4709947313656338, guid: 05846b69334dce941beca4a6f4fdb760, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0.122
-      objectReference: {fileID: 0}
-    - target: {fileID: 114539383162688092, guid: 05846b69334dce941beca4a6f4fdb760,
-        type: 2}
-      propertyPath: projectileForce
-      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 05846b69334dce941beca4a6f4fdb760, type: 2}
@@ -8868,7 +8850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa929d24f212cfc44b6a3fc9dba93063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pooledObjectTank: {fileID: 1713270533532436, guid: 39cfc963eb94a7c46a6613a9816e6304,
+  pooledObjectTank: {fileID: 1924653079851122, guid: 05846b69334dce941beca4a6f4fdb760,
     type: 2}
   willGrow: 0
   pooledObjectsTank: []
@@ -9414,7 +9396,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0c2ae723eb4c0f409cd709aeb7c2ef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allowEnemyOnEnemyCollision: 0
 --- !u!1 &2028683486
 GameObject:
   m_ObjectHideFlags: 0
