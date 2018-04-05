@@ -1700,7 +1700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuScene: 0
-  mainScene: 1
+  mainScene: 2
 --- !u!4 &1640845622
 Transform:
   m_ObjectHideFlags: 0

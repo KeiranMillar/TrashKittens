@@ -20,3 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainGame.unity
     guid: f59018c16e9754b4f9f3eb95a7178770
+  - enabled: 1
+    path: Assets/Scenes/NewEnviromentTest.unity
+    guid: b3a7e4d597b94d447a873674bb1a5d26
