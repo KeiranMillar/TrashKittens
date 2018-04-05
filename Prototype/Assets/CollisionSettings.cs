@@ -16,7 +16,7 @@ public class CollisionSettings : MonoBehaviour {
 		Physics2D.IgnoreLayerCollision (11, 10, true);
 		Physics2D.IgnoreLayerCollision (11, 12, true);
 		Physics2D.IgnoreLayerCollision (11, 13, true);
-		//Physics2D.IgnoreLayerCollision (13, 9, true);
+		Physics2D.IgnoreLayerCollision (13, 9, true);
 		Physics2D.IgnoreLayerCollision (12, 13, true);
 	}
 }
