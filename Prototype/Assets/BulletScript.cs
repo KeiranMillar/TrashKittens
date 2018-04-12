@@ -6,7 +6,7 @@ public class BulletScript : MonoBehaviour {
 
 	EnemyController2D script;
 	TurretFiring scriptTimer;
-	GameObject timerReset;
+	public GameObject timerReset;
 	public GameObject drill;
 
 	// Use this for initialization

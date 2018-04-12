@@ -18,12 +18,12 @@ TagManager:
   - 
   - 
   - Ground
-  - Enemy
+  - EnemyUngrabbed
   - Drill
   - Pickup
   - FriendlyProjectile
   - EnemyProjectile
-  - 
+  - EnemyGrabbed
   - 
   - 
   - 

@@ -734,6 +734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d3cd27a0e5e4214798fbdb8eb64720a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerReset: {fileID: 1779013216}
   drill: {fileID: 1343582074}
 --- !u!23 &210422478
 MeshRenderer:
