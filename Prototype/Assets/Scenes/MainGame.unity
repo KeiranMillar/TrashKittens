@@ -734,9 +734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d3cd27a0e5e4214798fbdb8eb64720a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  script: {fileID: 0}
-  scriptTimer: {fileID: 0}
-  timerReset: {fileID: 1779013216}
+  drill: {fileID: 1343582074}
 --- !u!23 &210422478
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2494,6 +2492,11 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 764881377}
+--- !u!1 &793518086 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1924653079851122, guid: 05846b69334dce941beca4a6f4fdb760,
+    type: 2}
+  m_PrefabInternal: {fileID: 1786463264}
 --- !u!1 &806072352 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1898486796785326, guid: ad2682600db4e744ebaf451e962e6947,
@@ -2900,7 +2903,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1231417034
+  randomSeed: 1216165763
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -6490,6 +6493,7 @@ MonoBehaviour:
   upgradeLevel: 1
   upgradePrice: 5
   turretPrice: 5
+  turretDamage: 1
   repairPrice: 25
   healthBar: {fileID: 1449600613}
   upgradePriceDisplay: {fileID: 1260385633}
@@ -6961,6 +6965,7 @@ GameObject:
   - component: {fileID: 1094456519}
   - component: {fileID: 1094456521}
   - component: {fileID: 1094456520}
+  - component: {fileID: 1094456522}
   m_Layer: 0
   m_Name: Top Upgrade Text
   m_TagString: Untagged
@@ -7020,7 +7025,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Upgrade Drill's Turret
+  m_Text: Buy The Drill
 --- !u!222 &1094456521
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7028,6 +7033,18 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1094456518}
+--- !u!114 &1094456522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1094456518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 357a4304a77b43c46976176309ef955a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turret: {fileID: 1779013216}
 --- !u!1 &1117318440
 GameObject:
   m_ObjectHideFlags: 0
@@ -7574,6 +7591,7 @@ MonoBehaviour:
   upgradeLevel: 1
   upgradePrice: 35
   turretPrice: 5
+  turretDamage: 1
   repairPrice: 25
   healthBar: {fileID: 1449600613}
   upgradePriceDisplay: {fileID: 1260385633}
@@ -8695,7 +8713,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1779013217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8715,6 +8733,8 @@ MonoBehaviour:
   bulletSpeed: 5
   SpawnManager: {fileID: 1871525057}
   fireNow: 0
+  cooledDown: 1
+  cooldownTimer: 5
 --- !u!23 &1779013218
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8947,6 +8967,10 @@ Prefab:
       propertyPath: projectileForce
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 1924653079851122, guid: 05846b69334dce941beca4a6f4fdb760, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 05846b69334dce941beca4a6f4fdb760, type: 2}
   m_IsPrefabParent: 0
@@ -8998,6 +9022,7 @@ GameObject:
   - component: {fileID: 1871525060}
   - component: {fileID: 1871525063}
   - component: {fileID: 1871525059}
+  - component: {fileID: 1871525062}
   m_Layer: 0
   m_Name: Spawn Manager
   m_TagString: Untagged
@@ -9067,11 +9092,28 @@ MonoBehaviour:
   babySpawnRateMax: 4
   mamaSpawnRateMin: 4
   mamaSpawnRateMax: 5
+  mamaSpawnDelay: 2
   tankSpawnRateMin: 4
   tankSpawnRateMax: 7
-  mamaSpawnDelay: 2
   tankSpawnDelay: 2
+  shooterSpawnRateMin: 3
+  shooterSpawnRateMax: 7
+  shooterSpawnDelay: 4
   wave: 0
+--- !u!114 &1871525062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1871525057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67277062588d67846990cc7c983ea124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObjectShooter: {fileID: 793518086}
+  willGrow: 0
+  pooledObjectsShooter: []
 --- !u!114 &1871525063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9085,7 +9127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pooledObjectMama: {fileID: 1895576350866784, guid: 41b41208e7eb965458c59a4a5eb61b03,
     type: 2}
-  willGrow: 1
+  willGrow: 0
   pooledObjectsMama: []
 --- !u!1 &1883015368
 GameObject:
@@ -9577,7 +9619,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0c2ae723eb4c0f409cd709aeb7c2ef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allowEnemyOnEnemyCollision: 0
 --- !u!1 &2006673446
 GameObject:
   m_ObjectHideFlags: 0

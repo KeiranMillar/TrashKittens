@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour {
 
-	public EnemyController2D script;
-	public TurretFiring scriptTimer;
-	public GameObject timerReset;
+	EnemyController2D script;
+	TurretFiring scriptTimer;
+	GameObject timerReset;
+	public GameObject drill;
 
 	// Use this for initialization
 	void Start () {
@@ -21,11 +22,13 @@ public class BulletScript : MonoBehaviour {
 	// for when the bullet hits something
 	void OnCollisionEnter2D(Collision2D coll)
 	{
+		healthManagement2D healthScript = drill.GetComponent<healthManagement2D>();
+
 		//If the target is an enemy, take health off them
 		if (coll.gameObject.tag == "Enemy")
 		{
 			script = coll.gameObject.GetComponent<EnemyController2D>();
-			script.DealLaserDamage(1);
+			script.DealLaserDamage(1 * healthScript.turretDamage);
 		}
 		this.gameObject.SetActive(false);
 
