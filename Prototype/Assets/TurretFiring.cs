@@ -15,6 +15,8 @@ public class TurretFiring : MonoBehaviour {
 	public GameObject SpawnManager;
 
 	public bool fireNow = false;
+	public bool cooledDown = true;
+	public float cooldownTimer = 5.0f;
 
 	// Use this for initialization
 	void Start () 
@@ -24,29 +26,32 @@ public class TurretFiring : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		//If the gun has been fired
-		if(fireNow)
+		if(cooledDown)
 		{
-			Transform targetLocation;
-			//ResourceCollection resourcesScript = drill.GetComponent<ResourceCollection>();
-			ObjectPoolingBaby babiesScript = SpawnManager.GetComponent<ObjectPoolingBaby>();
-			ObjectPoolingMama mamaScript = SpawnManager.GetComponent<ObjectPoolingMama>();
-			ObjectPoolingTank tankScript = SpawnManager.GetComponent<ObjectPoolingTank>();
-			babies = babiesScript.pooledObjectsBaby;
-			mamas = mamaScript.pooledObjectsMama;
-			tanks = tankScript.pooledObjectsTank;
-
-			//Get the closest enemy to the turret
-			targetLocation = GetClosestEnemy(babies, mamas, tanks);
-
-			//If the target is valid and the bullet isn't already fired
-			if(targetLocation && !bullet.activeInHierarchy)
+			//If the gun has been fired
+			if(fireNow)
 			{
-				//Shoot the enemy
-				ShootEnemy (targetLocation);
+				Transform targetLocation;
+				ObjectPoolingBaby babiesScript = SpawnManager.GetComponent<ObjectPoolingBaby>();
+				ObjectPoolingMama mamaScript = SpawnManager.GetComponent<ObjectPoolingMama>();
+				ObjectPoolingTank tankScript = SpawnManager.GetComponent<ObjectPoolingTank>();
+				babies = babiesScript.pooledObjectsBaby;
+				mamas = mamaScript.pooledObjectsMama;
+				tanks = tankScript.pooledObjectsTank;
+
+				//Get the closest enemy to the turret
+				targetLocation = GetClosestEnemy(babies, mamas, tanks);
+
+				//If the target is valid and the bullet isn't already fired
+				if(targetLocation && !bullet.activeInHierarchy)
+				{
+					//Shoot the enemy
+					ShootEnemy (targetLocation);
+					cooledDown = false;
+				}
+				//Reset the turret to not fire again
+				fireNow = false;
 			}
-			//Reset the turret to not fire again
-			fireNow = false;
 		}
 		//If the bullet is fired
 		if(bullet.activeInHierarchy)
@@ -61,6 +66,12 @@ public class TurretFiring : MonoBehaviour {
 				bullet.SetActive(false);
 				bulletLife = 5.0f;
 			}
+		}
+		cooldownTimer -= Time.deltaTime;
+		if ( cooldownTimer < 0 )
+		{
+			cooledDown = true;
+			cooldownTimer = 5.0f;
 		}
 	}
 		
