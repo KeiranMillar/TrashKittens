@@ -46,4 +46,9 @@ public class EnemyProjectile : MonoBehaviour
 		projectileRigid = GetComponent<Rigidbody2D> ();
 		projectileRigid.AddForce (new Vector3(-1, 1, 0) * projectileSpeed);
 	}
+
+	void OnMouseDown()
+	{
+		gameObject.SetActive (false);
+	}
 }
