@@ -22,7 +22,7 @@ public class DrillTextEditor : MonoBehaviour {
 			if(turret.activeInHierarchy)
 			{
 				Text UIText = this.GetComponent<Text>();
-				UIText.text = "Upgrade The Drill's Damage";
+				UIText.text = "Upgrade The Turret's Damage";
 			}
 		}
 	}
