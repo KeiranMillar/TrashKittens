@@ -11,16 +11,12 @@ public class GameUI : MonoBehaviour
 	// Public Variables
 	public Text resourceCounter;
 	public Text upgradeResourceCounter;
-	public GameObject drillObject;
-
-	// PrivateVariables
-	float drillResource;
+	public DrillController drillController;
 
 	// Update is called once per frame
 	void Update () 
 	{
-		drillResource = drillObject.GetComponent<ResourceCollection>().resources;
-		resourceCounter.text = Mathf.FloorToInt(drillResource).ToString();
-		upgradeResourceCounter.text = drillResource.ToString ();
+		resourceCounter.text = Mathf.FloorToInt(drillController.resources).ToString();
+		upgradeResourceCounter.text = drillController.resources.ToString ();
 	}
 }

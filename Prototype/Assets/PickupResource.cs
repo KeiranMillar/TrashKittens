@@ -16,7 +16,7 @@ public class PickupResource : MonoBehaviour {
 	[SerializeField] private float rotationIncrement = 1;
 	[SerializeField] private GameObject displayObject;
 	[SerializeField] private AudioClip pickupNoise;
-	private ResourceCollection resourceManager;
+	private DrillController drillController;
 	private AudioSource uiAudioSource;
 	public AudioMixerGroup output;
 	private bool floatingRises;
@@ -26,7 +26,7 @@ public class PickupResource : MonoBehaviour {
 	{
 		GameObject drillObject = GameObject.Find ("DrillObject");
 		GameObject uiObject = GameObject.Find ("Main Game UI");
-		resourceManager = drillObject.GetComponent<ResourceCollection> ();
+		drillController = drillObject.GetComponent<DrillController> ();
 		uiAudioSource = uiObject.GetComponent<AudioSource> ();
 		floatingRises = true;
 	}
@@ -65,7 +65,7 @@ public class PickupResource : MonoBehaviour {
 	void Pickup()
 	{
 		gameObject.SetActive (false);
-		resourceManager.resources += pickupValue;
+		drillController.resources += pickupValue;
 		uiAudioSource.outputAudioMixerGroup = output;
 		uiAudioSource.PlayOneShot (pickupNoise);
 	}

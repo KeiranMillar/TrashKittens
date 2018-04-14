@@ -601,7 +601,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 119.5, y: -346}
+  m_AnchoredPosition: {x: 315, y: -353}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &137845456
@@ -639,19 +639,19 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 137845457}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: Upgrade
-        m_Mode: 1
+      - m_Target: {fileID: 1343582076}
+        m_MethodName: UpgradeResourceOutput
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0
+          m_FloatArgument: 20
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -745,7 +745,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 119.5, y: -446}
+  m_AnchoredPosition: {x: 315, y: -455}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &289113442
@@ -1461,7 +1461,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 119.5, y: -48}
+  m_AnchoredPosition: {x: 315, y: -49}
   m_SizeDelta: {x: 96, y: 96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &501829113
@@ -1784,7 +1784,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 119.5, y: -246}
+  m_AnchoredPosition: {x: 315, y: -251}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &624410567
@@ -2142,7 +2142,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 119.5, y: -146}
+  m_AnchoredPosition: {x: 315, y: -149}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &764881379
@@ -2437,7 +2437,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Upgrade Drill's Mining Rate
+  m_Text: Gain extra resources at the end of each wave
 --- !u!222 &909819691
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2651,7 +2651,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1936819037
+  randomSeed: 1930682606
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -6240,6 +6240,7 @@ MonoBehaviour:
   upgradePrice: 5
   upgradePriceDisplay: {fileID: 604386073}
   collectionType: 0
+  lastUpdate: 0
 --- !u!114 &971409368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6259,17 +6260,38 @@ MonoBehaviour:
   turretPrice: 5
   turretDamage: 1
   repairPrice: 25
+  upgradeResourcePrice: 35
   healthBar: {fileID: 1449600613}
   upgradePriceDisplay: {fileID: 1260385633}
   repairPriceDisplay: {fileID: 0}
   turretPriceDisplay: {fileID: 0}
+  upgradeResourcePriceDisplay: {fileID: 0}
   fill: {fileID: 331160341}
-  damageColour: {r: 1, g: 0, b: 0, a: 0}
-  warningColour: {r: 0.89705884, g: 0.7609534, b: 0, a: 1}
+  damageColour:
+    r: 1
+    g: 0
+    b: 0
+    a: 0
+  warningColour:
+    r: 0.89705884
+    g: 0.7609534
+    b: 0
+    a: 1
   upgradeClip: {fileID: 0}
   upgradeFailClip: []
   audioSource: {fileID: 0}
   turret: {fileID: 0}
+  StateManager: {fileID: 0}
+  drill: {fileID: 0}
+  turretBought: 0
+  damaged: 0
+  healthyColour:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  animationScript: {fileID: 0}
+  lastUpdate: 0
 --- !u!1 &1024334449
 GameObject:
   m_ObjectHideFlags: 0
@@ -6541,7 +6563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceCounter: {fileID: 131323760}
   upgradeResourceCounter: {fileID: 482326503}
-  drillObject: {fileID: 1343582074}
+  drillController: {fileID: 1343582076}
 --- !u!4 &1053007954
 Transform:
   m_ObjectHideFlags: 0
@@ -7254,9 +7276,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1343582074}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62f15ce57b5b9364baf2c5f4c136f8e4, type: 3}
+  m_Script: {fileID: 11500000, guid: dd697e94fdbd0aa40a1209c57f74205e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resources: 0
   currentHealth: 60
   healthWarningThreshold: 25
   maxHealth: 60
@@ -7265,10 +7288,12 @@ MonoBehaviour:
   turretPrice: 5
   turretDamage: 1
   repairPrice: 25
+  upgradeResourcePrice: 35
   healthBar: {fileID: 1449600613}
   upgradePriceDisplay: {fileID: 1260385633}
   repairPriceDisplay: {fileID: 434020045}
   turretPriceDisplay: {fileID: 940901410}
+  upgradeResourcePriceDisplay: {fileID: 604386073}
   fill: {fileID: 331160341}
   damageColour: {r: 1, g: 0, b: 0, a: 0}
   warningColour: {r: 0.89705884, g: 0.7609534, b: 0, a: 1}
@@ -7277,23 +7302,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f4f43bad8243fe341a41cf67355180f4, type: 3}
   audioSource: {fileID: 1053007952}
   turret: {fileID: 1779013216}
---- !u!114 &1343582077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1343582074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aefe760323738f34b984230f845dbe9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  resources: 0
-  resourcesPerSec: 0
-  resourceModifier: 1
-  upgradePrice: 5
-  upgradePriceDisplay: {fileID: 604386073}
-  collectionType: 0
+  StateManager: {fileID: 303840707}
 --- !u!165 &1343582078
 AudioHighPassFilter:
   m_ObjectHideFlags: 0
@@ -8179,6 +8188,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8187aada3955aec4fba9262ff30d4b16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  forceToApply: {x: 0, y: 0}
+  touchedObject: {fileID: 0}
+  touchWorldPos: {x: 0, y: 0, z: 0}
 --- !u!1 &1741375051
 GameObject:
   m_ObjectHideFlags: 0

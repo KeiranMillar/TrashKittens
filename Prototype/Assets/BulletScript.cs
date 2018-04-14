@@ -22,13 +22,13 @@ public class BulletScript : MonoBehaviour {
 	// for when the bullet hits something
 	void OnCollisionEnter2D(Collision2D coll)
 	{
-		healthManagement2D healthScript = drill.GetComponent<healthManagement2D>();
+		DrillController drillController = drill.GetComponent<DrillController>();
 
 		//If the target is an enemy, take health off them
 		if (coll.gameObject.tag == "Enemy")
 		{
 			script = coll.gameObject.GetComponent<EnemyController2D>();
-			script.DealLaserDamage(1 * healthScript.turretDamage);
+			script.DealLaserDamage(1 * drillController.turretDamage);
 		}
 		this.gameObject.SetActive(false);
 

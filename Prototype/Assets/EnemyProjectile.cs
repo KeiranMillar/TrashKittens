@@ -36,7 +36,7 @@ public class EnemyProjectile : MonoBehaviour
 		{
 			gameObject.SetActive (false);
 			Debug.Log ("Projectile Hit");
-			coll.gameObject.GetComponent<healthManagement2D> ().Damage(1);
+			coll.gameObject.GetComponent<DrillController> ().Damage(1);
 		}
 	}
 
