@@ -426,9 +426,102 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 5b0d82450c01f5748990ab1447529c07,
         type: 3}
+    - target: {fileID: 224162113113729040, guid: d2efc67af5f832d449bb6f274dffc41c,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224162113113729040, guid: d2efc67af5f832d449bb6f274dffc41c,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224162113113729040, guid: d2efc67af5f832d449bb6f274dffc41c,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d2efc67af5f832d449bb6f274dffc41c, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &102583868
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1161870184867044, guid: 2572e076271e0f240aa5abf1be4e6ec2,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 102583869}
+  - component: {fileID: 102583871}
+  - component: {fileID: 102583870}
+  m_Layer: 0
+  m_Name: Top Upgrade Desc
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &102583869
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 224837301355613906, guid: 2572e076271e0f240aa5abf1be4e6ec2,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 102583868}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 940901409}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 65, y: -15}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &102583870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114117209441898626, guid: 2572e076271e0f240aa5abf1be4e6ec2,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 102583868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 27
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &102583871
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 222821521617671482, guid: 2572e076271e0f240aa5abf1be4e6ec2,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 102583868}
 --- !u!1 &131323757
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,7 +694,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 315, y: -353}
+  m_AnchoredPosition: {x: 485, y: -377.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &137845456
@@ -745,7 +838,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 315, y: -455}
+  m_AnchoredPosition: {x: 485, y: -486.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &289113442
@@ -860,7 +953,7 @@ GameObject:
   - component: {fileID: 289836061}
   - component: {fileID: 289836060}
   m_Layer: 0
-  m_Name: Middle Upgrade Description
+  m_Name: Middle Upgrade Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -882,7 +975,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 64, y: 0}
+  m_AnchoredPosition: {x: 65, y: 15}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &289836060
@@ -918,7 +1011,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Upgrade Drill's Maximum Health
+  m_Text: Upgrade drill's maximum health
 --- !u!222 &289836061
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1461,9 +1554,87 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 315, y: -49}
+  m_AnchoredPosition: {x: 485, y: -52.5}
   m_SizeDelta: {x: 96, y: 96}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &485171180
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1194150535382762, guid: 2572e076271e0f240aa5abf1be4e6ec2,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 485171181}
+  - component: {fileID: 485171183}
+  - component: {fileID: 485171182}
+  m_Layer: 0
+  m_Name: Middle Upgrade Desc
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &485171181
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 224691940811578712, guid: 2572e076271e0f240aa5abf1be4e6ec2,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 485171180}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1927721702}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 65, y: -15}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &485171182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114931490611214240, guid: 2572e076271e0f240aa5abf1be4e6ec2,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 485171180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 27
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: The drill's max health is 100
+--- !u!222 &485171183
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 222222593072205668, guid: 2572e076271e0f240aa5abf1be4e6ec2,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 485171180}
 --- !u!1 &501829113
 GameObject:
   m_ObjectHideFlags: 0
@@ -1494,6 +1665,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 909819689}
+  - {fileID: 1602387628}
   m_Father: {fileID: 137845455}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1784,7 +1956,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 315, y: -251}
+  m_AnchoredPosition: {x: 485, y: -268.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &624410567
@@ -2142,7 +2314,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 315, y: -149}
+  m_AnchoredPosition: {x: 485, y: -159.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &764881379
@@ -2379,7 +2551,7 @@ GameObject:
   - component: {fileID: 909819691}
   - component: {fileID: 909819690}
   m_Layer: 0
-  m_Name: Bottom Upgrade Description
+  m_Name: Bottom Upgrade Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2401,7 +2573,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 64, y: 0}
+  m_AnchoredPosition: {x: 64, y: 15}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &909819690
@@ -2437,7 +2609,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Gain extra resources at the end of each wave
+  m_Text: 'Gain extra resources from the drill
+
+'
 --- !u!222 &909819691
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2457,7 +2631,7 @@ GameObject:
   - component: {fileID: 915609969}
   - component: {fileID: 915609968}
   m_Layer: 0
-  m_Name: Middle Upgrade Description
+  m_Name: Middle Upgrade Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2515,7 +2689,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Repair The Drill
+  m_Text: Repair the drill by 25 health
 --- !u!222 &915609969
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5897,6 +6071,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1094456519}
+  - {fileID: 102583869}
   m_Father: {fileID: 764881378}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6234,13 +6409,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aefe760323738f34b984230f845dbe9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resources: 0
-  resourcesPerSec: 1
-  resourceModifier: 1
-  upgradePrice: 5
-  upgradePriceDisplay: {fileID: 604386073}
-  collectionType: 0
-  lastUpdate: 0
 --- !u!114 &971409368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6252,46 +6420,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62f15ce57b5b9364baf2c5f4c136f8e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 100
-  healthWarningThreshold: 25
-  maxHealth: 100
-  upgradeLevel: 1
-  upgradePrice: 5
-  turretPrice: 5
-  turretDamage: 1
-  repairPrice: 25
-  upgradeResourcePrice: 35
-  healthBar: {fileID: 1449600613}
-  upgradePriceDisplay: {fileID: 1260385633}
-  repairPriceDisplay: {fileID: 0}
-  turretPriceDisplay: {fileID: 0}
-  upgradeResourcePriceDisplay: {fileID: 0}
-  fill: {fileID: 331160341}
-  damageColour:
-    r: 1
-    g: 0
-    b: 0
-    a: 0
-  warningColour:
-    r: 0.89705884
-    g: 0.7609534
-    b: 0
-    a: 1
-  upgradeClip: {fileID: 0}
-  upgradeFailClip: []
-  audioSource: {fileID: 0}
-  turret: {fileID: 0}
-  StateManager: {fileID: 0}
-  drill: {fileID: 0}
-  turretBought: 0
-  damaged: 0
-  healthyColour:
-    r: 0
-    g: 0
-    b: 0
-    a: 0
-  animationScript: {fileID: 0}
-  lastUpdate: 0
 --- !u!1 &1024334449
 GameObject:
   m_ObjectHideFlags: 0
@@ -6751,6 +6879,7 @@ GameObject:
   - component: {fileID: 1094456519}
   - component: {fileID: 1094456521}
   - component: {fileID: 1094456520}
+  - component: {fileID: 1094456522}
   m_Layer: 0
   m_Name: Top Upgrade Text
   m_TagString: Untagged
@@ -6774,7 +6903,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 64, y: 0}
+  m_AnchoredPosition: {x: 65, y: 15}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1094456520
@@ -6810,7 +6939,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Upgrade Drill's Turret
+  m_Text: Buy a turret for the drill
 --- !u!222 &1094456521
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6818,6 +6947,18 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1094456518}
+--- !u!114 &1094456522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1094456518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 357a4304a77b43c46976176309ef955a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turret: {fileID: 1779013216}
 --- !u!114 &1182672456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7138,13 +7279,14 @@ GameObject:
   - component: {fileID: 1332269795}
   - component: {fileID: 1332269794}
   - component: {fileID: 1332269793}
+  - component: {fileID: 1332269796}
   m_Layer: 0
-  m_Name: Pause Button (1)
+  m_Name: Fire Turret Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1332269792
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7154,7 +7296,7 @@ RectTransform:
   m_GameObject: {fileID: 1332269791}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0000037, y: 1.0000037, z: 1.0000037}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1589379274}
   m_RootOrder: 7
@@ -7252,6 +7394,17 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1332269791}
+--- !u!114 &1332269796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1332269791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c75633f7bac5521439a94884f32b555a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1343582074 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100002, guid: f20f732fe1b95604ab927805202683d5, type: 3}
@@ -7294,6 +7447,9 @@ MonoBehaviour:
   repairPriceDisplay: {fileID: 434020045}
   turretPriceDisplay: {fileID: 940901410}
   upgradeResourcePriceDisplay: {fileID: 604386073}
+  turretDamageDisplay: {fileID: 102583870}
+  maxHealthDisplay: {fileID: 485171182}
+  resourceDisplay: {fileID: 1602387626}
   fill: {fileID: 331160341}
   damageColour: {r: 1, g: 0, b: 0, a: 0}
   warningColour: {r: 0.89705884, g: 0.7609534, b: 0, a: 1}
@@ -7302,6 +7458,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f4f43bad8243fe341a41cf67355180f4, type: 3}
   audioSource: {fileID: 1053007952}
   turret: {fileID: 1779013216}
+  fireTurretButton: {fileID: 1332269791}
   StateManager: {fileID: 303840707}
 --- !u!165 &1343582078
 AudioHighPassFilter:
@@ -8103,6 +8260,84 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.457924, y: 0.08301437}
   m_EdgeRadius: 0
+--- !u!1 &1602387625
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1492522706460842, guid: 2572e076271e0f240aa5abf1be4e6ec2,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1602387628}
+  - component: {fileID: 1602387627}
+  - component: {fileID: 1602387626}
+  m_Layer: 0
+  m_Name: Bottom Upgrade Desc
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1602387626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114485673941177986, guid: 2572e076271e0f240aa5abf1be4e6ec2,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1602387625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 27
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: You get 0 extra resources per wave
+--- !u!222 &1602387627
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 222111817255369382, guid: 2572e076271e0f240aa5abf1be4e6ec2,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1602387625}
+--- !u!224 &1602387628
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 224573351206368068, guid: 2572e076271e0f240aa5abf1be4e6ec2,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1602387625}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 501829114}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 64, y: -15}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1619610434
 GameObject:
   m_ObjectHideFlags: 0
@@ -8188,9 +8423,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8187aada3955aec4fba9262ff30d4b16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceToApply: {x: 0, y: 0}
-  touchedObject: {fileID: 0}
-  touchWorldPos: {x: 0, y: 0, z: 0}
 --- !u!1 &1741375051
 GameObject:
   m_ObjectHideFlags: 0
@@ -8960,6 +9192,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 289836059}
+  - {fileID: 485171181}
   m_Father: {fileID: 624410566}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
