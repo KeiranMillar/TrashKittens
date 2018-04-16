@@ -1627,7 +1627,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The drill's max health is 100
+  m_Text: The drill's max health is 60
 --- !u!222 &485171183
 CanvasRenderer:
   m_ObjectHideFlags: 0
