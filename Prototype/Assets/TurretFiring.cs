@@ -1,14 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TurretFiring : MonoBehaviour {
 
 	public List<GameObject> babies;
 	public List<GameObject> mamas;
+	public List<GameObject> shooters;
 	public List<GameObject> tanks;
 
 	public GameObject bullet;
+	public GameObject turretHead;
+	public Button fireButton;
 	public float bulletLife = 5.0f;
 	public int bulletSpeed = 1000000;
 
@@ -21,6 +25,7 @@ public class TurretFiring : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
+		turretHead.transform.rotation = Quaternion.Euler(0.0f, 180.0f, 0.0f);
 	}
 	
 	// Update is called once per frame
@@ -34,20 +39,27 @@ public class TurretFiring : MonoBehaviour {
 				Transform targetLocation;
 				ObjectPoolingBaby babiesScript = SpawnManager.GetComponent<ObjectPoolingBaby>();
 				ObjectPoolingMama mamaScript = SpawnManager.GetComponent<ObjectPoolingMama>();
+				ObjectPoolingShooter shooterScript = SpawnManager.GetComponent<ObjectPoolingShooter>();
 				ObjectPoolingTank tankScript = SpawnManager.GetComponent<ObjectPoolingTank>();
 				babies = babiesScript.pooledObjectsBaby;
 				mamas = mamaScript.pooledObjectsMama;
+				shooters = shooterScript.pooledObjectsShooter;
 				tanks = tankScript.pooledObjectsTank;
 
 				//Get the closest enemy to the turret
-				targetLocation = GetClosestEnemy(babies, mamas, tanks);
+				targetLocation = GetClosestEnemy(babies, mamas, shooters, tanks);
 
 				//If the target is valid and the bullet isn't already fired
 				if(targetLocation && !bullet.activeInHierarchy)
 				{
 					//Shoot the enemy
+					Vector3 difference = targetLocation.position - transform.position;
+					float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+					turretHead.transform.rotation = Quaternion.Euler(0.0f, 180.0f, (rotationZ + 3.0f));
 					ShootEnemy (targetLocation);
 					cooledDown = false;
+					fireButton.interactable = false;
+					cooldownTimer = 5.0f;
 				}
 				//Reset the turret to not fire again
 				fireNow = false;
@@ -72,10 +84,11 @@ public class TurretFiring : MonoBehaviour {
 		{
 			cooledDown = true;
 			cooldownTimer = 5.0f;
+			fireButton.interactable = true;
 		}
 	}
 		
-	Transform GetClosestEnemy (List<GameObject> babies, List<GameObject> mamas, List<GameObject> tanks)
+	Transform GetClosestEnemy (List<GameObject> babies, List<GameObject> mamas, List<GameObject> shooters, List<GameObject> tanks)
 	{
 		Transform bestTarget = null;
 		float closestDistanceSqr = Mathf.Infinity;
@@ -108,6 +121,19 @@ public class TurretFiring : MonoBehaviour {
 				}
 			}
 		}
+		for(int i = 0; i < shooters.Count; i++)
+		{
+			Vector3 directionToTarget = shooters[i].transform.position - currentPosition;
+			if(shooters[i].activeInHierarchy == true)
+			{
+				float dSqrToTarget = directionToTarget.sqrMagnitude;
+				if(dSqrToTarget < closestDistanceSqr)
+				{
+					closestDistanceSqr = dSqrToTarget;
+					bestTarget = shooters[i].transform;
+				}
+			}
+		}
 		for(int i = 0; i < tanks.Count; i++)
 		{
 			Vector3 directionToTarget = tanks[i].transform.position - currentPosition;
@@ -127,6 +153,7 @@ public class TurretFiring : MonoBehaviour {
 	void ShootEnemy(Transform targetLocation)
 	{
 		//Activate the bullet and set it location at the turret, looking at its target
+		targetLocation.position = new Vector3 (targetLocation.position.x, targetLocation.position.y + 0.5f, targetLocation.position.z);
 		this.GetComponent<AudioSource>().Play();
 		bullet.SetActive (true);
 		bullet.transform.position = this.transform.position;
