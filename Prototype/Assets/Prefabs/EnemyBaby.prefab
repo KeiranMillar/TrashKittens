@@ -972,7 +972,6 @@ MonoBehaviour:
     m_Bits: 256
   isShooter: 0
   projectileForce: 1
-  projectilePool: {fileID: 0}
   projectileSpawnPoint: {fileID: 0}
 --- !u!137 &137243152761799792
 SkinnedMeshRenderer:
@@ -1192,7 +1191,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 1766466069
+  randomSeed: 407276412
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -1240,7 +1239,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 0.62
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -1653,7 +1652,7 @@ ParticleSystem:
     m_UseMeshMaterialIndex: 0
     m_UseMeshColors: 1
     alignToDirection: 0
-    randomDirectionAmount: 0
+    randomDirectionAmount: 1
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:

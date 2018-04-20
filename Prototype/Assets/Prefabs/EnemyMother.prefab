@@ -1217,7 +1217,6 @@ MonoBehaviour:
     m_Bits: 256
   isShooter: 0
   projectileForce: 1
-  projectilePool: {fileID: 0}
   projectileSpawnPoint: {fileID: 0}
 --- !u!137 &137023854010739970
 SkinnedMeshRenderer:
@@ -1543,7 +1542,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 2130502619
+  randomSeed: -1663061129
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -1591,7 +1590,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -1938,7 +1937,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    randomizeRotationDirection: 0
+    randomizeRotationDirection: 0.15
     maxNumParticles: 20
     size3D: 0
     rotation3D: 0
@@ -1994,7 +1993,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0.2, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 0.3, y: 0.4, z: 0.3}
+    m_Scale: {x: 0.3, y: 0.4, z: 0.2}
     placementMode: 0
     m_Mesh: {fileID: 0}
     m_MeshRenderer: {fileID: 0}
@@ -2004,7 +2003,7 @@ ParticleSystem:
     m_UseMeshMaterialIndex: 0
     m_UseMeshColors: 1
     alignToDirection: 0
-    randomDirectionAmount: 0
+    randomDirectionAmount: 1
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
@@ -4783,7 +4782,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 0.05
+  m_MaxParticleSize: 0.06
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
