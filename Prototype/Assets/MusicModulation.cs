@@ -20,7 +20,4 @@ public class MusicModulation : MonoBehaviour {
 		Default.TransitionTo (0.5f);
 	}
 
-	void Update () {
-
-	}
 }
