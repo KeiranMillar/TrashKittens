@@ -43,6 +43,7 @@ public class EnemyProjectile : MonoBehaviour
 	public void Spawn(float projectileSpeed)
 	{
 		gameObject.SetActive (true);
+		transform.eulerAngles = Vector3.zero;
 		projectileRigid = GetComponent<Rigidbody2D> ();
 		projectileRigid.AddForce (new Vector3(-1, 1, 0) * projectileSpeed);
 	}
