@@ -7235,7 +7235,7 @@ MonoBehaviour:
   maxHealth: 60
   upgradeLevel: 1
   upgradePrice: 35
-  turretPrice: 5
+  turretPrice: 15
   turretDamage: 1
   repairPrice: 25
   upgradeResourcePrice: 35
@@ -8759,14 +8759,14 @@ MonoBehaviour:
   spawn: {x: 3, y: 0, z: -0.45}
   babySpawnRateMin: 2
   babySpawnRateMax: 4
-  mamaSpawnRateMin: 4
-  mamaSpawnRateMax: 5
+  mamaSpawnRateMin: 5
+  mamaSpawnRateMax: 6
   mamaSpawnDelay: 2
-  tankSpawnRateMin: 4
-  tankSpawnRateMax: 7
+  tankSpawnRateMin: 5
+  tankSpawnRateMax: 8
   tankSpawnDelay: 2
-  shooterSpawnRateMin: 3
-  shooterSpawnRateMax: 5
+  shooterSpawnRateMin: 4
+  shooterSpawnRateMax: 6
   shooterSpawnDelay: 3
   wave: 0
 --- !u!114 &1871525062

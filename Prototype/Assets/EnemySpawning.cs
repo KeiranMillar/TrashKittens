@@ -11,7 +11,7 @@ public class EnemySpawning : MonoBehaviour {
 	//number of enemies spawning per wave.
 	//So, for the first wave, 5 babies and 2 tanks
 	public int [,] spawnLimit = new int [4,4] {{5, 2, 0, 1},
-		{7, 3, 1, 2}, {10, 5, 2, 3}, {14, 8, 4, 6}};
+		{7, 3, 1, 2}, {10, 5, 2, 3}, {14, 8, 3, 4}};
 
 	public float babySpawnRateMin = 2.0f;
 	public float babySpawnRateMax = 4.0f;
